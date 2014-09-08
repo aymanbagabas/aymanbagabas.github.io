@@ -1,0 +1,9 @@
+destination: _site
+port: 4000
+highlighter: pygments
+posts: blog/_posts
+drafts: blog/_drafts
+
+name: mony960's Blog
+description: This is my description.
+url: http://mony960.com

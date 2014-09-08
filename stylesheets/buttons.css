@@ -1,0 +1,23 @@
+ #buttons {
+ 	img {
+		max-width: 24px;
+		max-hight: 24px;
+	};
+ 	float: right;
+ }
+ 	
+ #comments-button {
+ 	img {
+		max-width: 24px;
+		max-hight: 24px;
+ 	};
+ 	a {
+ 		height: 24px;
+ 	};
+ 	padding-right: 5px;
+ 	display: block;
+ 	float: left;
+ 	color: #ffffff;
+ 	font-weight: bold;
+ 	background-color: #3BD52B;
+ }
