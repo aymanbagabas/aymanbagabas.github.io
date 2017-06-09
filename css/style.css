@@ -1,0 +1,180 @@
+/*
+    Ayman Bagabas
+*/
+
+html, body, .row, .container-fluid {
+    height: 100%;
+    background-color: whitesmoke;
+    color: black;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 110%;
+}
+
+p * {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: dodgerblue;
+}
+
+a:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+hr {
+    border-top: 1px solid lightgrey;
+    margin-top: 20px;
+}
+
+legend {
+    border-bottom: 1px solid lightgrey;
+}
+
+pre, code {
+    background-color: white;
+}
+
+pre, code, pre *, code * {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 100%;
+    white-space: pre;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
+
+.col-md-2 {
+    height: 100%;
+    background: url("../images/tweed.png");
+    /*background-color: navy;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 0 20px #888;
+}
+
+.col-md-2 * {
+    color: darkgrey;
+}
+
+.col-md-2 a {
+    color: lightgray;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.col-md-2 a:hover {
+    color: white;
+}
+
+.social {
+    text-align: center;
+}
+
+.social .fa {
+    padding: 5px;
+    font-size: 30px;
+    color: white;
+}
+
+.social .fa:hover {
+    color: darkgrey;
+}
+
+#name {
+    color: white;
+}
+
+.footer {
+    padding: 20px 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+.title {
+    margin-bottom: 0;
+    text-decoration: none;
+    color: black;
+    /*display: inline;*/
+}
+
+.title:hover {
+    color: black;
+}
+
+.title h1 {
+    margin-bottom: 0;
+}
+
+.title a {
+    margin-bottom: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.title a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.title.desc {
+    text-decoration: none;
+    display: inline-block;
+    color: grey;
+    margin-bottom: 15px;
+    /*padding-left: 5px;*/
+}
+
+.title.desc i {
+    padding-right: 5px;
+}
+
+.title.desc a {
+    color: grey;
+}
+
+.title.desc a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+
+@media only screen and (max-width: 991px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    #sidenav {
+        text-align: center;
+    }
+    html, body, .row, .container-fluid {
+        height: auto;
+    }
+}
+/* Sticky sidenav */
+@media only screen and (min-width : 992px) {
+    #name {font-size: 72px;}
+    .col-md-2 {
+        position: fixed;
+        width: 20em;
+        z-index: 1;
+    }
+    .col-md-10 {
+        margin-left: 20em;
+        width: auto;
+    }
+	.content {
+		padding: 40px;
+	}
+}

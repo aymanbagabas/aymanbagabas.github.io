@@ -1,44 +1,54 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ page.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800|Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <!-- My Style -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+    <title>
+        {% if page.title %} {{ page.title }}
+        {% else %} {{ site.title }}
+        {% endif %}
+    </title>
+</head>
 
-    <link rel="icon" type="icon" href="/favicon.ico">
-
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <a href="/"><h1>mony960</h1></a>
-        
-        <p class="view"><a href="/blog/">Blog</a></p>
-        <p class="view"><a href="/about/">About me</a></p>
-        
-        <br />
-
-        <h3>Find me on:</h3>
-        <p class="view"><a href="https://github.com/mony960" target="_blank">GitHub</a></p>
-        <p class="view"><a href="https://www.facebook.com/mony960" target="_blank">Facebook</a></p>
-        <p class="view"><a href="https://twitter.com/mony960" target="_blank">Twitter</a></p>
-        <p class="view"><a href="http://instagram.com/mony960" target="_blank">Instagram</a></p>
-        
-      </header>
-      <section id="main">
-        {{ content }}
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small></p>
-      </footer>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 narrow">
+                <div id="sidenav">
+                    <a href="/"><h1 id='name'>{{ site.author }}</h1></a>
+                    <p>{{ site.description }}</p>
+                    <a href="/posts.html">Blog posts</a>
+                    <br><br>
+                    <div class="social">
+                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="fa fa-2x fa-twitter"></a>
+                        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="fa fa-2x fa-github"></a>
+                        <a href="mailto:{{ site.email }}" class="fa fa-2x fa-envelope"></a>
+                    </div>
+                    <footer class="footer">
+                        <small>&copy; 2017 Ayman Bagabas</small>
+                    </footer>
+                </div>
+            </div>
+            <div id="wide" class="col-md-10">
+                <div class="content">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="/javascripts/scale.fix.js"></script>
-    
-  </body>
+    <script id="dsq-count-scr" src="https://blog-aymanbagabas-com.disqus.com/count.js" async></script>
+</body>
+
 </html>
