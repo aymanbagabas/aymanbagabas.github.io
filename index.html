@@ -5,7 +5,7 @@ layout: default
 {% for post in site.posts %}
     <a class="title" href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
     <small class="title desc"><i class="fa fa-calendar" aria-hidden="true"></i>{{ post.date | date_to_string }}
-            <i class="fa fa-comments" aria-hidden="true"></i><small><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a></small>
+            <i class="fa fa-comments" aria-hidden="true"></i><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>
     </small>
 
     {{ post.content }}

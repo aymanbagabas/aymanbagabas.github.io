@@ -10,10 +10,6 @@ html, body, .row, .container-fluid {
 
 * {
     font-family: 'Open Sans', sans-serif;
-    font-size: 110%;
-}
-
-p * {
     font-size: 100%;
 }
 
@@ -164,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Sticky sidenav */
 @media only screen and (min-width : 992px) {
-    #name {font-size: 72px;}
+    #name {font-size: 58px;}
     .col-md-2 {
         position: fixed;
         width: 20em;
