@@ -10,7 +10,7 @@ html, body, .row, .container-fluid {
 
 * {
     font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
+    font-size: 105%;
 }
 
 a {
@@ -39,7 +39,7 @@ pre, code {
 
 pre, code, pre *, code * {
     font-family: 'Source Code Pro', monospace;
-    font-size: 100%;
+    font-size: 105%;
     white-space: pre;
 }
 
@@ -69,6 +69,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .col-md-2 a:hover {
     color: white;
+}
+
+div#sidenav {
+    margin: auto;
+    height: 40%;
+    width: 80%;
 }
 
 .social {
@@ -144,6 +150,11 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
+.center-image {
+    margin: 0 auto;
+    display: block;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 
 @media only screen and (max-width: 991px) {
@@ -163,14 +174,14 @@ h1, h2, h3, h4, h5, h6 {
     #name {font-size: 58px;}
     .col-md-2 {
         position: fixed;
-        width: 20em;
+        width: 25em;
         z-index: 1;
     }
     .col-md-10 {
-        margin-left: 20em;
+        margin-left: 25em;
         width: auto;
     }
-	.content {
-		padding: 40px;
-	}
+    .content {
+        padding: 40px;
+    }
 }

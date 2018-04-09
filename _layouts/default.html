@@ -20,6 +20,7 @@
         {% else %} {{ site.title }}
         {% endif %}
     </title>
+    {% seo %}
 </head>
 
 <body>
@@ -29,15 +30,15 @@
                 <div id="sidenav">
                     <a href="/"><h1 id='name'>{{ site.author }}</h1></a>
                     <p>{{ site.description }}</p>
-                    <a href="/posts.html">Blog posts</a>
+                    <a href="/posts.html">Blog index</a>
                     <br><br>
                     <div class="social">
-                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="fa fa-2x fa-twitter"></a>
-                        <a href="https://github.com/{{ site.github_username }}" target="_blank" class="fa fa-2x fa-github"></a>
+                        <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank" class="fa fa-2x fa-twitter"></a>
+                        <a href="https://github.com/{{ site.github.username }}" target="_blank" class="fa fa-2x fa-github"></a>
                         <a href="mailto:{{ site.email }}" class="fa fa-2x fa-envelope"></a>
                     </div>
                     <footer class="footer">
-                        <small>&copy; 2017 Ayman Bagabas</small>
+                        <small>&copy; 2018 Ayman Bagabas</small>
                     </footer>
                 </div>
             </div>

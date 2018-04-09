@@ -13,17 +13,24 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ayman's blog
+title: Ayman Bagabas
 author: Ayman Bagabas
 email: email@aymanbagabas.com
 description: > # this means to ignore newlines until "baseurl:"
   tech, code, misc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.aymanbagabas.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: aymanbagabas
-github_username:  aymanbagabas
+twitter:
+  username: aymanbagabas
+github:
+  username: aymanbagabas
+social:
+  name: Ayman Bagabas
+  links:
+    - https://twitter.com/aymanbagabas
+    - https://github.com/aymanbagabas
 
-#Dirs
+# Dirs
 layout_dir: _layouts
 posts_dir: _posts
 
@@ -33,8 +40,12 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 highlighter: rouge
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
+excerpt_separator: "\n"
