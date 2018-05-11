@@ -11,11 +11,11 @@ The other wonderful piece of software is [vdirsyncer](https://vdirsyncer.pimutil
 
 First, make sure we have all the needed packages. Orage and Vdirsyncer should exist in most distros official repositories. In Archlinux, the installation can be done with `sudo pacman -S vdirsyncer orage`. It would be similar for other distros as well. Ubuntu/Debian `sudo apt-get install vdirsyncer orage`.
 
-![orage]({{ "/images/orage1.png" | absolute_url }}){: .center-image }
+![orage]({{ "/images/orage1.png" }}){: .center-image }
 
 Here you can see how orage highlights dates with events attached to them. For example, April 1st is Easter Sundy. That was pulled from my Google United States holidays calendar.
 
-![orage]({{ "/images/orage2.png" | absolute_url }}){: .center-image}
+![orage]({{ "/images/orage2.png" }}){: .center-image}
 
 ### Vdirsyncer setup
 

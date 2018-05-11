@@ -1,17 +1,23 @@
 ---
-layout: default
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-{% for post in site.posts %}
-    <a class="title" href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
-    <small class="title desc"><i class="fa fa-calendar" aria-hidden="true"></i>{{ post.date | date_to_string }}
-            <i class="fa fa-comments" aria-hidden="true"></i><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>
-    </small>
+<head>
+    {% include head.html %}
+</head>
 
-    {{ post.content }}
-    <br>
-    <hr>
-    <br>
-{% endfor %}
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 " style="position:fixed;text-align:center;width:100%;">
+                <div id="sidenav">
+                    {% include sidenav.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="dsq-count-scr" src="https://blog-aymanbagabas-com.disqus.com/count.js" async></script>
+</body>
 
-<center><a href="/posts.html">View all posts</a></center>
+</html>
