@@ -35,17 +35,17 @@ legend {
 
 pre, code {
     background-color: white;
-    white-space: pre-wrap;      /* CSS3 */
-    white-space: -moz-pre-wrap; /* Firefox */
-    white-space: -pre-wrap;     /* Opera <7 */
-    white-space: -o-pre-wrap;   /* Opera 7 */
-    word-wrap: break-word;      /* IE */
 }
 
 pre, code, pre *, code * {
     font-family: 'Source Code Pro', monospace;
     font-size: 105%;
     white-space: pre;
+    white-space: pre-wrap;      /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap;     /* Opera <7 */
+    white-space: -o-pre-wrap;   /* Opera 7 */
+    word-wrap: break-word;      /* IE */
 }
 
 h1, h2, h3, h4, h5, h6 {

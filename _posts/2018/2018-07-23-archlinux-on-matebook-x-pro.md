@@ -10,7 +10,7 @@ Recently, I got a new laptop, Huawei Matebook X Pro. It has an i7 8th Gen. Intel
 2. The fingerprint sensor.
 3. Some keys in the Fn row.
 
-The installation was very straightforward and like every other Arch Linux installation process. I followed their [installation guide](https://wiki.archlinux.org/index.php/Installation_guide "installation guide){:target="_blank"}. After the installation is complete, everything was working properly except for some minor issues.
+The installation was very straightforward and like every other Arch Linux installation process. I followed their [installation guide](https://wiki.archlinux.org/index.php/Installation_guide "installation guide"){:target="_blank"}. After the installation is complete, everything was working properly except for some minor issues.
 
 ### Installation
 
