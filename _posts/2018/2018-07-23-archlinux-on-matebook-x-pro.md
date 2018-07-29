@@ -168,7 +168,7 @@ In order for hibernate to work, you have to define where the system should look 
 ## UPDATE 1 - fix sound
 
 You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` package then follow this picture and click on "Install boot override":
- 
- <center>{% responsive_image path: images/hdajackretask.png alt: "hdajackretask" %}</center>
+
+![hdajackretask]( {{ "images/hdajackretask.png" }} "hdajackretask"){: .center-image }
  
 You might need to set "connectivity" to "internal" to get it working. Finally, recreate your initramfs `sudo mkinitcpio -P` and reboot.

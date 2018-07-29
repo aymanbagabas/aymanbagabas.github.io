@@ -1,7 +1,5 @@
 ---
 layout: default
-title: About
+title: {% site.author %} - About
 permalink: /about/
 ---
-
-Under construction.
