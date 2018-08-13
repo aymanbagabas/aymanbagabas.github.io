@@ -138,9 +138,9 @@ options i915 enable_guc=3 enable_fbc=1
 
 #### Suspend and Hibernate
 
-Personally, I prefer hibernating my machine whenever I do not use it for a long time, that is why I use [suspend-then-hibernate](https://aymanbagabas.com/2018/07/18/suspend-then-hibernate.html){:target="_blank"}. Suspend to RAM works out of the box, but [hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation){:target="_blank"} requires some work. First, make sure you have either a swap partition or [swap file](https://wiki.archlinux.org/index.php/Swap#Swap_file){:target="_blank"}. I went with swap file just because it does not require partitioning. I find 6.5 to be reasonable for a swap file.
+Personally, I prefer hibernating my machine whenever I do not use it for a long time, that is why I use [suspend-then-hibernate](https://aymanbagabas.com/2018/07/18/suspend-then-hibernate.html){:target="_blank"}. Suspend to RAM works out of the box, but [hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation){:target="_blank"} requires some work. First, make sure you have either a swap partition or [swap file](https://wiki.archlinux.org/index.php/Swap#Swap_file){:target="_blank"}. I went with swap file just because it does not require partitioning. According to Redhat [Recommended System Swap Space](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-disk-partitioning-setup-x86#sect-recommended-partitioning-scheme-x86){:target="_blank"}, 1.5 of system RAM is the recommended amount of swap for hibernation which is 24Gb in this case.
 ```
-# fallocate -l 6.5G /swapfile
+# fallocate -l 24G /swapfile
 # chmod 600 /swapfile
 # mkswap /swapfile
 # swapon /swapfile
