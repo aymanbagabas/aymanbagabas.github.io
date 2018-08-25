@@ -1,8 +1,8 @@
-    <a href="/"><h1 id='name'>{{ site.author }}</h1></a>
+    <a href="{{ site.url }}{{ site.baseurl }}/"><h1 id='name'>{{ site.author }}</h1></a>
     <p>{{ site.description }}</p>
     {% for nav in site.sidenav %}
         {% if nav[1] %}
-            <a href="{{ nav[1]['path'] }}">{{ nav[1]['title'] }}</a><br>
+            <a href="{{ site.url }}{{ site.baseurl }}{{ nav[1]['path'] }}">{{ nav[1]['title'] }}</a><br>
         {% endif %}
     {% endfor %}
     <br><br>

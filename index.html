@@ -2,18 +2,21 @@
 layout: default
 ---
 
+{% assign i = 1 %}
 {% for post in site.posts %}
-    <a class="title" href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+    <a class="title" href="{{ post.url | relative_url }}"><h1>{{ post.title }}</h1></a>
     <small class="title desc"><i class="fa fa-calendar" aria-hidden="true"></i>{{ post.date | date_to_string }}
-            <i class="fa fa-comments" aria-hidden="true"></i><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>
+            <i class="fa fa-comments" aria-hidden="true"></i><a href="{{ post.url | relative_url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>
     </small>
 
     {{ post.content }}
     <br>
-    <center class="title"><small class="title desc"><a href="{{ post.url }}#comments">Add a Comment</a></small></center>
+    <center class="title"><small class="title desc"><a href="{{ post.url | relative_url }}#comments">Add a Comment</a></small></center>
     <br>
+    {% if i != site.posts.size %}
     <hr>
     <br>
+    {% endif %}
+    {% assign i = i | plus: 1 %}
 {% endfor %}
 
-<center><a href="/posts.html">View all posts</a></center>
