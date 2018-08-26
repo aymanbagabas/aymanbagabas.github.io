@@ -20,6 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   tech, code, misc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://aymanbagabas.com" # the base hostname & protocol for your site, e.g. http://example.com
+repository: aymanbagabas/aymanbagabas.github.io
 sidenav:
   about: 
      title: "About me"
@@ -34,8 +35,6 @@ sidenav:
      title: "Projects"
      path: "/projects/"
 twitter:
-  username: aymanbagabas
-github:
   username: aymanbagabas
 social:
   name: Ayman Bagabas
@@ -60,6 +59,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
+  - jekyll-github-metadata
+
 exclude:
   - Gemfile
   - Gemfile.lock
