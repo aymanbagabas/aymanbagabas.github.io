@@ -1,5 +1,6 @@
 ---
 layout: default
-title: {% site.author %} - About
+title: "Ayman Bagabas - About"
 permalink: /about/
 ---
+

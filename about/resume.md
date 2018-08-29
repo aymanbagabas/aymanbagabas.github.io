@@ -28,29 +28,29 @@ div.column{display: inline-block; vertical-align: top; width: 50%;}
 </header>
 <main>
 <div class="wrap">
-
 Education
 ---------
 
 <small>2015-Present</small>
 
 :   **Bachelor of Science in Computer Science**\\
-    Minoring in Mathematics and Cyber Security.
-
-:   Dean's list standing since starting college.\\
+    Minoring in Mathematics and Cyber Security.\\
     [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
+
+:   GPA: 3.86.\\
+    Dean's list standing since starting college.
 
 Job Experience
 --------------
 
-<small>2018-Present</small>
+<small>Jan 2018-Present</small>
 
 :   **Research Assistant in Computer Science**\\
     [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
 
 :   Designs and developments anonymous authentication protocol for ad-hoc vehicle networks; creates writing simulation models; tracks power consumption and analyzes the behavior of systems to detect anomalies.
 
-<small>2018 (1 month)</small>
+<small>Jun 2018</small>
 
 :   **Math Mentor in Mathematical Science**\\
     [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
@@ -83,8 +83,8 @@ Skills
     C/C++, PHP, Lua, Bash, Embedded Systems, Raspberry Pi, Arduino. Check my [website](https://aymanbagabas.com/){:target="_blank"} page for more information.
 
 <small>Languages</small>
-:   Since I am originally from Saudi Arabia, Arabic is my mother language.
-:   Fluent in English where I have been living in the USA for 4+ years.
+:   Native Arabic speaker.\\
+    Fluent in English.
 
 Activities and Interests
 -----------------------
