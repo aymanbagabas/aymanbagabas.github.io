@@ -1,5 +1,15 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<title>
+    {% if page.title %} {{ page.title }}
+    {% else %} {{ site.title }}
+    {% endif %}
+</title>
+</head>
+<body>
 {{ content }}
+</body>
+
+</html>
