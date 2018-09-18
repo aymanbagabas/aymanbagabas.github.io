@@ -73,6 +73,9 @@ Skills
 :   **Java** - 
     Worked with multiple projects, mostly school projects like [CheckExercise](https://github.com/aymanbagabas/CheckExercise){:target="_blank"}, which is a Java compiler and an answer checker for Dr. Daniel Liang's book *Intro to Java Programming*, and [Bar-Pop](https://github.com/aymanbagabas/Bar-Pop){:target="_blank"}, an Android application that finds the number of people in selected buildings.
 
+:   **C/C++** - 
+    Worked with multiple projects, mostly school projects like [CheckExercise](https://github.com/aymanbagabas/CheckExercise){:target="_blank"}, which is a Java compiler and an answer checker for Dr. Daniel Liang's book *Intro to Java Programming*, and [Bar-Pop](https://github.com/aymanbagabas/Bar-Pop){:target="_blank"}, an Android application that finds the number of people in selected buildings.
+
 :   **Python** - 
     Maintainer of [mopidy-mp3quran](https://github.com/aymanbagabas/mopidy-mp3quran){:target="_blank"} which is an extension for the music server [Mopidy](https://www.mopidy.com/){:target="_blank"}.
 
@@ -80,7 +83,7 @@ Skills
     Using it as a daily operating system. Very comfortable with using, managing, and administrating different Linux distributions.
 
 :   **Misc** - 
-    C/C++, PHP, Lua, Bash, Embedded Systems, Raspberry Pi, Arduino. Check my [website](https://aymanbagabas.com/){:target="_blank"} page for more information.
+    PHP, Lua, Bash, Embedded Systems, Raspberry Pi, Arduino. Check out my [website](https://aymanbagabas.com/){:target="_blank"} page for more information.
 
 <small>Languages</small>
 :   Native Arabic speaker.\\
@@ -97,15 +100,11 @@ Activities and Interests
 
 :   A member of *Pi Mu Epsilon* Mathematical Honor Society.
 
-<small>Hobbies</small>
-
-:   I am a big fan of the idea of DIY. I like building computers and electronics. I love traveling, I have been to multiple places in the world. Hiking and swimming are my favorite physical activities. In my free time, I am either cycling, coding, or making music.
-
 </div>
 </main>
 <footer>
 <div class="wrap">
-> +1 (912) 844 - 0892 • [aymanbagabas.com](https://aymanbagabas.com/){:target="_blank"} • [email@aymanbagabas.com](mailto:email@aymanbagabas.com)
+> +1 (912) 844 - 0892 • [aymanbagabas.com](https://aymanbagabas.com/){:target="_blank"} • [email@aymanbagabas.com](mailto:email@aymanbagabas.com) • [PDF version](resume.pdf)
 </div>
 </footer>
 </body>
