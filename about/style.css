@@ -21,7 +21,7 @@ body {
 
 .wrap {
     margin: auto;
-    width: 842px;
+    width: 900px;
     padding: 10px;
 }
 
@@ -135,6 +135,6 @@ footer {
 /* Set urls to black on PDFs */
 @media print {
     main a {
-        color: black;
+        /*color: black;*/
     }
 }

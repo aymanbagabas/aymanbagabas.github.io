@@ -60,11 +60,6 @@ Job Experience
 Skills
 ------
 
-<small>Awards</small>
-
-:   **Jesse Shearouse Scholarship**.\\
-    In the memory of Jesse Shearouse, the department of computer science at [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} selects an outstanding student to receive this award.
-
 <small>Programming</small>
 
 :   **Web Development, HTML, CSS, and JavaScript** - 
@@ -74,7 +69,7 @@ Skills
     Worked with multiple projects, mostly school projects like [CheckExercise](https://github.com/aymanbagabas/CheckExercise){:target="_blank"}, which is a Java compiler and an answer checker for Dr. Daniel Liang's book *Intro to Java Programming*, and [Bar-Pop](https://github.com/aymanbagabas/Bar-Pop){:target="_blank"}, an Android application that finds the number of people in selected buildings.
 
 :   **C/C++** - 
-    Worked with multiple projects, mostly school projects like [CheckExercise](https://github.com/aymanbagabas/CheckExercise){:target="_blank"}, which is a Java compiler and an answer checker for Dr. Daniel Liang's book *Intro to Java Programming*, and [Bar-Pop](https://github.com/aymanbagabas/Bar-Pop){:target="_blank"}, an Android application that finds the number of people in selected buildings.
+    Comfortable with using these languages especially with embedded systems. One of my projects was [C8emu](https://github.com/aymanbagabas/C8emu){:target="_blank"}, an emulator for Chip-8 systems.
 
 :   **Python** - 
     Maintainer of [mopidy-mp3quran](https://github.com/aymanbagabas/mopidy-mp3quran){:target="_blank"} which is an extension for the music server [Mopidy](https://www.mopidy.com/){:target="_blank"}.
@@ -83,22 +78,34 @@ Skills
     Using it as a daily operating system. Very comfortable with using, managing, and administrating different Linux distributions.
 
 :   **Misc** - 
-    PHP, Lua, Bash, Embedded Systems, Raspberry Pi, Arduino. Check out my [website](https://aymanbagabas.com/){:target="_blank"} page for more information.
+    MySQL, PHP, Lua, Bash, Embedded Systems, Raspberry Pi, Arduino. Check out my [website](https://aymanbagabas.com/){:target="_blank"} page for more information.
 
 <small>Languages</small>
 :   Native Arabic speaker.\\
     Fluent in English.
 
-Activities and Interests
+Activities and Awards
 -----------------------
+
+<small>Awards</small>
+
+:   **Jesse Shearouse Scholarship**.\\
+    In the memory of Jesse Shearouse, the department of computer science at [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} selects an outstanding student to receive this award.
 
 <small>Organizations</small>
 
-:   Secretary of the *Association for Computing Machinery (ACM)* in [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} Armstrong Campus.
+:   **ACM** - Secretary of the *Association for Computing Machinery (ACM)* in [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} Armstrong Campus.
 
-:   Part of the *Upsilon Pi Epsilon* Computing and Information Honor Society.
+:   **UPE** - Part of the *Upsilon Pi Epsilon* Computing and Information Honor Society.
 
-:   A member of *Pi Mu Epsilon* Mathematical Honor Society.
+:   **PME** - A member of *Pi Mu Epsilon* Mathematical Honor Society.
+
+References
+-----------------------
+
+[]()
+
+:   Available upon request.
 
 </div>
 </main>
