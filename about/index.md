@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Ayman Bagabas - About"
+title: "Ayman Bagabas - About me"
 permalink: /about/
 comments: false
 ---
