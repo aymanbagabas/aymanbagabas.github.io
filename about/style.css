@@ -39,16 +39,17 @@ h1 {
 h2 {
     font-size: 25px;
     color: black;
+	padding-left: 17%;
 }
 /* There is a bar just before each category */
-h2:before {
-    content: "";
-    display: inline-block;
-    margin-right:1%;
-    width: 16%;
-    height: 10px;
-    background-color: grey;
-}
+/*h2:before {*/
+    /*content: "";*/
+    /*display: inline-block;*/
+    /*margin-right: 1%;*/
+	/*width: 16%;*/
+    /*height: 10px;*/
+	/*background-color: lightsteelblue;*/
+/*}*/
 /* Definitions */
 dt {
     float: left;
@@ -60,6 +61,11 @@ dt {
 dd {
     margin-left: 17%;
 }
+
+dd ul {
+	padding-left: 0px;
+}
+
 p {
     margin-top:0;
     margin-bottom:7px;
@@ -74,6 +80,11 @@ blockquote {
 
 blockquote p {
     margin:0;
+}
+
+/* Lists */
+ul {
+	list-style-position: inside;
 }
 
 /* Links */
@@ -94,8 +105,8 @@ hr {
 header, footer {
     margin:0;
     width: 100%;
-    color: darkgray;
-    background-color: #494949;
+    color: aliceblue;
+    background-color: steelblue;
     padding: 10px 0 10px 0;
     box-shadow: 5px 0 20px #888;
 }
@@ -105,7 +116,7 @@ header.wrap, footer.wrap {
 }
 
 .title {
-    color:white;
+    color: white;
     margin: 0 auto 0 17%;
 }
 
@@ -114,13 +125,13 @@ header:before, footer:before {
 }
 
 header blockquote, footer blockquote {
-    color: lightgrey;
+    color: aliceblue;
     padding-top:0;
     margin: 0 auto 0 17%;
 }
 
 header a, header a:hover, footer a, footer a:hover {
-    color: lightgray;
+    color: aliceblue;
 }
 
 main {
@@ -133,9 +144,20 @@ footer {
     bottom: 0;
 }
 
-/* Set urls to black on PDFs */
+/* Set color to black when print */
 @media print {
-    main a {
-        /*color: black;*/
-    }
+	body {
+		background-color: white;
+	}
+	header, footer {
+		color: black;
+		background-color: white;
+		box-shadow: 0 0 0 0;
+	}
+	h1, header a, footer a,	header blockquote, footer blockquote {
+		color: black;
+	}
+	.title {
+		color: black;
+	}
 }
