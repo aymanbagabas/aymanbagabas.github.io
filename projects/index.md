@@ -4,9 +4,12 @@ title: "Ayman Bagabas - Projects"
 permalink: /projects/
 ---
 
-# Projects
+## Top Projects
+{% include top-projects.md %}
+
+## Other Projects
 
 {% for repository in site.github.public_repositories %}
-  * [{{ repository.name }}]({{ repository.html_url }}){:target="_blank"} - {{ repository.description }}
+* [{{ repository.name }}]({{ repository.html_url }}){:target="_blank"}\\
+{{ repository.description }}
 {% endfor %}
-
