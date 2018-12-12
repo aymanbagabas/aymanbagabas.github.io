@@ -38,13 +38,24 @@ legend {
     border-bottom: 1px solid lightgrey;
 }
 
-pre, code {
-    background-color: white;
+p {
+	line-height: 1.7em;
+	margin-bottom: 1.3em;
+}
+
+code {
+	color: #2f1e2e;
+	border: 1px solid #ccc;
+	font-size: 13px;
+}
+
+pre code {
+	border: 0;
 }
 
 pre, code, pre *, code * {
+    background-color: white;
     font-family: 'Source Code Pro', monospace;
-    font-size: 105%;
     white-space: pre;
     white-space: pre-wrap;      /* CSS3 */
     white-space: -moz-pre-wrap; /* Firefox */
@@ -59,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .col-md-2 {
     height: 100%;
-    background-color: #494949;
+    background-color: steelblue;
     /*background-color: navy;*/
     display: flex;
     flex-direction: column;
@@ -68,11 +79,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .col-md-2 * {
-    color: darkgrey;
+    color: aliceblue;
 }
 
 .col-md-2 a {
-    color: lightgray;
+    color: aliceblue;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -98,7 +109,7 @@ div#sidenav {
 }
 
 .social .fa:hover {
-    color: darkgrey;
+    color: aliceblue;
 }
 
 #name {
