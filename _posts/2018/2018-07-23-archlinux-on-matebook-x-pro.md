@@ -8,7 +8,7 @@ Recently, I got a new laptop, Huawei Matebook X Pro. It has an i7 8th Gen. Intel
 
 1. ~~Two out of four speakers.~~ See UPDATE1 down below
 2. The fingerprint sensor.
-3. Some keys in the Fn row.
+3. ~~Some keys in the Fn row.~~ See UPDATE2
 
 The installation was very straightforward and like every other Arch Linux installation process. I followed their [installation guide](https://wiki.archlinux.org/index.php/Installation_guide "installation guide"){:target="_blank"}. After the installation is complete, everything was working properly except for some minor issues.
 
@@ -172,3 +172,9 @@ You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` p
 ![hdajackretask]( {{ "/images/hdajackretask.png" }} "hdajackretask"){: .center-image }
  
 You might need to set "connectivity" to "internal" to get it working. Finally, recreate your initramfs `sudo mkinitcpio -P` and reboot.
+
+## UPDATE 2
+
+* Missing hotkeys `micmute, wlan, and pc manager` now work using [this](https://github.com/aymanbagabas/Huawei-WMI) driver. It will be part of linux 4.21 along with the speakers fix and micmute LED.
+* Some people reported slow network connection with the above settings. To fix that, drop `uapsd_disable=0` from `/etc/modprobe.d/iwlwifi.conf`.
+* Also if you were using full disk encryption, don't forget to add the speakers fix firmware files to `/etc/mkiniticpio.conf` like this: `FILES=(/usr/lib/firmware/hda-jack-retask.fw)`.
