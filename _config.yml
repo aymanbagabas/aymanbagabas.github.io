@@ -67,6 +67,7 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - about/resume.html
 excerpt_separator: "\n"
 paginate: 5
 paginate_path: "/blog/page:num"

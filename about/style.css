@@ -13,7 +13,7 @@ html, body {
 /* Whole document */
 body {
     font-family: "Open Sans", open sans, Arial, sans-serif;
-    font-size: 90%;
+    font-size: 84%;
     margin: auto;
     background-color: whitesmoke;
     min-height:100%;
@@ -56,7 +56,7 @@ dt {
     clear: left;
     width: 17%;
     color: dodgerblue;
-    /*font-weight: bold;*/
+	font-weight: bold;
 }
 dd {
     margin-left: 17%;
@@ -152,7 +152,7 @@ footer {
 	header, footer {
 		color: black;
 		background-color: white;
-		box-shadow: 0 0 0 0;
+		box-shadow: none;
 	}
 	h1, header a, footer a,	header blockquote, footer blockquote {
 		color: black;

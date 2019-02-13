@@ -37,8 +37,8 @@ Education
     With minors in Mathematics and Cyber Security.\\
     [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
 
-:   GPA: 3.86.\\
-    Dean's list standing.
+:   **GPA** - 3.83.\\
+    **Dean's list** - Fall 15, Spring 16, Summer 16, Fall 16, Spring 17, Summer 17, Fall 17, Spring 18, Fall 18.
 
 Experience
 --------------
@@ -50,57 +50,65 @@ Experience
 
 :   Design and develop anonymous authentication protocols for ad-hoc vehicle networks. Create writing simulation models that track power consumption and analyzes system behavior to detect anomalies.
 
-<small>Summer 18</small>
+Publications
+------------
 
-:   **Math Mentor in Mathematical Science**\\
-    [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
+[]()
 
-:   Assist high school age camp participants with understanding concepts from number theories. Help participants with writing code using Python on the mathematical software Sage.
+:	**Configurable Anonymous Authentication Schemes For The Internet of Things (IoT)**\\
+Dr. Amar A Rasheed, Dr. Ray R Hashemi, Mr. Ayman Bagabas, Mr. Jeffrey Young, Mr. Chanukya Badri and Mr. Keyur Patel. 2019 IEEE International Conference on RFID (RFID).
 
 Skills
 ------
 
-<small>Technical Skills</small>
+[]()
 
 :   **Programming Languages** -
-    C/C++, Python, Java, HTML, CSS, JavaScript, PHP, Bash, SQL, SageMath, Assembly
+    Python, Java, C/C++, JavaScript, PHP, Bash, SQL, HTML, CSS, SageMath, Assembly.
 
 :   **Operating Systems** -
-    Linux, Unix, Windows, Android
+    Linux, Unix, Windows, Android.
 
 :   **Tools** -
-    Git, Vim, Eclipse, Netbeans, Visual Studio, Atom, VirtualBox, Docker, MS Office, IE, Firefox, Chrome
+    Git, Vim, Eclipse, Netbeans, Visual Studio, Atom, KVM/Qemu, VirtualBox, Docker, MS Office, IE, Firefox, Chrome, AutoCAD.
 
 :   **Other** -
-    Embedded Systems, Debugging, Assembling/Disassembling electronics, 
+    Embedded Systems, Debugging, Assembling/Disassembling electronics, hand soldering.
 
-<small>Soft Skills</small>
+:   **Soft Skills** -
+	Strong leadership, communication, and collaboration skills.
+    Time management, Self motivation and strong research skills.
+	Adaptability and creative thinking skills.
 
-:   * Strong leadership, communication, and collaboration skills.
-    * Time management, Self motivation and strong research skills.
-	* Adaptability and creative thinking skills.
+:   **Hard Skills** -
+	Skilled in programming logic, data structures, and high mathematics.
+    Experienced with open source software and computer security.
 
-<small>Hard Skills</small>
-
-:   * Skilled in programming logic, data structures, and high mathematics.
-    * Experienced with open source software and computer security.
-
-<small>Languages</small>
-
-:   Fluent in English.\\
+:   **Languages** -
+	Fluent in English.
     Native Arabic speaker.
 
-Activities and Awards
------------------------
+Projects
+--------
 
-<small>Scholarships</small>
+[]()
+
+:	**Huawei WMI Driver** -
+	A Linux driver that enables some of the missing features on Huawei laptops.
+
+:	**CheckExercise** -
+	A Java compiler and answer checker for the famous book 'Intro to Java Programming'. Implemented using JavaServer Faces.
+
+:	**Glyrics** -
+	A simple lyrics viewer written in Python that uses GTK for its GUI.
+
+
+Scholarships
+------------
+[]()
 
 :   * Saudi Arabian Cultural Mission (SACM) Scholarship.
     * Jesse Shearouse Scholarship.
-
-<small>Leadership</small>
-
-:   Secretary of the Association for Computing Machinery (ACM) in [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} Armstrong Campus.
 
 Reference
 -----------------------
