@@ -22,7 +22,7 @@
 
 ### Computer Scientist
 {: .title }
-> Prolific problem solver with a strong urge to learn. Adept at self-motivation and assist others. Passionate about reverse engineering and data security.
+> Excellent problem solver with a strong urge to learn. Adept at self-motivation and assist others. Passionate about reverse engineering and data security.
 
 </div>
 </header>
