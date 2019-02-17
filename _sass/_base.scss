@@ -176,6 +176,10 @@ div#sidenav {
     display: block;
 }
 
+.pagination {
+	float: right;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 
 @media only screen and (max-width: 991px) {
