@@ -31,19 +31,27 @@
 Education
 ---------
 
-<small>Fall 15 - Spring 19</small>
+<small>Aug 15 - May 19</small>
 
 :   **Bachelor of Science in Computer Science**\\
     With minors in Mathematics and Cyber Security.\\
     [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
 
 :   **GPA** - 3.83.\\
-    **Dean's list** - Fall 15, Spring 16, Summer 16, Fall 16, Spring 17, Summer 17, Fall 17, Spring 18, Fall 18.
+    **Dean's list** - Fall 15, Spring 16, Summer 16, Fall 16, Spring 17, Summer 17, Fall 17, Spring 18, Fall 18.\\
+	**Scholarships** - Saudi Arabian Cultural Mission, Jesse Shearouse.
 
 Experience
 --------------
 
-<small>Fall 17 - Present</small>
+<small>Aug 18 - Present</small>
+
+:	**IoT Lab Research Assistant**\\
+    [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
+	
+:	Assist researcher in the area of Internet of Things (IoT). Organize and set up experiments. Collect and analyze data and prepare reports for publications and presentations.
+
+<small>Jan 18 - Aug 18</small>
 
 :   **Research Assistant in Computer Science**\\
     [Georgia Southern University](https://www.georgiasouthern.edu/){:target="_blank"} (Savannah GA, USA).
@@ -101,14 +109,6 @@ Projects
 
 :	**Glyrics** -
 	A simple lyrics viewer written in Python that uses GTK for its GUI.
-
-
-Scholarships
-------------
-[]()
-
-:   * Saudi Arabian Cultural Mission (SACM) Scholarship.
-    * Jesse Shearouse Scholarship.
 
 Reference
 -----------------------
