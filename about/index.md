@@ -7,7 +7,7 @@ comments: false
 
 ## Position
 
-Currently, I work at Georgia Southern University as a Student Research Assistant designing and developing anonymous authentication protocols for ad-hoc vehicle networks. Check out my resumé [here](resume.html)!
+Currently, I work at Georgia Southern University as a Student Research Assistant designing and developing anonymous authentication protocols for ad-hoc vehicle networks.
 
 ## Contact
 

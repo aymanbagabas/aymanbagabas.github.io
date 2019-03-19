@@ -8,36 +8,39 @@
 html, body {
     margin:0;
     min-width: 925px;
+	width: 100%;
+	min-height: 100%;
 }
 
 /* Whole document */
 body {
     font-family: "Open Sans", open sans, Arial, sans-serif;
-    font-size: 84%;
-    margin: auto;
+    font-size: 11pt;
+    /*margin: auto 1in auto 1in;*/
     background-color: whitesmoke;
-    min-height:100%;
-    position:relative;
+	position: relative;
+	min-height: 100vh;
 }
 
 .wrap {
-    margin: auto;
-    width: 900px;
+    margin: 0 auto;
+	width: 900px;
     padding: 10px;
 }
 
 /* Title of the resume */
 h1 {
     font-weight: 800;
-    font-size: 55px;
+    font-size: 32pt;
     color: white;
     /*text-align:center;*/
-    margin:0 auto 10px 17%;
+    /*margin:0 auto 10px 17%;*/
+	margin: 10px auto 10px auto;
 }
 
 /* Titles of categories */
 h2 {
-    font-size: 25px;
+    font-size: 20pt;
     color: black;
 	padding-left: 17%;
 }
@@ -52,34 +55,41 @@ h2 {
 /*}*/
 /* Definitions */
 dt {
-    float: left;
-    clear: left;
-    width: 17%;
-    color: dodgerblue;
+	font-size: 16pt;
+	float: left;
+	clear: left;
+    width: 18%;
 	font-weight: bold;
 }
+
 dd {
-    margin-left: 17%;
+    margin-left: 19%;
 }
 
 dd ul {
-	padding-left: 0px;
+	margin: auto;
+	margin-bottom: 7px;
 }
 
 p {
-    margin-top:0;
-    margin-bottom:7px;
+    margin-bottom: 7px;
+}
+
+.wrap p small {
+	color: dodgerblue;
+	float: right;
 }
 
 /* Blockquotes */
 blockquote {
+	margin: auto;
     /*text-align: center*/
-    margin-left: 17%;
+    /*margin-left: 17%;*/
     border: none;
 }
 
 blockquote p {
-    margin:0;
+    margin: 0;
 }
 
 /* Lists */
@@ -103,31 +113,36 @@ hr {
 }
 
 header, footer {
-    margin:0;
+	margin:0;
     width: 100%;
+	padding: 10px 0 10px 0;
     color: aliceblue;
     background-color: steelblue;
-    padding: 10px 0 10px 0;
     box-shadow: 5px 0 20px #888;
 }
 
-header.wrap, footer.wrap {
-    margin: 0 auto 0 17%;
+header>.wrap>*, footer>.wrap>* {
+	/*margin: auto;*/
+	margin-left: 19%;
 }
 
 .title {
-    color: white;
-    margin: 0 auto 0 17%;
+	color: white;
+	margin: auto;
 }
 
 header:before, footer:before {
     display:none;
 }
 
+header>blockquote>strong {
+	color: white;
+}
+
 header blockquote, footer blockquote {
     color: aliceblue;
     padding-top:0;
-    margin: 0 auto 0 17%;
+    /*margin: 0 auto 0 17%;*/
 }
 
 header a, header a:hover, footer a, footer a:hover {
@@ -135,29 +150,16 @@ header a, header a:hover, footer a, footer a:hover {
 }
 
 main {
-    padding-bottom:60px;   /* Height of the footer */
+	margin: 0 auto;
+    padding-bottom: 80px;   /* Height of the footer */
 }
 
 footer {
-    height: 40px;    /* Height of the footer */
-    position: absolute;
-    bottom: 0;
+    height: 60px;    /* Height of the footer */
+	position: absolute;
+	bottom: 0;
 }
 
-/* Set color to black when print */
-@media print {
-	body {
-		background-color: white;
-	}
-	header, footer {
-		color: black;
-		background-color: white;
-		box-shadow: none;
-	}
-	h1, header a, footer a,	header blockquote, footer blockquote {
-		color: black;
-	}
-	.title {
-		color: black;
-	}
+section {
+	margin-bottom: 14px;
 }
