@@ -5,15 +5,12 @@ permalink: /about/
 comments: false
 ---
 
-## Position
-
-Currently, I work at Georgia Southern University as a Student Research Assistant designing and developing anonymous authentication protocols for ad-hoc vehicle networks.
-
 ## Contact
 
+* [Email](mailto:email@aymanbagabas.com)
 * [Github](https://github.com/aymanbagabas)
-* [Keybase](https://keybase.io/aymanbagabas)
 * [Twitter](https://twitter.com/aymanbagabas)
+* [Keybase](https://keybase.io/aymanbagabas)
 
 Feel free to ask me any questions.
 

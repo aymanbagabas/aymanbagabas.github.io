@@ -7,7 +7,7 @@
 
 html, body {
     margin:0;
-    min-width: 925px;
+    min-width: 950px;
 	width: 100%;
 	min-height: 100%;
 }
@@ -15,7 +15,7 @@ html, body {
 /* Whole document */
 body {
     font-family: "Open Sans", open sans, Arial, sans-serif;
-    font-size: 11pt;
+    font-size: 12pt;
     /*margin: auto 1in auto 1in;*/
     background-color: whitesmoke;
 	position: relative;
@@ -24,7 +24,7 @@ body {
 
 .wrap {
     margin: 0 auto;
-	width: 900px;
+	width: 920px;
     padding: 10px;
 }
 
@@ -35,7 +35,7 @@ h1 {
     color: white;
     /*text-align:center;*/
     /*margin:0 auto 10px 17%;*/
-	margin: 10px auto 10px auto;
+    margin: 0 auto 10px auto;
 }
 
 /* Titles of categories */
@@ -68,11 +68,11 @@ dd {
 
 dd ul {
 	margin: auto;
-	margin-bottom: 7px;
+	margin-bottom: 5px;
 }
 
 p {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .wrap p small {
@@ -115,10 +115,14 @@ hr {
 header, footer {
 	margin:0;
     width: 100%;
-	padding: 10px 0 10px 0;
+	padding: 0 0 10px 0;
     color: aliceblue;
     background-color: steelblue;
     box-shadow: 5px 0 20px #888;
+}
+
+footer {
+    padding-top: 10px;
 }
 
 header>.wrap>*, footer>.wrap>* {
