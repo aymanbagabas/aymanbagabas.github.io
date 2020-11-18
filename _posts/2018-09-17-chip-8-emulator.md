@@ -72,7 +72,7 @@ These sprites should be stored in the reserved interpreter area 0-512 of memory.
 
 Start with the big picture, how does your computer works? After you boot your computer it starts initializing components and devices. This includes inputs, outputs, graphics, CPU, etc. Then it loads the system and starts executing instructions sequentially. The main loop should look something like this:
 
-{% highlight c++ %}
+``` cpp
 
 #include // Chip-8 system
 #include // Input
@@ -92,7 +92,7 @@ int main(int argc, char **argv) {
         // Refresh display if flag is set
         if (drawFlag)
             drawGraphics();
-        
+
         // Play beep if flag is set
         if (playSound)
             playBeep();
@@ -103,11 +103,11 @@ int main(int argc, char **argv) {
     return 0;
 }
 
-{% endhighlight %}
+```
 
 Chip-8 should implement ways to load and execute instructions:
 
-{% highlight c++ %}
+``` cpp
 
 void initChip8() {
     // initialize system
@@ -151,7 +151,7 @@ void executeOP() {
     }
 }
 
-{% endhighlight %}
+```
 
 Input and graphics depend on the libraries you will be using. I went with [SDL2](https://www.libsdl.org/) for these two since it is cross-platform, very well known, and has a lot of documentation. You can refer to my Chip-8 implementation [here](https://github.com/aymanbagabas/C8emu).
 
