@@ -9,6 +9,8 @@
     <footer class="footer social">
         <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank" class="fa fa-2x fa-twitter"></a>
         <a href="https://github.com/{{ site.github['owner_name'] }}" target="_blank" class="fa fa-2x fa-github"></a>
-        <a href="mailto:{{ site.email }}" class="fa fa-2x fa-envelope"></a><br>
+        <a href="mailto:{{ site.email }}" class="fa fa-2x fa-envelope"></a>
+        <a href="{{ site.feed.path }}" class="fa fa-2x fa-rss-square"></a>
+        <br />
         <small>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</small>
     </footer>
