@@ -2,6 +2,7 @@
 layout: "post"
 title: "Arch Linux on Matebook X Pro"
 comments: true
+tags: linux huawei archlinux
 ---
 
 Recently, I got a new laptop, Huawei Matebook X Pro. It has an i7 8th Gen. Intel CPU, 16Gib of RAM, 512Gib of SSD storage, Nvidia MX150 GPU with 2Gib of DRAM, and a beautiful HiDPI and touchscreen. It also comes with a fingerprint sensor. The first thing I did was installing Arch Linux, because well I am a Linux user! In the end, everything was working properly except:

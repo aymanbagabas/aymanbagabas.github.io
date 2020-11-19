@@ -3,6 +3,7 @@ layout: post
 title: Dropbox client on Ubuntu server 16.04
 date: '2017-08-06 23:19'
 comments: true
+tags: linux dropbox systemd
 ---
 
 Dropbox, in my opinion, is the best cloud service available. I wanted to have one shared dropbox folder that is accessible from all my virtual machines running on the server. I am using a ZFS drive as a storage drive, the dropbox folder is located in the ZFS drive. Dropbox service is running as a normal user, not the root, and the server is using systemd to start the service after booting the system.

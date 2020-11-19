@@ -3,6 +3,7 @@ layout: "post"
 title: "What is Jekyll?"
 date: "2017-06-09 18:12"
 comments: true
+tags: jekyll ruby
 ---
 
  [Jekyll](https://jekyllrb.com/) is a static website builder, it assembeles and combines multiple pages to form one unified HTML page. Jekyll uses YAML language to organize the structure of the page. [Markdown](https://daringfireball.net/projects/markdown/) language, which is a text-to-HTML converter, makes webpages easy to write and adapt.

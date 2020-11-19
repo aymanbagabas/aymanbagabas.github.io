@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: Dynamic DNS using DDclient
+tags: linux dns
 ---
 
 [DDclient](http://ddclient.sf.net/) is a service used to update dynamic DNS entries on many services. It is useful if you need a DDNS client that can work with pretty much any DNS service. Most distributions provide `DDclient` in their official repositories. It is available on Debian-based systems, Fedora, Archlinux, and many more.

@@ -2,6 +2,7 @@
 layout:    "post"
 title:     "Minesweeper using HTML5"
 comments:  yes
+tags: javascript html css
 ---
 
 Obviously, everyone was born before the year 2000 knows the famous classic game 'Minesweeper'. To me, I knew this game when I was little at the time where Windows XP was ruling everywhere. It is funny because at that time I did not know exactly how the game is played. That time the game was some kind of a luck game to me where you try to eliminate all the squares except the ones with mines until you either win or lose :laughing:.

@@ -3,6 +3,7 @@ layout   : "post"
 title    : "Sync Google calendar using Vdirsyncer and Orage"
 date     : 2018-04-08
 comments : true
+tags: google-calendar vdirsyncer caldav xfce linux
 ---
 
 For a long time I wanted to have all my calendars and todo lists synchronized with my current desktop setup. Currently, I am using XFCE software, like Thunar, with Openbox to manage everyday stuff. Yes, I know with Gnome DE you can achieve that easily, but Gnome has a HUGE package dependencies. XFCE on the other hand is very light-weight and simple.

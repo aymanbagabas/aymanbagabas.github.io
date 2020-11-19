@@ -2,6 +2,7 @@
 layout: "post"
 title: "Suspend then hibernate in systemd 239"
 comments: true
+tags: linux systemd
 ---
 
 In *systemd* 239, they have added a new service that handles suspending then hibernating after a given amount of time. This is easier than using external scripts since it comes built-in with this version of *systemd*. You can check *systemd* version with `systemctl --version`.
