@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Tag: {{ page.tag }}</h1>
+<br />
+<ul>
+{% for post in site.tags[page.tag] %}
+	<li>
+		<a href="{{ post.url | relative_url }}">{{ post.title }}</a> - <small>[ <i>{{ post.date | date_to_string }}</i> ]</small>
+			{{ post.excerpt | strip | remove_first: '</p>' }} <a href='{{ post.url | relative_url }}'>Read more...</a></p>
+	</li>
+{% endfor %}
+</ul>
