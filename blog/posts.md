@@ -3,6 +3,14 @@ title: "Ayman Bagabas - Index"
 layout: default
 ---
 
+## Tags
+
+<p>
+{% for tag in site.tags %}
+<small>[{{ tag[0] }}](/blog/tag/{{ tag[0] }}.html)</small>
+{% endfor %}
+</p>
+
 # Index
 
 {% for post in site.posts %}
