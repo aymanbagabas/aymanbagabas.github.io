@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Ayman Bagabas - About me"
-permalink: /about/
+permalink: /contact/
 comments: false
 ---
 
@@ -12,7 +12,7 @@ comments: false
 * [Twitter](https://twitter.com/aymanbagabas)
 * [Keybase](https://keybase.io/aymanbagabas)
 
-Feel free to ask me any questions.
+Drop me a message below.
 
 {% include contact-form.html %}
 

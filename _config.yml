@@ -23,8 +23,8 @@ url: "http://aymanbagabas.com" # the base hostname & protocol for your site, e.g
 repository: aymanbagabas/aymanbagabas.github.io
 sidenav:
   about: 
-     title: "About me"
-     path: "/about/"
+     title: "Contact me"
+     path: "/contact/"
   blog:
     title: "Blog"
     path: "/blog/"
