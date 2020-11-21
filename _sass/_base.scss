@@ -180,6 +180,14 @@ div#sidenav {
 	float: right;
 }
 
+.toc {
+    margin: 10px 0;
+}
+
+.toc summary:focus {
+    outline: none;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 
 @media only screen and (max-width: 991px) {

@@ -17,6 +17,7 @@ title: "Ayman Bagabas - Blog"
             {% endif %}
     </small>
 
+    {% include posttoc.html content=post.content %}
     {{ post.content }}
     <br>
     <center class="title"><small class="title desc"><a href="{{ post.url | relative_url }}#comments">Leave a Comment</a></small></center>

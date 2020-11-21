@@ -166,7 +166,7 @@ In order for hibernate to work, you have to define where the system should look 
 
 * Config files used in this post [etc.zip]({{ "/stuff/etc.zip" | absolute_url }}){:target="_blank"}. 
 
-## UPDATE 1 - fix sound
+### UPDATE 1 - fix sound
 
 You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` package then follow this picture and click on "Install boot override":
 
@@ -174,7 +174,7 @@ You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` p
  
 You might need to set "connectivity" to "internal" to get it working. Finally, recreate your initramfs `sudo mkinitcpio -P` and reboot.
 
-## UPDATE 2
+### UPDATE 2
 
 * Missing hotkeys `micmute, wlan, and pc manager` now work using [this](https://github.com/aymanbagabas/Huawei-WMI) driver. It will be part of linux 4.21 along with the speakers fix and micmute LED.
 * Some people reported slow network connection with the above settings. To fix that, drop `uapsd_disable=0` from `/etc/modprobe.d/iwlwifi.conf`.
