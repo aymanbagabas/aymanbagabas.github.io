@@ -16,8 +16,6 @@ Feel free to ask me any questions.
 
 {% include contact-form.html %}
 
-
-
 ## Donations
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7TMEEVMB4S4G8&currency_code=USD&source=url){: target="_blank"}

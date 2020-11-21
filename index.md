@@ -6,7 +6,7 @@ comments: false
 
 **Hello there...**
 
-My name is Ayman Bagabas. I'm a computer science student who cares about open source projects, a coffee addict, and a traveler. I like coding, playing music, and biking. Oh, and cats :cat:!
+My name is Ayman Bagabas. I'm a software developer who cares about open source projects, a coffee addict, and a traveler. I like coding, playing music, and biking. Oh, and cats :cat:!
 
 ## Top Projects
 {% include top-projects.md %}
