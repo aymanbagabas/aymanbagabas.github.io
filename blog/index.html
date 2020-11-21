@@ -5,20 +5,7 @@ title: "Ayman Bagabas - Blog"
 
 {% assign i = 1 %}
 {% for post in paginator.posts %}
-    <a class="title" href="{{ post.url | relative_url }}"><h1>{{ post.title }}</h1></a>
-    <small class="title desc"><i class="fa fa-calendar" aria-hidden="true"></i>{{ post.date | date_to_string }}
-            <i class="fa fa-comments" aria-hidden="true"></i><a href="{{ post.url | relative_url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>
-            {% if post.tags.size > 0 %}
-              <i class="fa fa-tags" aria-hidden="true"</i>
-                {% for tag in post.tags %}
-                  <a href="/blog/tag/{{ tag }}.html">{{ tag }}</a>
-                {% endfor %}
-              </i>
-            {% endif %}
-    </small>
-
-    {% include posttoc.html content=post.content %}
-    {{ post.content }}
+    {% include post.html post=post %}
     <br>
     <center class="title"><small class="title desc"><a href="{{ post.url | relative_url }}#comments">Leave a Comment</a></small></center>
     <br>

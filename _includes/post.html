@@ -1,0 +1,15 @@
+
+<a href="{{ include.post.url | relative_url }}" class="title"><h1>{{ include.post.title }}</h1></a>
+<small class="title desc"><i class="fa fa-calendar" aria-hidden="true"></i>{{ include.post.date | date_to_string }}
+        <i class="fa fa-comments" aria-hidden="true"></i><a class="disqus-comment-count" href="{{ include.post.url | relative_url }}#disqus_thread" data-disqus-identifier="{{ include.post.id }}">0 Comments</a>
+        {% if include.post.tags.size > 0 %}
+            <i class="fa fa-tags" aria-hidden="true"</i>
+                {% for tag in include.post.tags %}
+                    <a href="/blog/tag/{{ tag }}.html">{{ tag }}</a>
+                {% endfor %}
+            </i>
+        {% endif %}
+</small>
+
+{% include posttoc.html content=include.post.content %}
+{{ include.post.content }}
