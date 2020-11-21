@@ -183,6 +183,10 @@ div#sidenav {
     outline: none;
 }
 
+.contact {
+    width: 100%;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 
 @media only screen and (max-width: 991px) {
@@ -207,7 +211,7 @@ div#sidenav {
     }
     .col-md-10 {
         margin-left: 25em;
-        width: auto;
+        width: 100%;
 		max-width: 850px;
     }
     .content {
