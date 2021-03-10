@@ -12,4 +12,4 @@
 </small>
 
 {% include posttoc.html content=include.post.content %}
-{{ include.post.content }}
+{% include anchor_headings.html html=include.post.content anchorBody="#" anchorClass="hanchor" %}
