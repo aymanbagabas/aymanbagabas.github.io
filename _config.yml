@@ -75,3 +75,5 @@ permalink: /blog/:categories/:year/:month/:day/:title:output_ext
 
 feed:
   path: /blog/feed.xml
+
+theme: null
