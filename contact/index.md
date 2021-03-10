@@ -10,7 +10,6 @@ comments: false
 * [Email](mailto:email@aymanbagabas.com)
 * [Github](https://github.com/aymanbagabas)
 * [Twitter](https://twitter.com/aymanbagabas)
-* [Keybase](https://keybase.io/aymanbagabas)
 
 Drop me a message below.
 
