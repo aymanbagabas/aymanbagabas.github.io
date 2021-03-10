@@ -18,8 +18,8 @@ author: Ayman Bagabas
 email: email@aymanbagabas.com
 description: >
   ~
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://aymanbagabas.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://aymanbagabas.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: aymanbagabas/aymanbagabas.github.io
 sidenav:
   about: 
