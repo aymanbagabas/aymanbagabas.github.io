@@ -1,59 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: base
+---
 
-<head>
-  {% include head.html %}
-</head>
+<header>
+  {% include sidenav.html %}
+</header>
+<main class="content">
+  {% include anchor_headings.html html=content anchorBody="#" anchorClass="hanchor" %}
+</main>
+<footer>
+  {% include footer.html %}
+</footer>
+<script id="dsq-count-scr" src="https://{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
+<script>
+  function setDataLang() {
+    var els = document.querySelectorAll('[class^=language-')
 
-<body>
-  <header>
-    {% include sidenav.html %}
-  </header>
-  <main class="content">
-    {% include anchor_headings.html html=content anchorBody="#" anchorClass="hanchor" %}
-  </main>
-  <footer>
-    {% include footer.html %}
-  </footer>
-  <script id="dsq-count-scr" src="https://{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
-  <script>
-    function setDataLang() {
-      var els = document.querySelectorAll('[class^=language-')
-
-      for (var el of els) {
-        if (!el.getAttribute('data-lang') && el.getElementsByTagName('pre').length > 0) {
-          var regex = /language-(.*)/
-          var lang
-          for (var cls of el.classList) {
-            if (regex.test(cls)) {
-              lang = cls.match(regex)[1]
-            }
+    for (var el of els) {
+      if (!el.getAttribute('data-lang') && el.getElementsByTagName('pre').length > 0) {
+        var regex = /language-(.*)/
+        var lang
+        for (var cls of el.classList) {
+          if (regex.test(cls)) {
+            lang = cls.match(regex)[1]
           }
-          el.setAttribute('data-lang', lang)
         }
+        el.setAttribute('data-lang', lang)
       }
     }
+  }
 
-    function toggleTheme() {
-      var themeIcon = document.getElementById('toggleTheme')
-      if (document.body.classList.contains('dark')) {
-        document.body.classList.remove('dark')
-      } else {
-        document.body.classList.add('dark')
-      }
-      if (loadDisqus) {
-        loadDisqus() // defined in _layouts/post.html
-      }
-    }
-
-    if (window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      var themeIcon = document.getElementById('toggleTheme')
+  function toggleTheme() {
+    var themeIcon = document.getElementById('toggleTheme')
+    if (document.body.classList.contains('dark')) {
+      document.body.classList.remove('dark')
+    } else {
       document.body.classList.add('dark')
     }
+    if (loadDisqus) {
+      loadDisqus() // defined in _layouts/post.html
+    }
+  }
 
-    setDataLang()
-  </script>
-</body>
+  if (window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    var themeIcon = document.getElementById('toggleTheme')
+    document.body.classList.add('dark')
+  }
 
-</html>
+  setDataLang()
+</script>
