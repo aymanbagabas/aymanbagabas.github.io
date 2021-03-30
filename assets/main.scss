@@ -82,6 +82,10 @@ hr {
   background-color: rgba(var(--border-color), 0.1) !important;
 }
 
+p {
+  word-break: break-word;
+}
+
 code {
   color: var(--color-darkGrey);
 }
@@ -119,8 +123,11 @@ blockquote {
   }
 }
 
-summary::marker {
-  color: var(--color-primary);
+summary {
+  &::marker,
+  &::-webkit-details-marker {
+    color: var(--color-primary);
+  }
 }
 
 .toc {
