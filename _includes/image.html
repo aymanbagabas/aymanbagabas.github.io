@@ -1,0 +1,14 @@
+<figure class="image" markdown="0">
+    {% if include.url %}
+    <a href="{{ include.url }}">
+        {% endif %}
+        <img src="{{ include.file }}"
+            style="max-width: {% if include.max-width %}{{ include.max-width }}{% else %}100%{% endif %};"
+            alt="{% if include.alt %}{{ include.alt }}{% else %}{{ include.caption }}{% endif %}" />
+        {% if include.url %}
+    </a>
+    {% endif %}
+    {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>

@@ -1,16 +1,27 @@
-    <a href="{{ site.url }}{{ site.baseurl }}/"><h1 id='name'>{{ site.author }}</h1></a>
-    <p>{{ site.description }}</p>
-    {% for nav in site.sidenav %}
-        {% if nav[1] %}
-            <a href="{{ site.url }}{{ site.baseurl }}{{ nav[1]['path'] }}">{{ nav[1]['title'] }}</a><br>
-        {% endif %}
-    {% endfor %}
-    <br>
-    <footer class="footer social">
-        <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank" class="fa fa-2x fa-twitter"></a>
-        <a href="https://github.com/{{ site.github['owner_name'] }}" target="_blank" class="fa fa-2x fa-github"></a>
-        <a href="mailto:{{ site.email }}" class="fa fa-2x fa-envelope"></a>
-        <a href="{{ site.feed.path }}" class="fa fa-2x fa-rss-square"></a>
-        <br />
-        <small>&copy; 2017-{{ site.time | date: '%Y' }} {{ site.author }}</small>
-    </footer>
+<div class="header">
+    <a class="brand" href="/">AB</a>
+</div>
+<nav class="nav">
+    <div class="nav-left">
+        <ul>
+            {% for nav in site.sidenav %}
+            {% if nav[1] %}
+            <li>
+                <small><a href="{{ nav[1]['path'] }}">{{ nav[1]['title'] }}</a></small>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="nav-right">
+        <a href="https://twitter.com/{{ site.social.username }}" target="_blank" class="fab fa-twitter"
+            title="Twitter"></a>
+        <a href="https://github.com/{{ site.github['owner_name'] }}" target="_blank" class="fab fa-github"
+            title="Github"></a>
+        <a href="https://linkedin.com/in/{{ site.social.username }}" target="_blank" class="fab fa-linkedin"
+            title="LinkedIn"></a>
+        <a href="mailto:{{ site.email }}" class="fas fa-envelope" title="Email"></a>
+        <a href="{{ site.feed.path }}" class="fas fa-rss-square" title="RSS Feed"></a>
+        <a href="#" id='toggleTheme' class="fas fa-adjust" onclick="toggleTheme()" title="Toggle Theme"></a>
+    </div>
+</nav>
