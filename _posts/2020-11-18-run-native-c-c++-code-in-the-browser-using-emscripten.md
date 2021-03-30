@@ -48,7 +48,7 @@ To be able to call C functions within JavaScript, we have to compile `bmf2mof` w
 Using `MODULARIZE` compiler flag makes the generated JavaScript modular where you can use promises and `require()` in Node. `EXPORT_NAME='bmf2mof'` compiler flag changes the exported module name, in this case, it would be named `bmf2mof()`. `WASM=1` specifies that we want a wasm output. And finally `"EXPORTED_FUNCTIONS=['_parse_data']"` exports the function `parse_data` from the C code. We also want to [optimize](https://emscripten.org/docs/optimizing/Optimizing-Code.html) the output JS code so we will use `-O2`.
 
 ``` sh
-emcc bmfdec/bmf2mof.c -s "EXPORTED_FUNCTIONS=['_parse_data']" -s "MODULARIZE=1" -s "EXPORT_NAME='bmf2mof'" -s "WASM=1" -O2 -o bmf2mof.js`.
+emcc bmfdec/bmf2mof.c -s "EXPORTED_FUNCTIONS=['_parse_data']" -s "MODULARIZE=1" -s "EXPORT_NAME='bmf2mof'" -s "WASM=1" -O2 -o bmf2mof.js
 ```
 
 Now the generated `bmf2mof.js` will have a `_parse_data` function that maps to the C function and can be called from the JavaScript code.

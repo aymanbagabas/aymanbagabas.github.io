@@ -19,9 +19,7 @@ These three steps happen in the CPU which is the main component of a system. The
 
 ## Chip-8
 
-<div class="center-image" style="width:50%;">
-![Space Invaders](https://github.com/aymanbagabas/C8emu/raw/master/shot1.png){: .center-image .img-thumbnail .img-responsive}
-</div>
+{% include image.html caption="Space Invaders" file="https://github.com/aymanbagabas/C8emu/raw/master/shot1.png" max-width="50%" %}
 
 Before you get very excited, you really have to understand how the system works and behaves. Get familiar with your binary and hexadecimal conversions. A hex viewer may come handy when debugging a program.
 

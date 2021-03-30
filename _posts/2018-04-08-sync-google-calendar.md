@@ -12,11 +12,11 @@ The other wonderful piece of software is [vdirsyncer](https://vdirsyncer.pimutil
 
 First, make sure we have all the needed packages. Orage and Vdirsyncer should exist in most distros official repositories. In Archlinux, the installation can be done with `sudo pacman -S vdirsyncer orage`. It would be similar for other distros as well. Ubuntu/Debian `sudo apt-get install vdirsyncer orage`.
 
-![orage]({{ "/images/orage1.png" }}){: .center-image }
+{% include image.html file="/images/orage1.png" caption="Orage highlighting events" %}
 
 Here you can see how orage highlights dates with events attached to them. For example, April 1st is Easter Sundy. That was pulled from my Google United States holidays calendar.
 
-![orage]({{ "/images/orage2.png" }}){: .center-image}
+{% include image.html file="/images/orage2.png" caption="Orage displaying events" %}
 
 ### Vdirsyncer setup
 
@@ -58,15 +58,15 @@ Now we have to enable CalDAV API for our Google account.
 
 Now we have Vdirsyncer config setup, we need to authorize it to access our Google account.
 
-```
-$ vdirsyncer discover calendar
+```sh
+vdirsyncer discover calendar
 ```
 
 This will try to authorize the pair 'calendar' defined in the config file. A browser window or a link should pop up to complete the authorization and that would create the access token defined in the config.
 Now we can synchronize Google calendar by
 
-```
-$ vdirsyncer sync
+```sh
+vdirsyncer sync
 ```
 Read more about [Vdirsyncer](https://vdirsyncer.pimutils.org/en/stable/index.html).
 
@@ -79,15 +79,15 @@ You should see all your calendars events highlighted within Orage. You can play 
 
 You can add a cron to automate the sync command. `crontab -e`
 
-```
+```conf
 MAILTO=""
 @hourly vdirsyncer sync
 ```
 
 This will sync calendars every hour. Make sure you have a cron service running. I am using "cronie" for my setup and with Archlinux, I had to enable the cronie service for that to happen.
 
-```
-$ sudo systemctl enable cronie
-$ sudo systemctl start cronie
+```sh
+sudo systemctl enable cronie
+sudo systemctl start cronie
 ```
 
