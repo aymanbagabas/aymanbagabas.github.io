@@ -6,21 +6,67 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2 narrow">
-                <div id="sidenav">
-                    {% include sidenav.html %}
-                </div>
+    <header>
+        {% include sidenav.html %}
+    </header>
+    <main class="content">
+        {% include anchor_headings.html html=content anchorBody="#" anchorClass="hanchor" %}
+    </main>
+    <footer>
+        <hr />
+        <small>
+            <div>
+                <i class="fas fa-copyright"></i> 2017-{{ site.time | date: '%Y' }} {{ site.author }}. This work is
+                liscensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC
+                    4.0</a>.
             </div>
-            <div id="wide" class="col-md-10">
-                <div class="content">
-                    {{ content }}
-                </div>
+            <div>
+                Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, <a
+                    href="https://pages.github.com/" target="_blank">Github Pages</a>, and <a
+                    href="https://github.com/aymanbagabas/aymanbagabas.github.io"
+                    target="_blank">aymanbagabas.github.io</a>.
             </div>
-        </div>
-    </div>
+        </small>
+    </footer>
     <script id="dsq-count-scr" src="https://{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
+    <script>
+        function setDataLang() {
+            var els = document.querySelectorAll('[class^=language-')
+
+            for (var el of els) {
+                if (!el.getAttribute('data-lang') && el.getElementsByTagName('pre').length > 0) {
+                    var regex = /language-(.*)/
+                    var lang
+                    for (var cls of el.classList) {
+                        if (regex.test(cls)) {
+                            lang = cls.match(regex)[1]
+                        }
+                    }
+                    el.setAttribute('data-lang', lang)
+                }
+            }
+        }
+
+        function toggleTheme() {
+            var themeIcon = document.getElementById('toggleTheme')
+            if (document.body.classList.contains('dark')) {
+                document.body.classList.remove('dark')
+            } else {
+                document.body.classList.add('dark')
+            }
+            if (loadDisqus) {
+                loadDisqus() // defined in _layouts/post.html
+            }
+        }
+
+        if (window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            var themeIcon = document.getElementById('toggleTheme')
+            document.body.classList.add('dark')
+        }
+
+        setDataLang()
+    </script>
 </body>
 
 </html>
