@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "Ayman Bagabas - Projects"
-permalink: /projects/
+title: "Projects"
 ---
 
-## Top Projects
-{% include top-projects.md %}
+# Projects
 
-## Other Projects
-
+<ul>
 {% for repository in site.github.public_repositories %}
-* [{{ repository.name }}]({{ repository.html_url }}){:target="_blank"}\\
-{{ repository.description }}
+<li>
+<a href="{{ repository.html_url }}" target="_blank">{{ repository.name }}</a>
+<p>{{ repository.description }}</p>
+</li>
 {% endfor %}
+<ul>
