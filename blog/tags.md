@@ -43,7 +43,7 @@ The purpose of this snippet is to list all the tags you have in your site.
 =======================
 {% endcomment %}
 
-# Tags 
+# Tags
 
 <p>
 {% for tag in tags %}

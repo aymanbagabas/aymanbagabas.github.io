@@ -22,7 +22,7 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://aymanbagabas.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: aymanbagabas/aymanbagabas.github.io
 sidenav:
-  about: 
+  about:
      title: "About"
      path: "/about/"
   blog:
