@@ -23,24 +23,27 @@ url: "https://aymanbagabas.com" # the base hostname & protocol for your site, e.
 repository: aymanbagabas/aymanbagabas.github.io
 sidenav:
   about: 
-     title: "Contact me"
-     path: "/contact/"
+     title: "About"
+     path: "/about/"
   blog:
     title: "Blog"
     path: "/blog/"
-  blog_index:
-    title: "Index"
-    path: "/blog/posts.html"
+  blog_archive:
+    title: "Archive"
+    path: "/blog/archive"
+  blog_tags:
+    title: "Tags"
+    path: "/blog/tags"
   projects:
      title: "Projects"
      path: "/projects/"
-twitter:
-  username: aymanbagabas
 social:
   name: Ayman Bagabas
+  username: aymanbagabas
   links:
     - https://twitter.com/aymanbagabas
     - https://github.com/aymanbagabas
+    - https://linkedin.com/in/aymanbagabas
 disqus_shortname: "blog-aymanbagabas-com"
 google_analytics: "UA-119528295-1"
 
