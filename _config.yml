@@ -24,10 +24,10 @@ repository: aymanbagabas/aymanbagabas.github.io
 sidenav:
   about:
      title: "About"
-     path: "/about/"
+     path: "/about"
   blog:
     title: "Blog"
-    path: "/blog/"
+    path: "/blog"
   blog_archive:
     title: "Archive"
     path: "/blog/archive"
@@ -36,7 +36,7 @@ sidenav:
     path: "/blog/tags"
   projects:
      title: "Projects"
-     path: "/projects/"
+     path: "/projects"
 social:
   name: Ayman Bagabas
   username: aymanbagabas
