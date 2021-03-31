@@ -37,8 +37,8 @@ layout: base
     } else {
       document.body.classList.add('dark')
     }
-    if (loadDisqus) {
-      loadDisqus() // defined in _layouts/post.html
+    if (window.DISQUS) {
+      window.DISQUS.reset({ reload: true })
     }
   }
 
