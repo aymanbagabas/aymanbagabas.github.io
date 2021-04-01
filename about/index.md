@@ -9,6 +9,13 @@ title: "About"
 - [Github](https://github.com/aymanbagabas)
 - [Twitter](https://twitter.com/aymanbagabas)
 
+<details markdown="0">
+    <summary>
+        <a href="/pgp.txt" download>PGP Key</a>
+    </summary>
+    <pre><code>{% include pgp.txt %}</code></pre>
+</details>
+
 Send me a message.
 
 {% include contact-form.html %}
