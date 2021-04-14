@@ -8,6 +8,7 @@ title: "About"
 - [Email](mailto:email@aymanbagabas.com)
 - [Github](https://github.com/aymanbagabas)
 - [Twitter](https://twitter.com/aymanbagabas)
+- [Keybase](https://keybase.io/aymanbagabas)
 
 <details markdown="0">
     <summary>
