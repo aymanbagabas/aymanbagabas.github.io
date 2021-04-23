@@ -26,9 +26,9 @@
 
 @import url(https://unpkg.com/chota@0.8.0/dist/chota.min.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css);
+@import url(https://cdn.jsdelivr.net/gh/aymanbagabas/iosevka-fonts@v5.2.1/dist/iosevka/iosevka.min.css);
+@import url(https://cdn.jsdelivr.net/gh/aymanbagabas/iosevka-fonts@v5.2.1/dist/iosevka-etoile/iosevka-etoile.min.css);
 @import "syntax";
-@import "iosevka";
-@import "iosevka-etoile";
 
 :root {
   --bg-color: whitesmoke;
