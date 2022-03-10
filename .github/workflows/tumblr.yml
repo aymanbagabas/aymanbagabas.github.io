@@ -1,0 +1,33 @@
+name: Tumblr importer
+
+on:
+  push:
+  schedule:
+    - cron: "0 1 * * *"
+
+jobs:
+  tumblr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          # Not needed with a .ruby-version file
+          ruby-version: 2.7
+          # runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
+
+      - run: |
+          bundle exec ruby tumblr-import.rb
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          commit_message: Update Tumblr posts
+          branch: master
+          commit_user_name: tumblr-bot 🤖
+          commit_user_email: actions@github.com
+          commit_author: tumblr-bot 🤖 <actions@github.com>
