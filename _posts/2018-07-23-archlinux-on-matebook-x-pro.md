@@ -164,14 +164,14 @@ In order for hibernate to work, you have to define where the system should look 
 
 ### Files
 
-* Config files used in this post [etc.zip]({{ "/stuff/etc.zip" | absolute_url }}){:target="_blank"}. 
+* Config files used in this post [etc.zip]({{ "/assets/stuff/etc.zip" | absolute_url }}){:target="_blank"}.
 
 ### UPDATE 1 - fix sound
 
 You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` package then follow this picture and click on "Install boot override":
 
-{% include image.html file="/images/hdajackretask.png" caption="HDAJackReTask" max-width="100%" %}
- 
+{% include image.html file="/assets/images/hdajackretask.png" caption="HDAJackReTask" max-width="100%" %}
+
 You might need to set "connectivity" to "internal" to get it working. Finally, recreate your initramfs `sudo mkinitcpio -P` and reboot.
 
 ### UPDATE 2

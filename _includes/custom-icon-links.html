@@ -1,0 +1,5 @@
+{% for s in site.data.icon-links %}
+<a id="{{ s.name }}-link" class="icon {{ s.class }}" title="{{ s.name | capitalize }}"
+  aria-label="{{ s.name | capitalize }}" href="{{ s.url }}" target="_blank">
+</a>
+{% endfor %}

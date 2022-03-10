@@ -1,8 +1,0 @@
-{% if include.content contains '<h' %}
-<small>
-    <details class="toc" open="true">
-        <summary>Table of Contents</summary>
-        {% include toc.html html=include.content %}
-    </details>
-</small>
-{% endif %}

@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
+sidebar_link: true
+sidebar_sort_order: 3
 title: "Projects"
 ---
-
-# Projects
 
 <ul>
 {% for repository in site.github.public_repositories %}

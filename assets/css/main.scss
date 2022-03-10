@@ -1,0 +1,21 @@
+---
+# Jekyll needs front matter for SCSS files
+---
+
+$sidebar-bg-color: #ac4142;
+$sidebar-sticky: true;
+$link-color: $sidebar-bg-color;
+@import "hydeout";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+
+#sidebar nav > .fab.icon,
+#sidebar nav > .fas.icon {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1em;
+  margin-top: 0.29em;
+  padding: 0 5px;
+}
+
+:root {
+  --color-primary: #ac4142;
+}
