@@ -20,7 +20,7 @@ Name pronunciation: **Aye-men Ba-ga-bas**
 - [Email][email]
 - [Twitter][twitter]{:target="_blank" }
 - [Telegram][telegram]{:target="_blank" }
-- [Tumblr][tumblr]
+- [Tumblr][tumblr]{:target="_blank" }
 
 ### PGP Key
 
@@ -35,7 +35,7 @@ curl -sL {{ site.url }}/key0x{{ site.data.pgp.id }}.asc | gpg --import
 
 ### If you like what I do...
 
-Or find any of it useful, consider [sponsoring me on Github](https://github.com/sponsors/aymanbagabas) or buying me coffee.
+Or find any of it useful, consider [sponsoring me on Github](https://github.com/sponsors/aymanbagabas){:target="_blank" } or buying me coffee.
 
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=7TMEEVMB4S4G8&currency_code=USD&source=url){: target="_blank"}
 
