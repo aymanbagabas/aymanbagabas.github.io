@@ -1,0 +1,15 @@
+- name: email
+  url: mailto:{{ site.email }}
+  class: fas fa-envelope
+
+- name: twitter
+  url: https://twitter.com/{{ site.twitter.username }}
+  class: fab fa-twitter
+
+- name: github
+  url: https://github.com/{{ site.github.username }}
+  class: fab fa-github-alt
+
+- name: linkedin
+  url: https://linkedin.com/in/{{ site.linkedin.username }}
+  class: fab fa-linkedin
