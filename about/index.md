@@ -9,7 +9,7 @@ title: "About"
 
 He received his Bachelor's degree in Computer Science from Georgia Southern University in 2019. He is currently working as a Software and DevOps Engineer at [Charmbracelet, Inc.](https://charm.sh/){:target="_blank" }. Previously, he worked as a Junior Software Engineer at [MyHealthily](https://myhealthily.com/){:target="_blank" }.
 
-Ayman is interested in system designs, distributed systems, IoT and embedded systems, and software engineering in general. Feel free to drop me a line if you have any questions or comments :)
+Ayman is interested in system designs, distributed systems, IoT and embedded systems, and software engineering in general. Feel free to drop him a line if you have any questions or comments :)
 
 While not working on his daily job, Ayman spends his time hacking on [open source projects][github]{:target="_blank" }, learning new technologies, [making music][soundcloud]{:target="_blank" }, [exploring nature][tumblr]{:target="_blank" }, and sometimes [playing video games][steam]{:target="_blank" }.
 
