@@ -1,0 +1,36 @@
+---
+layout: page
+sidebar_link: true
+sidebar_sort_order: 3
+title: "Projects"
+---
+
+{% comment %}
+Repository JSON structure https://docs.github.com/en/rest/reference/repos#get-a-repository--code-samples
+{% endcomment %}
+
+<br />
+
+<ul class="project-list">
+  {% for repo in site.github.public_repositories %}
+  {% unless repo.fork %}
+  <li>
+    {% include repository.html repository=repo %}
+  </li>
+  {% endunless %}
+  {% endfor %}
+</ul>
+
+<br />
+
+<h2>Projects Contributed to</h2>
+
+<ul class="project-list">
+  {% for repo in site.github.public_repositories %}
+  {% if repo.fork %}
+  <li>
+    {% include repository.html repository=repo %}
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>

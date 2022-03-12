@@ -16,6 +16,47 @@ $link-color: $sidebar-bg-color;
   padding: 0 5px;
 }
 
+.project-list {
+  list-style: none;
+  padding-left: 0;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  li p {
+    color: #999;
+    font-size: 75%;
+  }
+
+  li a {
+    display: block;
+  }
+
+  li a:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  li a:hover p {
+    color: inherit;
+  }
+
+  li small {
+    color: #999;
+    font-size: 75%;
+  }
+
+  li a:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  li a:hover small {
+    color: inherit;
+  }
+}
+
 :root {
   --color-primary: #ac4142;
 }
