@@ -3,6 +3,9 @@
   {% if include.repository.stargazers_count > 0 %}
   <small>{{ include.repository.stargazers_count }} 🌟</small>
   {% endif %}
+  {% if include.repository.archived %}
+  <i class="archived"></i>
+  {% endif %}
   <p>
     {{ include.repository.description }}
   </p>

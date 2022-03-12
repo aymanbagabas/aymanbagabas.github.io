@@ -24,9 +24,12 @@ $link-color: $sidebar-bg-color;
     margin-top: 0;
   }
 
-  li p {
-    color: #999;
-    font-size: 75%;
+  li {
+    p,
+    small {
+      color: #999;
+      font-size: 75%;
+    }
   }
 
   li a {
@@ -38,22 +41,23 @@ $link-color: $sidebar-bg-color;
     text-decoration: none;
   }
 
-  li a:hover p {
-    color: inherit;
-  }
-
-  li small {
-    color: #999;
-    font-size: 75%;
-  }
-
   li a:hover {
-    color: $link-color;
-    text-decoration: none;
+    p {
+      color: inherit;
+    }
   }
+}
 
-  li a:hover small {
-    color: inherit;
+.archived {
+  font-style: normal;
+  color: #999;
+  border: 1px solid $border-color;
+  border-radius: 300px;
+  padding: 0.2em 0.7em;
+  font-size: 60% !important;
+
+  &:before {
+    content: "Archived";
   }
 }
 
