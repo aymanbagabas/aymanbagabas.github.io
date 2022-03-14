@@ -72,8 +72,6 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - scripts
-  - tumblr-import.rb
 paginate: 5
 paginate_path: "/page:num"
 permalink: /:categories/:year/:month/:day/:title:output_ext
