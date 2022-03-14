@@ -1,8 +1,6 @@
 ---
 layout: tags
-title: Archive
-sidebar_link: true
-sidebar_sort_order: 2
+title: Blog
 ---
 
 {% comment %}
