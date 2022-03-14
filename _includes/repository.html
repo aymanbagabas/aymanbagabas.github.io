@@ -1,12 +1,14 @@
-<a rel="noopener" rel="noreferrer" href="{{ include.repository.html_url }}" target="_blank">
-  {{ include.repository.name }}
-  {% if include.repository.stargazers_count > 0 %}
-  <small>{{ include.repository.stargazers_count }} 🌟</small>
-  {% endif %}
-  {% if include.repository.archived %}
-  <i class="archived"></i>
-  {% endif %}
-  <p>
-    {{ include.repository.description }}
-  </p>
-</a>
+<h3>
+  <a rel="noopener" rel="noreferrer" href="{{ include.repository.html_url }}" target="_blank">
+    {{ include.repository.name }}
+    {% if include.repository.stargazers_count > 0 %}
+    <small>{{ include.repository.stargazers_count }} 🌟</small>
+    {% endif %}
+    {% if include.repository.archived %}
+    <i class="archived"></i>
+    {% endif %}
+    <p>
+      {{ include.repository.description }}
+    </p>
+  </a>
+</h3>

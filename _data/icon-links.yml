@@ -1,15 +1,15 @@
 - name: email
-  url: mailto:{{ site.email }}
+  url: mailto:email@aymanbagabas.com
   class: fas fa-envelope
 
 - name: twitter
-  url: https://twitter.com/{{ site.twitter.username }}
+  url: https://twitter.com/aymanbagabas
   class: fab fa-twitter
 
 - name: github
-  url: https://github.com/{{ site.github.username }}
+  url: https://github.com/aymanbagabas
   class: fab fa-github-alt
 
 - name: linkedin
-  url: https://linkedin.com/in/{{ site.linkedin.username }}
+  url: https://linkedin.com/in/aymanbagabas
   class: fab fa-linkedin
