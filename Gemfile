@@ -31,3 +31,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "jekyll-theme-hydeout", "~> 4.1"
 
 gem "jekyll-import"
+
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
