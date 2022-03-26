@@ -33,7 +33,7 @@ The server works by receiving requests from clients, reading the client’s term
 
 # Where To Find?
 
-You can find this project on Github [aymanbagabas/nyancatsh](https://github.com/aymanbagabas/nyancatsh). Or you could install it using `go install github.com/aymanbagabas/nyancatsh@latest`. If you want the non-ssh version that only uses Bubbletea `go install github.com/aymanbagabas/nyancatsh/cmd/nyancat@latest`
+You can find this project on Github [aymanbagabas/nyancatsh](https://github.com/aymanbagabas/nyancatsh). You could also install it using `go install github.com/aymanbagabas/nyancatsh@latest`. If you want the non-ssh version that only uses Bubbletea `go install github.com/aymanbagabas/nyancatsh/cmd/nyancat@latest`
 
 # Credits
 
