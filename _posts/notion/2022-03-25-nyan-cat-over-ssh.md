@@ -7,9 +7,11 @@ tags: ssh tui terminal
 
 Everyone knows the Nyan Cat meme that started in 2011. The meme started from a [YouTube](https://www.youtube.com/watch?v=QH2-TGUlwu4) video that merged a Japanese pop song with an animated cartoon cat. Then a Telnet Nyan Cat server was created by [klange/nyancat](https://github.com/klange/nyancat). And now, in 2022, after 11 years of nyaning, it got ported to SSH!
 
+![nyancat](https://github.com/aymanbagabas/nyancatsh/raw/master/nyancatsh.gif)
+
 # The Why
 
-Well, to put it simply, why not port it to SSH! SSH is a safe and more modern protocol than Telnet is.
+Well, to put it simply, why not port it to SSH! SSH is safer and a more modern protocol than Telnet is.
 
 # The How
 
@@ -17,7 +19,7 @@ For this, I went with [charmbracelet/wish](https://github.com/charmbracelet/wish
 
 # Implementation
 
-Nyan Cat C implementation consists of multiple [frames](https://github.com/klange/nyancat/blob/master/src/animation.c) that then get translated to ANSI256 colors. Each character in these frames represents a color which then gets rendered as a background for 2 whitespace characters within a [90-millisecond](https://github.com/klange/nyancat/blob/master/src/nyancat.c#L385) interval (the default).
+Nyan Cat C implementation consists of multiple [frames](https://github.com/klange/nyancat/blob/master/src/animation.c) that then get translated to ANSI256 colors. Each character in these frames represents a color which then gets rendered as a background of 2 whitespace characters within a [90-millisecond](https://github.com/klange/nyancat/blob/master/src/nyancat.c#L385) interval (the default).
 
 All that is done after the program determines the terminal size and whether or not to crop the frames before they are being rendered. Thankfully, I didn’t need to do any of those calculations, thanks to [NARKOZ](https://github.com/NARKOZ) port of [Nyan Cat in Golang](https://github.com/NARKOZ/go-nyancat).
 
@@ -37,8 +39,8 @@ You can find this project on Github [aymanbagabas/nyancatsh](https://github.com/
 
 This wouldn’t happen without these awesome projects:
 
-- https://github.com/klange/nyancat
-- https://github.com/NARKOZ/go-nyancat
-- https://github.com/charmbracelet/wish
-- https://github.com/charmbracelet/bubbletea
-- https://github.com/charmbracelet/lipgloss
+- [klange/nyancat](https://github.com/klange/nyancat)
+- [go-nyancat](https://github.com/NARKOZ/go-nyancat)
+- [charmbracelet/wish](https://github.com/charmbracelet/wish)
+- [charmbracelet/bubbletea](https://github.com/charmbracelet/bubbletea)
+- [charmbracelet/lipgloss](https://github.com/charmbracelet/lipgloss)
