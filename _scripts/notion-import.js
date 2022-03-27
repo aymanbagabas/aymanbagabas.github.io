@@ -30,6 +30,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 	})
 	for (const r of response.results) {
+		// console.log(r)
 		const id = r.id
 		// date
 		let date = moment(r.created_time).format("YYYY-MM-DD")
@@ -61,6 +62,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 				tags.push(n)
 			}
 		}
+		// comments
+		const comments = r.properties?.['No Comments']?.['checkbox'] == false
 		// frontmatter
 		let fmtags = ''
 		let fmcats = ''
@@ -78,7 +81,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 		}
 		const fm = `---
 layout: post
-comments: true
+comments: ${comments}
 date: ${date}
 title: ${title}${fmtags}${fmcats}
 ---
