@@ -72,6 +72,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
 paginate: 5
 paginate_path: "/blog/page:num"
 permalink: /blog/:categories/:year/:month/:day/:title:output_ext
