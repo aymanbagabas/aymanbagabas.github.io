@@ -13,7 +13,7 @@ Ayman is interested in system designs, distributed systems, IoT and embedded sys
 
 While not working on his daily job, Ayman spends his time hacking on [open source projects][github]{:target="_blank" }, learning new technologies, [making music][soundcloud]{:target="_blank" }, [exploring nature][tumblr]{:target="_blank" }, and sometimes [playing video games][steam]{:target="_blank" }.
 
-Name pronunciation: **Aye-men Ba-ga-bas**
+Name pronunciation: **Aye-man Ba-ga-bas**
 
 ### Contact
 
