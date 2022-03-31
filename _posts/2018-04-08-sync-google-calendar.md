@@ -22,7 +22,7 @@ Here you can see how orage highlights dates with events attached to them. For ex
 
 First, we start by configuring Vdirsyncer to sync Google calendars. My configuration file looks like this:
 
-{% highlight conf %}
+```conf
 [general]
 status_path = "~/.vdirsyncer/status/"
 
@@ -41,7 +41,7 @@ type = "google_calendar"
 token_file = "~/.vdirsyncer/google_token"
 client_id = "CLIENT_ID"
 client_secret = "CLIENT_SECRET"
-{% endhighlight %}
+```
 
 Here, we specified were the status for Vdirsyncer should be located. Mine is located under ~/.vdirsyncer/status. Then we tell Vdirsyncer to create a pair of calendars for bidirectional syncing, where **a** is the actual Google calendar, and **b** is the local files pulled from the cloud. Then we define the two calendars as storages.
 

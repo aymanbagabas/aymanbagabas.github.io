@@ -19,6 +19,9 @@ jobs:
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
 
+      # Clean tumblr posts before reimporting them
+      - run: rm -rf _posts/tumblr
+
       - run: |
           bundle exec ruby _scripts/tumblr-import.rb
 

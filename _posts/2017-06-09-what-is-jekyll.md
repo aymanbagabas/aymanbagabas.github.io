@@ -10,11 +10,11 @@ tags: jekyll ruby
 
  Jekyll is writen in Ruby and can be installed using `gem`. On a Linux machine that already has Ruby installed, Jekyll can be installed as the following:
 
-{% highlight shell %}
+```sh
 gem install jekyll bundler
 jekyll new my-awesome-site
 cd my-awesome-site
 bundle exec jekyll serve
-{% endhighlight %}
+```
 
  Now you can visualize the page using [http://localhost:4000](http://localhost:4000)

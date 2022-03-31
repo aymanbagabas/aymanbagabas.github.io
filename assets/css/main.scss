@@ -68,3 +68,7 @@ $link-color: $sidebar-bg-color;
 p {
   overflow-wrap: break-word;
 }
+
+details ul {
+  margin-bottom: 0;
+}

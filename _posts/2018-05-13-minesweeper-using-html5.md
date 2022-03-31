@@ -36,11 +36,11 @@ I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB"){:target="_blank"
 
 ### Minesweeper
 
-Coming from an Object-Oriented Programming mentality, I wanted the ability to create classes just because I am used to it this way :smiley:. I was surprised when I knew that you can mimic creating [classes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes "Classes - JavaScript"){:target="_blank"} . 
+Coming from an Object-Oriented Programming mentality, I wanted the ability to create classes just because I am used to it this way :smiley:. I was surprised when I knew that you can mimic creating [classes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes "Classes - JavaScript"){:target="_blank"} .
 
 I started by questioning what attributes each square has? And I came up with these: isMine, isFlagged, isDown, x, y, and weight. isMine tells if a square is a mine. isFlagged is when a square is being flagged or marked. isDown if a square is revealed. x and y hold the location in the game. weight is a number greater than zero where it holds how many mines within its surrounding squares. With these attributes I came with this JS class:
 
-{% highlight js linenos %}
+```js
 class square {
     constructor(x, y) {
         this.x = x;
@@ -75,7 +75,7 @@ class square {
         updateHeader();
     }
 }
-{% endhighlight %}
+```
 
 The game does not have a loop, it contains two main functions. The first one is called to initialize the game environment like setting mouse event handler. Here is where all the magic happens, whenever the user clicks the first click the timer starts and it passes the click to the game. If it was inside the game frame where the squares are located it will register a click for that square. Otherwise, it will start a new game. Which is the second function, the previous function is only called once. This one is called to clear all the previous data in the game and create a start a new game. Obviously, this is done with the help of other functions to make it a little more organized.
 
