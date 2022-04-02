@@ -11,7 +11,7 @@ tags:
 
 Lately, I started using Notion for note-taking, to-do lists, and now for writing blog posts. Notion makes it simple to combine all those activities in a unified pretty interface. Using Jekyll, Github Pages, and Github Actions, I was able to import my Notion Blog database posts into Jekyll using a Github workflow that runs twice a day.
 
-![My Notion Blog database](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e93d2eeb-9f9e-46e3-9e81-181a939cbb68/Untitled.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220402T062112Z&X-Amz-Expires=3600&X-Amz-Signature=f5a4293a663d31aee58f80a148539cdb9351334e372bc20c44ac2350ae8bed16&X-Amz-SignedHeaders=host&x-id=GetObject)
+![My Notion Blog database](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e93d2eeb-9f9e-46e3-9e81-181a939cbb68/Untitled.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220402T071619Z&X-Amz-Expires=3600&X-Amz-Signature=54eb6a5d9e55e03ef470b0fb89ca30732d222c77b835a2057f41240ca2326d5a&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 # What is a Notion Database?
 
@@ -27,7 +27,7 @@ Writing the importer script was a breeze using [Notion JavaScript SDK](https://g
 
 To use the script, first, you have to create a new Notion integration that can access your Blog page database. Simply go to settings, choose integrations, click on “develop your own integration” and create a new integration with the proper scopes.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9ae53ab-a4de-4b31-84bf-8b95b8aef7e3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220402T062112Z&X-Amz-Expires=3600&X-Amz-Signature=8eba3c7d397e46d2a8202407401a4ea75ed81d674f2361cf0b88bd9731dfcf9b&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b9ae53ab-a4de-4b31-84bf-8b95b8aef7e3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220402T071619Z&X-Amz-Expires=3600&X-Amz-Signature=d91f880b8d93c385836600107dd3ce96eddfe85f3bc16836ecad5c8fe52edf6e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 After creating that, you will get an integration key that would be used later with the script for it to work. But before that, you will need to invite your newly created integration bot to the Notion page that has the database that you want to use. Simply click the “share” button on the database page and invite the integration you just created. It will have the same name you specified when you created the integration.
 
