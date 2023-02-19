@@ -27,10 +27,9 @@ Name pronunciation: **Aye-man Ba-ga-bas**
 You can find my PGP key <a href="/key0x{{ site.data.pgp.id }}.asc" download>here</a>. Or you can import it with the following:
 
 ```sh
-gpg --keyserver hkp://pgp.mit.edu --recv-keys {{ site.data.pgp.id }}
-gpg --keyserver hkp://keyserver.pgp.com --recv-keys {{ site.data.pgp.id }}
+gpg --keyserver hkp://keys.openpgp.org --recv-keys {{ site.data.pgp.id }}
 gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys {{ site.data.pgp.id }}
-curl -sL {{ site.url }}/key0x{{ site.data.pgp.id }}.asc | gpg --import
+curl -sL {{ site.url }}/key.txt | gpg --import
 ```
 
 ### If you like what I do...

@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: key.txt
+---
+
+{{ site.data.pgp.key }}
