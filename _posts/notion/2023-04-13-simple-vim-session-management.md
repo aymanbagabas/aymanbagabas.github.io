@@ -48,14 +48,18 @@ Now, we need to add out `autocmd`s on `VimEnter` and `VimLeave`.
 -- Simple session management on directory open
 -- Here we check if the opened file is a directory.
 -- Then we load the sessionfile if exists.
+-- Set a global flag to save session later.
 -- And lastly, we delete the extra directory buffer.
-vim.api.nvim_create_autocmd("VimEnter", {
+autocmd("VimEnter", {
   callback = function(data)
     -- buffer is a directory
     local isdirectory = vim.fn.isdirectory(data.file) == 1
     if not isdirectory then
       return
     end
+
+    -- save session before exit
+    vim.g.save_session = true
 
     -- source session.vim if it exists
     local sessionfile = vim.fn.resolve(data.file .. "/.nvim/session.vim")
@@ -71,8 +75,8 @@ vim.api.nvim_create_autocmd("VimEnter", {
 
 -- Check if we are in the project root.
 -- If we are, save the session file.
-vim.api.nvim_create_autocmd("VimLeave", {
-  callback = function()
+autocmd("VimLeave", {
+  callback = function(data)
     local isproject = false
     for _, root in ipairs({ ".git", ".hg", ".bzr", ".svn", "Makefile", "package.json", "go.mod" }) do
       if vim.fn.isdirectory(root) == 1 then
@@ -82,11 +86,16 @@ vim.api.nvim_create_autocmd("VimLeave", {
     end
 
     -- only save session if we are in a project root
-    if not isproject then
+    -- and if vim started on a directory
+    if not isproject or not vim.g.save_session then
       return
     end
 
     local sessionfile = ".nvim/session.vim"
+    if vim.v.this_session ~= "" then
+      sessionfile = vim.v.this_session
+    end
+
     vim.fn.mkdir(".nvim", "p")
     vim.cmd("mksession! " .. sessionfile)
   end,
