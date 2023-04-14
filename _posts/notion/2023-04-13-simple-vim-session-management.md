@@ -78,7 +78,7 @@ autocmd("VimEnter", {
 autocmd("VimLeave", {
   callback = function(data)
     local isproject = false
-    for _, root in ipairs({ ".git", ".hg", ".bzr", ".svn", "Makefile", "package.json", "go.mod" }) do
+    for _, root in ipairs({ ".git", ".hg", ".bzr", ".svn" }) do
       if vim.fn.isdirectory(root) == 1 then
         isproject = true
         break
