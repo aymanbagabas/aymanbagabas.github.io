@@ -50,7 +50,7 @@ Now, we need to add out `autocmd`s on `VimEnter` and `VimLeave`.
 -- Then we load the sessionfile if exists.
 -- Set a global flag to save session later.
 -- And lastly, we delete the extra directory buffer.
-autocmd("VimEnter", {
+vim.api.nvim_create_autocmd("VimEnter", {
   callback = function(data)
     -- buffer is a directory
     local isdirectory = vim.fn.isdirectory(data.file) == 1
@@ -59,12 +59,22 @@ autocmd("VimEnter", {
     end
 
     -- save session before exit
-    vim.g.save_session = true
+    vim.g.save_session = false
 
-    -- source session.vim if it exists
-    local sessionfile = vim.fn.resolve(data.file .. "/.nvim/session.vim")
-    if vim.fn.filereadable(sessionfile) == 1 then
-      vim.cmd("source " .. sessionfile)
+    -- check if directory is a project directory
+    for _, root in ipairs({ ".git", ".hg", ".bzr", ".svn" }) do
+      if vim.fn.isdirectory(data.file .. "/" .. root) == 1 then
+        vim.g.save_session = true
+        break
+      end
+    end
+
+    if vim.g.save_session then
+      -- source session.vim if it exists
+      local sessionfile = vim.fn.resolve(data.file .. "/.nvim/session.vim")
+      if vim.fn.filereadable(sessionfile) == 1 then
+        vim.cmd("source " .. sessionfile)
+      end
     end
 
     -- wipe the directory buffer
@@ -75,19 +85,10 @@ autocmd("VimEnter", {
 
 -- Check if we are in the project root.
 -- If we are, save the session file.
-autocmd("VimLeave", {
+vim.api.nvim_create_autocmd("VimLeave", {
   callback = function(data)
-    local isproject = false
-    for _, root in ipairs({ ".git", ".hg", ".bzr", ".svn" }) do
-      if vim.fn.isdirectory(root) == 1 then
-        isproject = true
-        break
-      end
-    end
-
-    -- only save session if we are in a project root
-    -- and if vim started on a directory
-    if not isproject or not vim.g.save_session then
+    -- only save session if vim started on a directory
+    if not vim.g.save_session then
       return
     end
 
