@@ -129,7 +129,7 @@ title: ${title}${fmtags}${fmcats}
 `;
     const canonical = r.properties?.["Canonical URL"]?.["url"];
     if (canonical) {
-      fm += "canonical_url: ${canonical}\n";
+      fm += `canonical_url: ${canonical}\n`;
     }
 
     fm += "---\n";
