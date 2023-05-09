@@ -171,10 +171,7 @@ To be able to use HTTPS in [Soft Serve](https://github.com/charmbracelet/soft-se
 > Note: if you're not using a domain name, you won't be able to issue an HTTPS certificate since Let's Encrypt doesn't allow the use of bare IP addresses. ZeroSSL is a great alternative that supports bare IP addresses.
 
 
-<picture>
-<source srcset="[https://stuff.charm.sh/blog/self-hosted-soft-serve/certbot-options.png](https://stuff.charm.sh/blog/self-hosted-soft-serve/certbot-options.png)" media="(max-width: 550px)">
-<img srcset="[https://stuff.charm.sh/blog/self-hosted-soft-serve/certbot-options.png](https://stuff.charm.sh/blog/self-hosted-soft-serve/certbot-options.png)" />
-</picture>
+![](https://stuff.charm.sh/blog/self-hosted-soft-serve/certbot-options.png)
 
 
 Now, make sure you have updated your DNS records to point your server's IP address to your custom domain. This is typically done using a `A` record. This will vary depending on your DNS domain provider. We will be using `git.example.com` to demonstrate issuing a certificate for the subdomain `git`.
@@ -461,10 +458,7 @@ ssh -i <my-precious-key> git.example.com repo create hula-hoop
 If you ssh into the server (without any arguments) you should see the TUI and the new repository.
 
 
-<picture>
-<source srcset="[https://stuff.charm.sh/blog/self-hosted-soft-serve/hula-hoop-tui-selected.png](https://stuff.charm.sh/blog/self-hosted-soft-serve/hula-hoop-tui-selected.png)" media="(max-width: 550px)">
-<img srcset="[https://stuff.charm.sh/blog/self-hosted-soft-serve/hula-hoop-tui-selected.png](https://stuff.charm.sh/blog/self-hosted-soft-serve/hula-hoop-tui-selected.png)" />
-</picture>
+![](https://stuff.charm.sh/blog/self-hosted-soft-serve/hula-hoop-tui-selected.png)
 
 
 ### Push to Repository
@@ -552,10 +546,7 @@ ssh -i <my-precious-key> git.example.com repo description soft-serve 'The hackab
 ```
 
 
-<picture>
-<source srcset="[https://stuff.charm.sh/blog/self-hosted-soft-serve/soft-serve-in-da-house-tui-nested.png](https://stuff.charm.sh/blog/self-hosted-soft-serve/soft-serve-in-da-house-tui-nested.png)" media="(max-width: 550px)">
-<img srcset="[https://stuff.charm.sh/blog/self-hosted-soft-serve/soft-serve-in-da-house-tui-nested.png](https://stuff.charm.sh/blog/self-hosted-soft-serve/soft-serve-in-da-house-tui-nested.png)" />
-</picture>
+![](http://stuff.charm.sh/blog/self-hosted-soft-serve/soft-serve-in-da-house-tui-nested.png)
 
 
 For more info on repository commands try `repo help`.
