@@ -69,6 +69,16 @@ p {
   overflow-wrap: break-word;
 }
 
-details ul {
-  margin-bottom: 0;
+details {
+  ul {
+    margin-bottom: 0;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  summary > * {
+    display: inline;
+  }
 }
