@@ -38,7 +38,7 @@ vim.opt.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos,term
 ```
 
 
-Here I’m choosing almost everything 🙂 Make sure to avoid adding `options` to the list since it will interfere with other plugins you might have. Read more about this [`:h sessionoptions`](https://neovim.io/doc/user/options.html#'sessionoptions').
+Here I’m choosing almost everything 🙂 Make sure to avoid adding `options` to the list since it will interfere with other plugins you might have. Read more about this [`:h sessionoptions`](https://neovim.io/doc/user/options.html#%27sessionoptions%27).
 
 
 Now, we need to add out `autocmd`s on `VimEnter` and `VimLeave`. 
