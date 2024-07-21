@@ -1,7 +1,8 @@
 ---
-layout:    "post"
-title:     "Minesweeper using HTML5"
-comments:  yes
+published: true
+layout: "post"
+title: "Minesweeper using HTML5"
+comments: yes
 tags: javascript html css
 ---
 
@@ -14,7 +15,10 @@ Until recently, a friend pointed out that they saw a video of a guy who made a f
 With the help of HTML5 canvas element, you can draw geometric objects. We can achieve this dynamically using JavaScript. First, we create a canvas element in the page:
 
 ```html
-<canvas id="example" width="500" height="500">Any text here will get displayed if the browser does not support HTML5 canvas</canvas>
+<canvas id="example" width="500" height="500"
+  >Any text here will get displayed if the browser does not support HTML5
+  canvas</canvas
+>
 ```
 
 Then we use JavaScript to create objects and control their properties:
@@ -23,7 +27,7 @@ Then we use JavaScript to create objects and control their properties:
 var canvas = document.getElementById("example");
 var context = canvas.getContext("2d");
 context.beginPath();
-context.fillStyle = 'red';
+context.fillStyle = "red";
 context.fillRect(0, 0, 10, 10);
 context.closePath();
 ```
@@ -32,48 +36,66 @@ This will create a square with side equals to 10 and a position of (0, 0). Easy 
 
 ### Grub
 
-I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB"){:target="_blank"} for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
+I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB"){:target="\_blank"} for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
 
 ### Minesweeper
 
-Coming from an Object-Oriented Programming mentality, I wanted the ability to create classes just because I am used to it this way :smiley:. I was surprised when I knew that you can mimic creating [classes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes "Classes - JavaScript"){:target="_blank"} .
+Coming from an Object-Oriented Programming mentality, I wanted the ability to create classes just because I am used to it this way :smiley:. I was surprised when I knew that you can mimic creating [classes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes "Classes - JavaScript"){:target="\_blank"} .
 
 I started by questioning what attributes each square has? And I came up with these: isMine, isFlagged, isDown, x, y, and weight. isMine tells if a square is a mine. isFlagged is when a square is being flagged or marked. isDown if a square is revealed. x and y hold the location in the game. weight is a number greater than zero where it holds how many mines within its surrounding squares. With these attributes I came with this JS class:
 
 ```js
 class square {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.isDown = false;
-        this.isMine = false;
-        this.isDown = false;
-        this.weight = 0;
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.isDown = false;
+    this.isMine = false;
+    this.isDown = false;
+    this.weight = 0;
+  }
+  get x() {
+    return this._x;
+  }
+  set x(value) {
+    this._x = value;
+  }
+  get y() {
+    return this._y;
+  }
+  set y(value) {
+    this._y = value;
+  }
+  get weight() {
+    return this._weight;
+  }
+  set weight(value) {
+    this._weight = value;
+  }
+  get isDown() {
+    return this._isDown;
+  }
+  set isDown(value) {
+    this._isDown = value;
+    if (this.isMine) {
+      end = true;
     }
-    get x() { return this._x; }
-    set x(value) { this._x = value; }
-    get y() { return this._y; }
-    set y(value) { this._y = value; }
-    get weight() { return this._weight; }
-    set weight(value) { this._weight = value; }
-    get isDown() { return this._isDown; }
-    set isDown(value) {
-        this._isDown = value;
-        if (this.isMine) {
-            end = true;
-        }
-    }
-    get isMine() { return this._isMine; }
-    set isMine(value) { this._isMine = value; }
-    get isFlagged() { return this._isFlagged; }
-    set isFlagged(value) {
-        this._isFlagged = value;
-        if (value)
-            numberofmines = (numberofmines <= 0) ? 0: numberofmines - 1;
-        else
-            numberofmines++;
-        updateHeader();
-    }
+  }
+  get isMine() {
+    return this._isMine;
+  }
+  set isMine(value) {
+    this._isMine = value;
+  }
+  get isFlagged() {
+    return this._isFlagged;
+  }
+  set isFlagged(value) {
+    this._isFlagged = value;
+    if (value) numberofmines = numberofmines <= 0 ? 0 : numberofmines - 1;
+    else numberofmines++;
+    updateHeader();
+  }
 }
 ```
 
@@ -81,4 +103,4 @@ The game does not have a loop, it contains two main functions. The first one is 
 
 ### Source code
 
-The source code is available at [JSMinesweeper](https://github.com/aymanbagabas/jsminesweeper "JSMinesweeper - AymanBagabas"){:target="_blank"} or you can try it out [here](https://aymanbagabas.com/jsminesweeper "JSMinesweeper"){:target="_blank"} .
+The source code is available at [JSMinesweeper](https://github.com/aymanbagabas/jsminesweeper "JSMinesweeper - AymanBagabas"){:target="\_blank"} or you can try it out [here](https://aymanbagabas.com/jsminesweeper "JSMinesweeper"){:target="\_blank"} .

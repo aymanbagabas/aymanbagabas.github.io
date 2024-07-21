@@ -1,19 +1,20 @@
 ---
+published: true
 layout: post
 title: Writing a Chip-8 emulator
 comments: true
 tags: cpp sdl2 chip8 emulation
 ---
 
-If you ever played retro games on modern computers, then you probably know what an emulator is. Chip-8 is an interpreted programming language that was created originally by [Joseph Weisbecker](https://en.wikipedia.org/wiki/Joseph_Weisbecker){:target="_blank"}. Chip-8 programs get interpreted by a virtual machine. It offers a very simple monochrome graphics and uses a 4Kb of memory. It has the "8" part because all the system's components, like CPU registers, have a size of 8 bits or 1 byte.
+If you ever played retro games on modern computers, then you probably know what an emulator is. Chip-8 is an interpreted programming language that was created originally by [Joseph Weisbecker](https://en.wikipedia.org/wiki/Joseph_Weisbecker){:target="\_blank"}. Chip-8 programs get interpreted by a virtual machine. It offers a very simple monochrome graphics and uses a 4Kb of memory. It has the "8" part because all the system's components, like CPU registers, have a size of 8 bits or 1 byte.
 
 ## What is an Emulator?
 
 The idea of an emulator is the same across any operating system. You basically try to translate the instructions of one system to another. The process of translation is done in three main parts:
 
-* Fetching opcodes
-* Decoding opcodes
-* Executing opcodes
+- Fetching opcodes
+- Decoding opcodes
+- Executing opcodes
 
 These three steps happen in the CPU which is the main component of a system. The first step is to read operation codes from the program, then the CPU tries to decode these codes and then executes them accordingly.
 
@@ -32,6 +33,7 @@ Chip-8 is a simple system that has 16 CPU registers, each takes information up t
 There are two timers both countdown from 60 to 0. Delay timer is used for program events and its value can be set and read. And a sound timer which plays a beep whenever it reaches 0. After every operation execution, both timers get subtracted by 1.
 
 ### Input
+
 The Chip-8 uses 16 keys of input, (0x0-0xF) which are usually mapped to:
 
 ```
@@ -71,7 +73,7 @@ These sprites should be stored in the reserved interpreter area 0-512 of memory.
 
 Start with the big picture, how does your computer works? After you boot your computer it starts initializing components and devices. This includes inputs, outputs, graphics, CPU, etc. Then it loads the system and starts executing instructions sequentially. The main loop should look something like this:
 
-``` cpp
+```cpp
 
 #include // Chip-8 system
 #include // Input
@@ -106,7 +108,7 @@ int main(int argc, char **argv) {
 
 Chip-8 should implement ways to load and execute instructions:
 
-``` cpp
+```cpp
 
 void initChip8() {
     // initialize system
@@ -160,7 +162,7 @@ Well, I really learned a lot from this project. Next, I want to extend this proj
 
 ## References
 
-* [How to write an emulator](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
-* [Cowgod's Chip-8 Technical Reference v1.0](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
-* [CHIP-8](https://en.wikipedia.org/wiki/CHIP-8)
-* [Lazy Foo' SDL2 Tutorial](http://lazyfoo.net/tutorials/SDL/index.php)
+- [How to write an emulator](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
+- [Cowgod's Chip-8 Technical Reference v1.0](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
+- [CHIP-8](https://en.wikipedia.org/wiki/CHIP-8)
+- [Lazy Foo' SDL2 Tutorial](http://lazyfoo.net/tutorials/SDL/index.php)

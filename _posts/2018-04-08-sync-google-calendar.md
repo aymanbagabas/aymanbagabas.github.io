@@ -1,8 +1,9 @@
 ---
-layout   : "post"
-title    : "Sync Google calendar using Vdirsyncer and Orage"
-date     : 2018-04-08
-comments : true
+published: true
+layout: "post"
+title: "Sync Google calendar using Vdirsyncer and Orage"
+date: 2018-04-08
+comments: true
 tags: google-calendar vdirsyncer caldav xfce linux
 ---
 
@@ -45,8 +46,8 @@ client_secret = "CLIENT_SECRET"
 
 Here, we specified were the status for Vdirsyncer should be located. Mine is located under ~/.vdirsyncer/status. Then we tell Vdirsyncer to create a pair of calendars for bidirectional syncing, where **a** is the actual Google calendar, and **b** is the local files pulled from the cloud. Then we define the two calendars as storages.
 
-* storage local_calendar, here we specify what the type of this storage which is "singlefile" meaning Vdirsyncer would have a single file for each calendar that you have.
-* storage google_calendar, here where it gets interested. The type here is "google_calendar" which means use Google cloud to fetch the calendars. With this type you have to specify a token file, client id, and client secret. All of these are essential for synchronizing.
+- storage local_calendar, here we specify what the type of this storage which is "singlefile" meaning Vdirsyncer would have a single file for each calendar that you have.
+- storage google_calendar, here where it gets interested. The type here is "google_calendar" which means use Google cloud to fetch the calendars. With this type you have to specify a token file, client id, and client secret. All of these are essential for synchronizing.
 
 Now we have to enable CalDAV API for our Google account.
 
@@ -68,6 +69,7 @@ Now we can synchronize Google calendar by
 ```sh
 vdirsyncer sync
 ```
+
 Read more about [Vdirsyncer](https://vdirsyncer.pimutils.org/en/stable/index.html).
 
 ### Orage setup
@@ -90,4 +92,3 @@ This will sync calendars every hour. Make sure you have a cron service running. 
 sudo systemctl enable cronie
 sudo systemctl start cronie
 ```
-

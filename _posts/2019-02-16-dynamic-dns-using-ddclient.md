@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 comments: true
 title: Dynamic DNS using DDclient

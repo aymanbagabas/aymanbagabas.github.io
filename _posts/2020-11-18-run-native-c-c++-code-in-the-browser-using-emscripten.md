@@ -1,4 +1,5 @@
 ---
+published: true
 title: Run native C/C++ code in the browser using Emscripten
 layout: post
 comments: true
@@ -11,13 +12,13 @@ While working on [WMIDumpper](https://aymanbagabas.com/wmidumpper/), a simple to
 
 I cloned [bmfdec](https://github.com/pali/bmfdec) and followed Emscripten [documentation](https://emscripten.org/docs/index.html) on how to compile the project into `wasm`. Building [bmfdec](https://github.com/pali/bmfdec) was straightforward using Emscripten compiler.
 
-``` sh
+```sh
 emcc bmfdec/bmf2mof.c -o bmf2mof.js
 ```
 
 There was one problem though, [bmfdec](https://github.com/pali/bmfdec) was written to take input from stdin as a binary file. I had to modify `bmfdec.c` and change the `main()` function to take a buffer instead of reading binary from stdin and called it `parse_data()`.
 
-``` c
+```c
 int parse_data(uint8_t *pin, ssize_t lin) {
   static char pout[0x40000];
   int lout;
@@ -47,13 +48,13 @@ To be able to call C functions within JavaScript, we have to compile `bmf2mof` w
 
 Using `MODULARIZE` compiler flag makes the generated JavaScript modular where you can use promises and `require()` in Node. `EXPORT_NAME='bmf2mof'` compiler flag changes the exported module name, in this case, it would be named `bmf2mof()`. `WASM=1` specifies that we want a wasm output. And finally `"EXPORTED_FUNCTIONS=['_parse_data']"` exports the function `parse_data` from the C code. We also want to [optimize](https://emscripten.org/docs/optimizing/Optimizing-Code.html) the output JS code so we will use `-O2`.
 
-``` sh
+```sh
 emcc bmfdec/bmf2mof.c -s "EXPORTED_FUNCTIONS=['_parse_data']" -s "MODULARIZE=1" -s "EXPORT_NAME='bmf2mof'" -s "WASM=1" -O2 -o bmf2mof.js
 ```
 
 Now the generated `bmf2mof.js` will have a `_parse_data` function that maps to the C function and can be called from the JavaScript code.
 
-``` javascript
+```javascript
 const bmf2mof = require('bmf2mof.js')
 
 const buf = new Uint8Array([0x46, 0x4F, 0x4D, 0x42, ..., 0x20, 0xEC, 0xFF, 0x0F])
@@ -75,7 +76,7 @@ Emscripten documentation was a bit lacking when it comes to this, the generated 
 
 The generated JS takes an object that overrides the default module functions. To redirect our output from stdout to the textarea in the HTML, all we need to do is define our own `print` function.
 
-``` javascript
+```javascript
 const textarea = document.getElementById('textarea')
 
 bmf2mof({
