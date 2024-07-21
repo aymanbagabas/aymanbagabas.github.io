@@ -72,6 +72,7 @@ const modifyNumberedListObject = (blocks) => {
     },
   });
   for (const r of response.results) {
+    const published = r.properties?.["Publish"]?.["checkbox"] == true;
     // console.log(r)
     const id = r.id;
     // date
@@ -122,6 +123,7 @@ const modifyNumberedListObject = (blocks) => {
       }
     }
     let fm = `---
+published: ${published}
 layout: post
 comments: ${comments}
 date: ${date}
