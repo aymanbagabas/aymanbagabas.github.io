@@ -2,6 +2,7 @@
   "devDependencies": {
     "@notionhq/client": "^1.0.4",
     "@types/node-fetch": "^2.6.2",
+    "dev-to-git": "^1.4.10",
     "moment": "^2.29.2",
     "node-fetch": "^2.6.7",
     "notion-to-md": "^2.5.5"
