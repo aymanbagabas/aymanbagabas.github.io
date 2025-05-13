@@ -202,3 +202,6 @@ adapting to new technologies and user needs. Stay tuned for more posts on
 terminal emulators and escape sequences, where we'll explore these topics in
 greater detail.
 
+
+> This post is cross-posted from [Charm.sh/blog](http://charm.sh/blog).
+

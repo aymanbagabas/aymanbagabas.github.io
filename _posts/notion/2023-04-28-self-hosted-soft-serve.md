@@ -561,3 +561,6 @@ That's it for now. Check out [Soft Serve's README](https://github.com/charmbrace
 
 Till next time, happy hacking!
 
+
+> This post is cross-posted from [Charm.sh/blog](http://charm.sh/blog).
+
