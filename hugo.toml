@@ -27,7 +27,7 @@ pluralizeListTitles = false
   shortname = "blog-aymanbagabas-com"
 
 [services.googleAnalytics]
-  ID = "UA-119528295-1"
+  ID = "G-5ZQY2F0YLT"
 
 [security]
   allowContent = ['text/markdown', 'text/html']
