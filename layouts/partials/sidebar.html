@@ -1,0 +1,25 @@
+<aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="{{ .Site.BaseURL | relURL }}"><h1>{{ .Site.Title }}</h1></a>
+      {{ with .Site.Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li{{ if .IsHome }} class="active"{{ end }}><a href="{{ "/" | relURL }}">Home</a></li>
+        {{ range .Site.Menus.main -}}
+          <li{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+
+      <ul class="sidebar-nav sidebar-icons">
+        {{ range hugo.Data.icon_links -}}
+        <li><a class="icon {{ .class }}" title="{{ .name | title }}" aria-label="{{ .name | title }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer"></a></li>
+        {{- end }}
+      </ul>
+    </nav>
+
+    {{ with .Site.Params.copyright }}<p class="copyright">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+</aside>

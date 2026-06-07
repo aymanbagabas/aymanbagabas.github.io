@@ -57,7 +57,7 @@ const modifyNumberedListObject = (blocks) => {
 
 (async () => {
   // ensure directory exists
-  const root = path.join("_posts", "notion");
+  const root = path.join("content", "blog", "notion");
   fs.mkdirSync(root, { recursive: true });
 
   const databaseId = process.env.DATABASE_ID;
@@ -123,15 +123,15 @@ const modifyNumberedListObject = (blocks) => {
       }
     }
     let fm = `---
-published: ${published}
-layout: post
-comments: ${comments}
 date: ${date}
 title: ${title}${fmtags}${fmcats}
 `;
     const canonical = r.properties?.["Canonical URL"]?.["url"];
     if (canonical) {
       fm += `canonical_url: ${canonical}\n`;
+    }
+    if (!published) {
+      fm += `draft: true\n`;
     }
 
     fm += "---\n";

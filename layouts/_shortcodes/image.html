@@ -1,0 +1,11 @@
+{{- $file := .Get "file" -}}
+{{- $url := .Get "url" -}}
+{{- $caption := .Get "caption" -}}
+{{- $alt := default $caption (.Get "alt") -}}
+{{- $maxWidth := default "100%" (.Get "max-width") -}}
+<figure class="image">
+  {{- if $url }}<a href="{{ $url }}">{{ end -}}
+    <img src="{{ $file }}" style="max-width: {{ $maxWidth }};" alt="{{ $alt }}" />
+  {{- if $url }}</a>{{ end -}}
+  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

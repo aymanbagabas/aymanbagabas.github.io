@@ -1,9 +1,18 @@
-_site
-.sass-cache
-.jekyll-metadata
-_drafts/
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# Importer scratch
+_posts/
+
+# Node
+node_modules/
+
+# Ruby (tumblr importer)
 Gemfile.lock
 vendor/
-.DS_Store
 .bundle
-node_modules
+
+# Editor / OS
+.DS_Store

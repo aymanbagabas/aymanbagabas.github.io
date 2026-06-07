@@ -1,0 +1,32 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{ .Content }}
+
+{{ $repos := hugo.Data.github_repos }}
+{{ if $repos }}
+{{ $own := where $repos "fork" false }}
+{{ $forks := where $repos "fork" true }}
+
+<ul class="project-list">
+  {{ range $own }}
+  <li>
+    {{ partial "repository.html" . }}
+  </li>
+  {{ end }}
+</ul>
+
+{{ if $forks }}
+<h2>Other Contributions</h2>
+<ul class="project-list">
+  {{ range $forks }}
+  <li>
+    {{ partial "repository.html" . }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ else }}
+<p><em>Project list will appear here once GitHub data has been fetched.</em></p>
+{{ end }}
+{{ end }}

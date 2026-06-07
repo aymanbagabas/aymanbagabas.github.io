@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-title">{{ .Title }}</h1>
+  {{ partial "post-meta.html" . }}
+
+  {{ with .Params.canonical_url }}
+  <p class="post-canonical">Originally published at <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>.</p>
+  {{ end }}
+
+  {{ if .TableOfContents }}
+  <details class="toc" open>
+    <summary>Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  {{ end }}
+
+  <div class="post-body">
+    {{ .Content }}
+  </div>
+</article>
+
+{{ if and (eq hugo.Environment "production") .Site.Config.Services.Disqus.Shortname }}
+<h2>Comments</h2>
+{{ template "_internal/disqus.html" . }}
+{{ end }}
+{{ end }}
