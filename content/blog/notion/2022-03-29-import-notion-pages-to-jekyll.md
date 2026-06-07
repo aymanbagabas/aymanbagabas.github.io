@@ -1,12 +1,10 @@
 ---
-date: '2022-03-29'
+date: 2022-03-29
 title: Import Notion Pages to Jekyll
 tags:
-- jekyll
-- notion
-slug: import-notion-pages-to-jekyll
-aliases:
-- /blog/2022/03/29/import-notion-pages-to-jekyll.html
+  - jekyll
+  - notion
+
 ---
 
 Lately, I started using Notion for note-taking, to-do lists, and now for writing blog posts. Notion makes it simple to combine all those activities in a unified pretty interface. Using Jekyll, Github Pages, and Github Actions, I was able to import my Notion Blog database posts into Jekyll using a Github workflow that runs twice a day.
