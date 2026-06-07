@@ -96,6 +96,20 @@ pre {
 
 pre code { background: transparent; padding: 0; border-radius: 0; }
 
+.highlight {
+  margin: 1rem 0;
+  background: var(--code-bg);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.highlight pre { margin: 0; border-radius: 0; }
+.highlight > div { background: transparent !important; padding: 0 !important; }
+.highlight table { width: auto; margin: 0; border-collapse: collapse; }
+.highlight table td { border: 0; padding: 0; }
+.highlight table th { border: 0; }
+.highlight pre code > span { display: block; }
+
 img, video { max-width: 100%; height: auto; display: block; margin: 1rem auto; }
 
 figure { margin: 1.5rem 0; text-align: center; }
