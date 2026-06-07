@@ -209,6 +209,17 @@ li { margin: 0.25rem 0; }
 .not-found { text-align: center; padding: 4rem 0; }
 .not-found h1 { font-size: 4rem; margin: 0; }
 
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.site-footer a { color: var(--muted); }
+
 @media (max-width: 480px) {
   .site-header { padding: 2rem 1rem 1.5rem; }
   .site-title { font-size: 4rem; }

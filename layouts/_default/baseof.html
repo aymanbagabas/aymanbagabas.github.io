@@ -32,6 +32,10 @@
     {{ block "main" . }}{{ end }}
   </main>
 
+  <footer class="site-footer">
+    <a href="/search/">Search</a>
+  </footer>
+
   {{ if eq hugo.Environment "production" }}
     {{ template "_internal/google_analytics.html" . }}
   {{ end }}
