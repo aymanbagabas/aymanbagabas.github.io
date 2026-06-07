@@ -156,7 +156,18 @@ li > ul, li > ol { padding-left: 1.75rem; }
   color: var(--muted);
 }
 
-.post-toc ul { list-style: none; padding-left: 0; margin: 0; }
+.post-toc summary {
+  cursor: pointer;
+  color: var(--muted);
+  list-style: none;
+  padding: 0.25rem 0;
+}
+
+.post-toc summary::-webkit-details-marker { display: none; }
+.post-toc summary::before { content: "▸ "; display: inline-block; transition: transform 0.15s; }
+.post-toc[open] summary::before { transform: rotate(90deg); }
+
+.post-toc ul { list-style: none; padding-left: 0; margin: 0.25rem 0 0; }
 .post-toc ul ul { padding-left: 1.25rem; }
 .post-toc li { margin: 0.15rem 0; }
 .post-toc a { color: var(--muted); text-decoration: none; }
@@ -169,6 +180,9 @@ li > ul, li > ol { padding-left: 1.75rem; }
 }
 
 .heading-anchor {
+  position: absolute;
+  right: 100%;
+  padding-right: 0.2em;
   color: var(--muted);
   text-decoration: none;
   font-weight: 400;
@@ -179,11 +193,6 @@ li > ul, li > ol { padding-left: 1.75rem; }
 .heading-anchor:hover { color: var(--fg); }
 
 @media (hover: hover) {
-  .heading-anchor {
-    position: absolute;
-    right: 100%;
-    padding-right: 0.4em;
-  }
   .post-body h1:hover .heading-anchor,
   .post-body h2:hover .heading-anchor,
   .post-body h3:hover .heading-anchor,
@@ -194,7 +203,7 @@ li > ul, li > ol { padding-left: 1.75rem; }
 }
 
 @media (hover: none) {
-  .heading-anchor { opacity: 0.45; margin-right: 0.35em; }
+  .heading-anchor { opacity: 0.45; }
 }
 
 .search-input {

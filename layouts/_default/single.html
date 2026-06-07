@@ -10,9 +10,15 @@
   {{ end }}
 
   {{ if and .TableOfContents (gt (len .TableOfContents) 50) }}
-  <nav class="post-toc" aria-label="Contents">
+  <details class="post-toc" open>
+    <summary>Contents</summary>
     {{ .TableOfContents }}
-  </nav>
+  </details>
+  <script>
+    if (window.matchMedia('(max-width: 480px)').matches) {
+      document.querySelector('.post-toc')?.removeAttribute('open');
+    }
+  </script>
   {{ end }}
 
   <div class="post-body">
