@@ -12,7 +12,7 @@ I'm interested in system design, distributed systems, IoT, embedded systems, and
 
 Name pronunciation: **Aye-man Ba-ga-bas**.
 
-You can reach me by [email](mailto:email@aymanbagabas.com), [Telegram](https://t.me/aymanbagabas), or [Twitter](https://twitter.com/aymanbagabas). My PGP key is available <a href="/key.txt" download>here</a>:
+You can reach me by [email](mailto:email@aymanbagabas.com), [Telegram](https://t.me/aymanbagabas), [LinkedIn](https://www.linkedin.com/in/aymanbagabas), or [X](https://x.com/aymanbagabas). My PGP key is available <a href="/key.txt" download>here</a>:
 
 ```sh
 gpg --keyserver hkp://keys.openpgp.org --recv-keys C5DE73DF202C9E1B
