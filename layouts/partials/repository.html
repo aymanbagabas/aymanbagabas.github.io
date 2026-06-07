@@ -1,0 +1,8 @@
+<h3>
+  <a href="{{ .html_url }}" target="_blank" rel="noopener noreferrer">
+    {{ .name }}
+    {{ if gt (default 0 .stargazers_count) 0 }}<small>{{ .stargazers_count }} 🌟</small>{{ end }}
+    {{ if .archived }}<i class="archived" title="archived"></i>{{ end }}
+  </a>
+</h3>
+{{ with .description }}<p>{{ . }}</p>{{ end }}
