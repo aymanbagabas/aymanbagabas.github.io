@@ -13,5 +13,3 @@ Born in Saudi Arabia, currently in New York City. Outside of work, I [hack on op
 Name pronunciation: **Aye-man Ba-ga-bas**.
 
 You can reach me by [email](mailto:email@aymanbagabas.com), [Telegram](https://t.me/aymanbagabas), [LinkedIn](https://www.linkedin.com/in/aymanbagabas), or [X](https://x.com/aymanbagabas).
-
-If you find any of my work useful, consider [sponsoring me on GitHub](https://github.com/sponsors/aymanbagabas).
