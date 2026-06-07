@@ -14,7 +14,7 @@
     el.style.top = `${y}px`;
     document.body.appendChild(el);
 
-    const bounces = 1 + Math.floor(Math.random() * 3);
+    const bounces = 1 + Math.floor(Math.random() * 5);
     const grounds = [];
     let lastGround = y;
     for (let i = 0; i < bounces; i++) {
