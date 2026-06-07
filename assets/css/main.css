@@ -103,12 +103,43 @@ pre code { background: transparent; padding: 0; border-radius: 0; }
   overflow-x: auto;
 }
 
+.code-wrap { position: relative; }
+.code-wrap .highlight { margin: 0; }
+
 .highlight pre { margin: 0; border-radius: 0; }
 .highlight > div { background: transparent !important; padding: 0 !important; }
 .highlight table { width: auto; margin: 0; border-collapse: collapse; }
 .highlight table td { border: 0; padding: 0; }
 .highlight table th { border: 0; }
 .highlight pre code > span { display: block; }
+
+.copy-btn {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--code-bg);
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.code-wrap:hover .copy-btn,
+.copy-btn:focus-visible { opacity: 1; }
+.copy-btn:hover { color: var(--fg); border-color: var(--muted); }
+.copy-btn.copied { color: var(--syntax-green, #3f953a); opacity: 1; }
+
+@media (hover: none) {
+  .copy-btn { opacity: 0.6; }
+}
 
 img, video { max-width: 100%; height: auto; display: block; margin: 1rem auto; }
 
