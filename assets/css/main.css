@@ -155,14 +155,12 @@ li > ul, li > ol { padding-left: 1.75rem; }
 
 .post-header { margin-bottom: 2rem; }
 .post-title { margin: 0 0 0.5rem; }
-.post-date { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.post-date { color: var(--muted); font-size: 0.825rem; font-variant-numeric: tabular-nums; }
+.post-meta { color: var(--muted); font-size: 0.825rem; margin: 0.25rem 0 0; display: flex; gap: 0.5rem; align-items: baseline; flex-wrap: wrap; }
 
-.post-canonical {
-  color: var(--muted);
-  font-size: 0.9rem;
-  font-style: italic;
-  margin-bottom: 1.5rem;
-}
+.post-canonical { color: var(--muted); }
+.post-canonical a { color: inherit; }
+.post-canonical a:hover { color: var(--fg); }
 
 .post-toc {
   margin: 1.5rem 0 2rem;

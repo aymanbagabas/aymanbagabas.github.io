@@ -2,12 +2,16 @@
 <article class="post">
   <header class="post-header">
     <h1 class="post-title">{{ .Title }}</h1>
-    <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.dateFormat }}</time>
+    <p class="post-meta">
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.dateFormat }}</time>
+      <span aria-hidden="true">·</span>
+      <span class="post-reading-time">{{ .ReadingTime }} min read</span>
+      {{ with .Params.canonical_url }}
+      <span aria-hidden="true">·</span>
+      <span class="post-canonical">originally on <a href="{{ . }}" rel="canonical noopener noreferrer">{{ (urls.Parse .).Host }} ↗</a></span>
+      {{ end }}
+    </p>
   </header>
-
-  {{ with .Params.canonical_url }}
-  <p class="post-canonical">Originally published at <a href="{{ . }}" rel="noopener noreferrer">{{ . }}</a>.</p>
-  {{ end }}
 
   {{ if and .TableOfContents (gt (len .TableOfContents) 50) }}
   <details class="post-toc" open>
