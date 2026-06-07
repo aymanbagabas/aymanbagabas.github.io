@@ -1,33 +1,26 @@
 baseURL = "https://aymanbagabas.com/"
 defaultContentLanguage = "en"
 title = "Ayman Bagabas"
-theme = "hyde"
 enableEmoji = true
 enableRobotsTXT = true
 pluralizeListTitles = false
-
-[pagination]
-  pagerSize = 5
-  path = "page"
+disableKinds = ["taxonomy", "term"]
 
 [permalinks]
-  blog = "/blog/:year/:month/:day/:slug/"
-
-[taxonomies]
-  tag = "tags"
+  posts = "/posts/:year/:month/:day/:slug/"
 
 [languages.en]
   locale = "en-us"
   weight = 1
 
 [languages.en.params]
-  description = "Playground where I express ideas, share knowledge, and experiences."
-
-[services.disqus]
-  shortname = "blog-aymanbagabas-com"
+  description = "Personal site of Ayman Bagabas."
 
 [services.googleAnalytics]
   ID = "G-5ZQY2F0YLT"
+
+[services.disqus]
+  shortname = "blog-aymanbagabas-com"
 
 [security]
   allowContent = ['text/markdown', 'text/html']
@@ -45,10 +38,11 @@ pluralizeListTitles = false
     endLevel = 4
     ordered = false
   [markup.highlight]
-    style = "github"
+    style = "bw"
     lineNos = false
     codeFences = true
     guessSyntax = true
+    noClasses = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -59,37 +53,8 @@ pluralizeListTitles = false
   email = "email@aymanbagabas.com"
 
 [params]
-  description = "Playground where I express ideas, share knowledge, and experiences."
-  themeColor = "theme-base-08"
+  description = "Personal site of Ayman Bagabas."
   author = "Ayman Bagabas"
   authorURL = "https://aymanbagabas.com"
-  github = "aymanbagabas"
-  twitter = "aymanbagabas"
-  linkedin = "aymanbagabas"
   copyright = "© 2017–2026 Ayman Bagabas"
   dateFormat = "January 2, 2006"
-
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 1
-
-[[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 2
-
-[[menu.main]]
-  name = "Projects"
-  url = "/projects/"
-  weight = 3
-
-[[menu.main]]
-  name = "Search"
-  url = "/search/"
-  weight = 4
-
-[[menu.main]]
-  name = "Tags"
-  url = "/tags/"
-  weight = 5

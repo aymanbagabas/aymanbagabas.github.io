@@ -1,40 +1,27 @@
 {{ define "main" }}
 <h1 class="page-title">{{ .Title }}</h1>
-{{ .Content }}
+<input type="search" id="search-input" class="search-input" placeholder="Search posts…" autofocus>
+<ul id="search-results" class="articles-list"></ul>
 
-<input id="search-input" type="search" placeholder="Search posts..." aria-label="Search posts" autocomplete="off" autofocus>
-<ul id="search-results" class="posts-list"></ul>
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" referrerpolicy="no-referrer" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 <script>
-(function () {
-  var input = document.getElementById('search-input');
-  var results = document.getElementById('search-results');
-  var fuse = null;
-  fetch('{{ "/index.json" | relURL }}')
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      fuse = new Fuse(data, {
-        keys: ['title', 'tags', 'summary', 'content'],
-        threshold: 0.4,
-        ignoreLocation: true,
-      });
-    });
-
-  function render(items) {
-    results.innerHTML = items.slice(0, 50).map(function (it) {
-      var p = it.item || it;
-      return '<li><h3><a href="' + p.url + '">' + p.title +
-        ' <small>' + p.date + '</small></a></h3></li>';
+(async function () {
+  const res = await fetch('/index.json');
+  const docs = await res.json();
+  const fuse = new Fuse(docs, { keys: ['title', 'tags', 'content'], threshold: 0.3, ignoreLocation: true });
+  const input = document.getElementById('search-input');
+  const out = document.getElementById('search-results');
+  function render(results) {
+    out.innerHTML = results.map(r => {
+      const d = r.item || r;
+      return `<li class="articles-item"><a href="${d.url}">${d.title}</a><time>${d.date || ''}</time></li>`;
     }).join('');
   }
-
-  input.addEventListener('input', function () {
-    if (!fuse) return;
-    var q = input.value.trim();
-    if (!q) { results.innerHTML = ''; return; }
-    render(fuse.search(q));
+  input.addEventListener('input', () => {
+    const q = input.value.trim();
+    render(q ? fuse.search(q) : docs.map(d => ({ item: d })));
   });
+  render(docs.map(d => ({ item: d })));
 })();
 </script>
 {{ end }}

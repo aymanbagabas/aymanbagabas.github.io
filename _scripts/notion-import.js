@@ -57,7 +57,7 @@ const modifyNumberedListObject = (blocks) => {
 
 (async () => {
   // ensure directory exists
-  const root = path.join("content", "blog", "notion");
+  const root = path.join("content", "posts", "notion");
   fs.mkdirSync(root, { recursive: true });
 
   const databaseId = process.env.DATABASE_ID;
@@ -157,13 +157,13 @@ title: ${title}${fmtags}${fmcats}
           .then((res) => res.buffer())
           .then((buf) => (img = buf));
         // make sure parent directory exists
-        const parent = path.join("assets", "images", pftitle);
+        const parent = path.join("static", "assets", "images", pftitle);
         fs.mkdirSync(parent, { recursive: true });
         fs.writeFileSync(path.join(parent, fileName), img);
         // replace image url with local path
         b.image.type = "external";
         b.image["external"] = {
-          url: "/" + path.join(parent, fileName),
+          url: "/" + path.join("assets", "images", pftitle, fileName),
         };
       }
     }

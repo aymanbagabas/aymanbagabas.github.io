@@ -45,8 +45,12 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: hugo --gc --minify
 
-      - name: Preserve legacy feed URL
-        run: cp public/blog/index.xml public/blog/feed.xml
+      - name: Preserve legacy feed URLs
+        run: |
+          mkdir -p public/blog
+          cp public/posts/index.xml public/posts/feed.xml
+          cp public/posts/index.xml public/blog/index.xml
+          cp public/posts/index.xml public/blog/feed.xml
 
       - uses: actions/upload-pages-artifact@v5
         with:

@@ -1,14 +1,16 @@
 {{ define "main" }}
 <article class="post">
-  <h1 class="post-title">{{ .Title }}</h1>
-  {{ partial "post-meta.html" . }}
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.dateFormat }}</time>
+  </header>
 
   {{ with .Params.canonical_url }}
-  <p class="post-canonical">Originally published at <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>.</p>
+  <p class="post-canonical">Originally published at <a href="{{ . }}" rel="noopener noreferrer">{{ . }}</a>.</p>
   {{ end }}
 
-  {{ if .TableOfContents }}
-  <details class="toc" open>
+  {{ if and .TableOfContents (gt (len .TableOfContents) 50) }}
+  <details class="post-toc">
     <summary>Contents</summary>
     {{ .TableOfContents }}
   </details>
@@ -20,7 +22,9 @@
 </article>
 
 {{ if and (eq hugo.Environment "production") .Site.Config.Services.Disqus.Shortname }}
-<h2>Comments</h2>
-{{ template "_internal/disqus.html" . }}
+<section class="comments">
+  <h2>Comments</h2>
+  {{ template "_internal/disqus.html" . }}
+</section>
 {{ end }}
 {{ end }}
