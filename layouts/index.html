@@ -8,8 +8,8 @@
   <ul class="articles-list">
     {{ range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
     <li class="articles-item">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $.Site.Params.dateFormat }}</time>
     </li>
     {{ end }}
   </ul>
