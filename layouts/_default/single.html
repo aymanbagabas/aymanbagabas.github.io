@@ -10,10 +10,9 @@
   {{ end }}
 
   {{ if and .TableOfContents (gt (len .TableOfContents) 50) }}
-  <details class="post-toc">
-    <summary>Contents</summary>
+  <nav class="post-toc" aria-label="Contents">
     {{ .TableOfContents }}
-  </details>
+  </nav>
   {{ end }}
 
   <div class="post-body">
