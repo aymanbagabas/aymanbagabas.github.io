@@ -12,9 +12,10 @@
   const input = document.getElementById('search-input');
   const out = document.getElementById('search-results');
   function render(results) {
+    // HTML must match layouts/partials/article-list.html
     out.innerHTML = results.map(r => {
       const d = r.item || r;
-      return `<li class="articles-item"><a href="${d.url}">${d.title}</a><time>${d.date || ''}</time></li>`;
+      return `<li class="articles-item"><time datetime="${d.dateISO || ''}">${d.date || ''}</time><a href="${d.url}">${d.title}</a></li>`;
     }).join('');
   }
   input.addEventListener('input', () => {

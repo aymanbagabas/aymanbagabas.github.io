@@ -5,7 +5,8 @@
   {
     "title": {{ .Title | jsonify }},
     "url":   {{ .RelPermalink | jsonify }},
-    "date":  {{ (.Date.Format .Site.Params.dateFormat) | jsonify }},
+    "date":  {{ (.Date.Format "Jan 2006") | jsonify }},
+    "dateISO": {{ (.Date.Format "2006-01-02") | jsonify }},
     "tags":  {{ .Params.tags | jsonify }},
     "content": {{ .Plain | jsonify }}
   }
