@@ -31,6 +31,6 @@ This will make systemd executes _suspend-then-hibernate_ instead of _suspend_ ev
 
 #### Reference
 
-[systemd-sleep.conf](https://www.freedesktop.org/software/systemd/man/systemd-sleep.conf.html "systemd-sleep.conf"){target="_blank" rel="noopener"}
+[systemd-sleep.conf](https://www.freedesktop.org/software/systemd/man/systemd-sleep.conf.html "systemd-sleep.conf")
 
-[systemd-suspend-then-hibernate.service](https://www.freedesktop.org/software/systemd/man/systemd-suspend-then-hibernate.service.html "systemd-suspend-then-hibernate.service"){target="_blank" rel="noopener"}
+[systemd-suspend-then-hibernate.service](https://www.freedesktop.org/software/systemd/man/systemd-suspend-then-hibernate.service.html "systemd-suspend-then-hibernate.service")

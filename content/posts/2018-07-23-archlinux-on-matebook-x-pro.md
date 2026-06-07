@@ -17,7 +17,7 @@ Recently, I got a new laptop, Huawei Matebook X Pro. It has an i7 8th Gen. Intel
 2. The fingerprint sensor.
 3. ~~Some keys in the Fn row.~~ See UPDATE2
 
-The installation was very straightforward and like every other Arch Linux installation process. I followed their [installation guide](https://wiki.archlinux.org/index.php/Installation_guide "installation guide"){target="_blank" rel="noopener"}. After the installation is complete, everything was working properly except for some minor issues.
+The installation was very straightforward and like every other Arch Linux installation process. I followed their [installation guide](https://wiki.archlinux.org/index.php/Installation_guide "installation guide"). After the installation is complete, everything was working properly except for some minor issues.
 
 ### Installation
 
@@ -34,7 +34,7 @@ Include = /etc/pacman.d/mirrorlist
 
 ### Grub
 
-I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB"){target="_blank" rel="noopener"} for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
+I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB") for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
 
 ```conf
 GRUB_GFXMODE=1600x1200x32
@@ -60,7 +60,7 @@ In my case, my Windows partition was `/dev/nvme0n1p3`, you should change that ba
 
 ### AUR helper
 
-One of Arch Linux beauties is AUR, where you can easily get any Linux package installed with ease. I used the tool `aurman` which is IMO one of the safest ones out there. Here is the full list of [AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers "AUR helpers"){target="_blank" rel="noopener"}. To install aurman:
+One of Arch Linux beauties is AUR, where you can easily get any Linux package installed with ease. I used the tool `aurman` which is IMO one of the safest ones out there. Here is the full list of [AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers "AUR helpers"). To install aurman:
 
 ```sh
 git clone https://aur.archlinux.org/aurman.git
@@ -80,7 +80,7 @@ This would automatically install Gnome with Wayland. Wayland doesn't require any
 
 ### Nvidia driver & Bumblebee
 
-The MBXP comes with Intel UHD Graphics 620 and NVIDIA Geforce MX150. If you are planning to use the [Nvidia](https://wiki.archlinux.org/index.php/NVIDIA){target="_blank" rel="noopener"} card for gaming, rendering, or anything your best two options are using Prime technology with [Nouveau](https://wiki.archlinux.org/index.php/Nouveau){target="_blank" rel="noopener"} (open source NVIDIA driver), or use NVIDIA proprietary driver with [Bumblebee](https://wiki.archlinux.org/index.php/Bumblebee){target="_blank" rel="noopener"}. I decided to go with the later because it offers better performance. Install Bumblebee
+The MBXP comes with Intel UHD Graphics 620 and NVIDIA Geforce MX150. If you are planning to use the [Nvidia](https://wiki.archlinux.org/index.php/NVIDIA) card for gaming, rendering, or anything your best two options are using Prime technology with [Nouveau](https://wiki.archlinux.org/index.php/Nouveau) (open source NVIDIA driver), or use NVIDIA proprietary driver with [Bumblebee](https://wiki.archlinux.org/index.php/Bumblebee). I decided to go with the later because it offers better performance. Install Bumblebee
 
 ```sh
 sudo pacman -S bumblebee bbswitch nvidia mesa acpi_call lib32-virtualgl lib32-nvidia-utils
@@ -93,7 +93,7 @@ sudo systemctl enable bumblebeed.service
 sudo gpasswd -a $USER bumblebee
 ```
 
-You probably need to [Enable NVIDIA card during shutdown](https://wiki.archlinux.org/index.php/Bumblebee#Default_power_state_of_NVIDIA_card_using_bbswitch){target="_blank" rel="noopener"} to avoid issues with using it.
+You probably need to [Enable NVIDIA card during shutdown](https://wiki.archlinux.org/index.php/Bumblebee#Default_power_state_of_NVIDIA_card_using_bbswitch) to avoid issues with using it.
 Now we need to tell Bumblebee to use bbswitch for card switching. Edit `/etc/bumblebee/bumblebee.conf` to include this:
 
 ```conf
@@ -105,7 +105,7 @@ Sometimes Bumblebee doesn't detect the card which results in an error. You need 
 
 ### Power Saving
 
-I was able to get a great 8-10 hours of battery with low brightness. I am using [TLP](https://wiki.archlinux.org/index.php/TLP){target="_blank" rel="noopener"} for managing [power saving](https://wiki.archlinux.org/index.php/Power_management){target="_blank" rel="noopener"}.
+I was able to get a great 8-10 hours of battery with low brightness. I am using [TLP](https://wiki.archlinux.org/index.php/TLP) for managing [power saving](https://wiki.archlinux.org/index.php/Power_management).
 
 #### TLP
 
@@ -171,7 +171,7 @@ options i915 enable_guc=3 enable_fbc=1
 
 #### Suspend and Hibernate
 
-Personally, I prefer hibernating my machine whenever I do not use it for a long time, that is why I use [suspend-then-hibernate](https://aymanbagabas.com/2018/07/18/suspend-then-hibernate.html){target="_blank" rel="noopener"}. Suspend to RAM works out of the box, but [hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation){target="_blank" rel="noopener"} requires some work. First, make sure you have either a swap partition or [swap file](https://wiki.archlinux.org/index.php/Swap#Swap_file){target="_blank" rel="noopener"}. I went with swap file just because it does not require partitioning. According to Redhat [Recommended System Swap Space](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-disk-partitioning-setup-x86#sect-recommended-partitioning-scheme-x86){target="_blank" rel="noopener"}, 1.5 of system RAM is the recommended amount of swap for hibernation which is 24Gb in this case.
+Personally, I prefer hibernating my machine whenever I do not use it for a long time, that is why I use [suspend-then-hibernate](https://aymanbagabas.com/2018/07/18/suspend-then-hibernate.html). Suspend to RAM works out of the box, but [hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation) requires some work. First, make sure you have either a swap partition or [swap file](https://wiki.archlinux.org/index.php/Swap#Swap_file). I went with swap file just because it does not require partitioning. According to Redhat [Recommended System Swap Space](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-disk-partitioning-setup-x86#sect-recommended-partitioning-scheme-x86), 1.5 of system RAM is the recommended amount of swap for hibernation which is 24Gb in this case.
 
 ```sh
 sudo fallocate -l 24G /swapfile
@@ -192,7 +192,7 @@ In order for hibernate to work, you have to define where the system should look 
 
 - Add `pcie_aspm=force` kernel parameter to enable ASPM (Active State Power Management).
 - Disable watchdog, add `blacklist iTCO_wdt` to `/etc/modprobe.d/nowatchdog.conf`.
-- Take a look at [Improving Performance](https://wiki.archlinux.org/index.php/Improving_performance){target="_blank" rel="noopener"} and [Power Management](https://wiki.archlinux.org/index.php/Power_management){target="_blank" rel="noopener"}.
+- Take a look at [Improving Performance](https://wiki.archlinux.org/index.php/Improving_performance) and [Power Management](https://wiki.archlinux.org/index.php/Power_management).
 - Regenerate initramfs `sudo mkinitcpio -P`.
 - Regenerate grub.cfg `sudo grub-mkconfig -o /boot/grub/grub.cfg`.
 - Install Plymouth.
@@ -200,7 +200,7 @@ In order for hibernate to work, you have to define where the system should look 
 
 ### Files
 
-- Config files used in this post [etc.zip](/assets/stuff/etc.zip){target="_blank" rel="noopener"}.
+- Config files used in this post [etc.zip](/assets/stuff/etc.zip).
 
 ### UPDATE 1 - fix sound
 

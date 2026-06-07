@@ -41,11 +41,11 @@ This will create a square with side equals to 10 and a position of (0, 0). Easy 
 
 ### Grub
 
-I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB"){target="_blank" rel="noopener"} for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
+I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB") for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
 
 ### Minesweeper
 
-Coming from an Object-Oriented Programming mentality, I wanted the ability to create classes just because I am used to it this way :smiley:. I was surprised when I knew that you can mimic creating [classes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes "Classes - JavaScript"){target="_blank" rel="noopener"} .
+Coming from an Object-Oriented Programming mentality, I wanted the ability to create classes just because I am used to it this way :smiley:. I was surprised when I knew that you can mimic creating [classes in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes "Classes - JavaScript") .
 
 I started by questioning what attributes each square has? And I came up with these: isMine, isFlagged, isDown, x, y, and weight. isMine tells if a square is a mine. isFlagged is when a square is being flagged or marked. isDown if a square is revealed. x and y hold the location in the game. weight is a number greater than zero where it holds how many mines within its surrounding squares. With these attributes I came with this JS class:
 
@@ -108,4 +108,4 @@ The game does not have a loop, it contains two main functions. The first one is 
 
 ### Source code
 
-The source code is available at [JSMinesweeper](https://github.com/aymanbagabas/jsminesweeper "JSMinesweeper - AymanBagabas"){target="_blank" rel="noopener"} or you can try it out [here](https://aymanbagabas.com/jsminesweeper "JSMinesweeper"){target="_blank" rel="noopener"} .
+The source code is available at [JSMinesweeper](https://github.com/aymanbagabas/jsminesweeper "JSMinesweeper - AymanBagabas") or you can try it out [here](https://aymanbagabas.com/jsminesweeper "JSMinesweeper") .
