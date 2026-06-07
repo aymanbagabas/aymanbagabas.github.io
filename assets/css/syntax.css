@@ -1,0 +1,69 @@
+/* Syntax highlighting — Atom One Light palette */
+.chroma {
+  --syntax-fg:       #2a2c33;
+  --syntax-muted:    #a0a1a7;
+  --syntax-red:      #de3e35;
+  --syntax-green:    #3f953a;
+  --syntax-yellow:   #d2b67c;
+  --syntax-blue:     #2f5af3;
+  --syntax-magenta:  #a00095;
+  --syntax-purple:   #950095;
+  --syntax-hl:       #ededed;
+  --syntax-gd-bg:    #fbeaea;
+  --syntax-gi-bg:    #eaf5ea;
+
+  color: var(--syntax-fg);
+  background-color: transparent;
+}
+
+.chroma .err { color: var(--syntax-red); }
+.chroma .lntable { border-spacing: 0; padding: 0; margin: 0; width: auto; }
+.chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+.chroma .lnt, .chroma .ln { color: var(--syntax-muted); margin-right: 0.4em; padding: 0 0.4em; user-select: none; }
+.chroma .hl { background-color: var(--syntax-hl); }
+
+/* Comments */
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs,
+.chroma .cp, .chroma .cpf { color: var(--syntax-muted); font-style: italic; }
+
+/* Keywords */
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn,
+.chroma .kp, .chroma .kr { color: var(--syntax-magenta); }
+.chroma .kt { color: var(--syntax-yellow); }
+
+/* Names */
+.chroma .na { color: var(--syntax-red); }
+.chroma .nb, .chroma .bp { color: var(--syntax-blue); }
+.chroma .nc { color: var(--syntax-yellow); }
+.chroma .no { color: var(--syntax-purple); }
+.chroma .nd { color: var(--syntax-magenta); }
+.chroma .ni { color: var(--syntax-red); }
+.chroma .ne { color: var(--syntax-red); }
+.chroma .nf, .chroma .fm { color: var(--syntax-blue); }
+.chroma .nl { color: var(--syntax-fg); }
+.chroma .nn { color: var(--syntax-fg); }
+.chroma .nt { color: var(--syntax-magenta); }
+.chroma .nv, .chroma .vc, .chroma .vg,
+.chroma .vi, .chroma .vm { color: var(--syntax-red); }
+
+/* Literals */
+.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl,
+.chroma .sd, .chroma .s2, .chroma .se, .chroma .sh, .chroma .si,
+.chroma .sx, .chroma .sr, .chroma .s1, .chroma .ss { color: var(--syntax-green); }
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh,
+.chroma .mi, .chroma .il, .chroma .mo { color: var(--syntax-purple); }
+
+/* Operators, punctuation */
+.chroma .o, .chroma .ow { color: var(--syntax-magenta); }
+.chroma .p { color: var(--syntax-fg); }
+
+/* Generic (diff, etc.) */
+.chroma .gd { color: var(--syntax-red); background-color: var(--syntax-gd-bg); }
+.chroma .gi { color: var(--syntax-green); background-color: var(--syntax-gi-bg); }
+.chroma .gh, .chroma .gu { color: var(--syntax-blue); font-weight: bold; }
+.chroma .gs { font-weight: bold; }
+.chroma .ge { font-style: italic; }
+.chroma .gr { color: var(--syntax-red); }
+.chroma .go { color: var(--syntax-fg); }
+.chroma .gp { color: var(--syntax-muted); }
+.chroma .gt { color: var(--syntax-red); }

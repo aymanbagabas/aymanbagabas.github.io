@@ -17,8 +17,11 @@
 
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $syntax := resources.Get "css/syntax.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}">
 
   <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
   {{ end -}}

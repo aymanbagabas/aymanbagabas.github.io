@@ -41,7 +41,7 @@ pluralizeListTitles = false
     lineNos = false
     codeFences = true
     guessSyntax = true
-    noClasses = true
+    noClasses = false
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
