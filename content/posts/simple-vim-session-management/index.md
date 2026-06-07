@@ -13,7 +13,7 @@ aliases:
 Recently I switched back to using Neovim after being a VSCode user for a while. One of the things I miss in VSCode is the session management that comes bundled in. My brain became wired to doing things like `code <projectDir>` to open the editor with all files loaded just like the way I left them. Luckily in Vim, you can use `:mksession` to create sessions.
 
 
-# The Problem
+## The Problem
 
 
 Just like VSCode, I want Neovim to save the session file under the project root directory. Specifically in `.nvim/session.vim`. I want Neovim to detect whether the opened file is a directory, and based on that, load the session file if exists. Before exiting Neovim, save the session file under the project root directory.
@@ -22,13 +22,13 @@ Just like VSCode, I want Neovim to save the session file under the project root 
 You see, I tried different plugins including [persistence.nvim](https://github.com/folke/persistence.nvim), [persisted.nvim](https://github.com/olimorris/persisted.nvim), [auto-session](https://github.com/rmagatti/auto-session), [sessions.nvim](https://github.com/natecraddock/sessions.nvim), and [project.nvim](https://github.com/ahmedkhalf/project.nvim). None of them achieved what I wanted.
 
 
-# How?
+## How?
 
 
 Neovim supports sessions. You can use `:mksession` to create session files, and `:source <file>` or `nvim -S <file>` to restore a session. And with the `sessionoptions` option, we can tell Neovim exactly what to save in the session file. Simple just like that. Pairing that with `autocmd`s on startup and exit we can get what we want. Read more about this [`:h session`](https://neovim.io/doc/user/usr_21.html#21.4).
 
 
-## The Config
+### The Config
 
 
 First, we need to tell Neovim what to save in the session file. We do so using the `sessionoptions` option. In your `init.lua` add the list of session options you want to save and restore:
@@ -105,7 +105,7 @@ vim.api.nvim_create_autocmd("VimLeave", {
 ```
 
 
-## Bonus
+### Bonus
 
 
 When using `git`, it can be annoying to see the `.nvim` directory in every project you have. You can ignore the file by adding it to a `~/.gitignore` and exclude the file contents from git.

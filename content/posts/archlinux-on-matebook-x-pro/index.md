@@ -20,11 +20,11 @@ Recently, I got a new laptop, Huawei Matebook X Pro. It has an i7 8th Gen. Intel
 
 The installation was very straightforward and like every other Arch Linux installation process. I followed their [installation guide](https://wiki.archlinux.org/index.php/Installation_guide "installation guide"). After the installation is complete, everything was working properly except for some minor issues.
 
-### Installation
+#### Installation
 
 First, disable secure boot from the BIOS menu by pressing F2 while booting. Then have your Arch Linux installation media ready, then you can access the boot menu by holding F12 while booting. Once you boot into Arch Linux live boot image, you will notice that the font is too small, you can change that to use a large font with `setfont latarcyrheb-sun32`, or you could use any other font you like.
 
-### Multi-lib repositories
+#### Multi-lib repositories
 
 You probably want to enable multi-lib repos to support 32-bit software. Just uncomment that in `/etc/pacman.conf` or add the following:
 
@@ -33,7 +33,7 @@ You probably want to enable multi-lib repos to support 32-bit software. Just unc
 Include = /etc/pacman.d/mirrorlist
 ```
 
-### Grub
+#### Grub
 
 I used [Grub](https://wiki.archlinux.org/index.php/GRUB "GRUB") for the bootloader. Obviously, you want to use Grub for UEFI systems. For the ESP location, I had mine set to `/boot/efi` just to follow other Linux distors approach. Because of the HiDPI screen that comes with this laptop, Grub would very tiny to see, a quick fix is to set the `GRUB_GFXMODE` variable to something like `1600x1200x32`. The available values can be fetched from Grub command line by executing `videoinfo`. Edit your `/etc/default/grub` file to include these lines:
 
@@ -49,7 +49,7 @@ don't forget to regenerate `grub.cfg` using:
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### After Installation
+#### After Installation
 
 Because I have a dual-boot setup with Windows, I ran into a little problem after partitioning Windows partition. However, it was easily fixed using `ntfs-3g` package which includes the tool `ntfsfix`. After you complete the installation and boot into Arch, just run the tool with `-b` to fix bad sectors and `-d` to clear dirty flag:
 
@@ -59,7 +59,7 @@ sudo ntfsfix -b -d /dev/nvme0n1p3
 
 In my case, my Windows partition was `/dev/nvme0n1p3`, you should change that based on your partition name. You can use `lsblk` or `blkid` to list all your partitions.
 
-### AUR helper
+#### AUR helper
 
 One of Arch Linux beauties is AUR, where you can easily get any Linux package installed with ease. I used the tool `aurman` which is IMO one of the safest ones out there. Here is the full list of [AUR helpers](https://wiki.archlinux.org/index.php/AUR_helpers "AUR helpers"). To install aurman:
 
@@ -69,7 +69,7 @@ cd aurman
 makepkg -si
 ```
 
-### Desktop Environment
+#### Desktop Environment
 
 Since this device comes with a touch-enabled and HiDPI screen, I decided to go with Gnome because it supports these two things pretty well.
 
@@ -79,7 +79,7 @@ sudo pacman -S gnome gnome-extra
 
 This would automatically install Gnome with Wayland. Wayland doesn't require any further configuration or drivers.
 
-### Nvidia driver & Bumblebee
+#### Nvidia driver & Bumblebee
 
 The MBXP comes with Intel UHD Graphics 620 and NVIDIA Geforce MX150. If you are planning to use the [Nvidia](https://wiki.archlinux.org/index.php/NVIDIA) card for gaming, rendering, or anything your best two options are using Prime technology with [Nouveau](https://wiki.archlinux.org/index.php/Nouveau) (open source NVIDIA driver), or use NVIDIA proprietary driver with [Bumblebee](https://wiki.archlinux.org/index.php/Bumblebee). I decided to go with the later because it offers better performance. Install Bumblebee
 
@@ -104,11 +104,11 @@ PMMethod=bbswitch
 
 Sometimes Bumblebee doesn't detect the card which results in an error. You need to define the card BusID in `/etc/bumblebee/xorg.conf.nvidia`, just uncomment the line where it has "BusID" and set it to the actual device ID. You can get that using `lspci`. In my case, it was "PCI:01:00:0".
 
-### Power Saving
+#### Power Saving
 
 I was able to get a great 8-10 hours of battery with low brightness. I am using [TLP](https://wiki.archlinux.org/index.php/TLP) for managing [power saving](https://wiki.archlinux.org/index.php/Power_management).
 
-#### TLP
+##### TLP
 
 Install TLP:
 
@@ -145,7 +145,7 @@ RUNTIME_PM_DRIVER_BLACKLIST="amdgpu nouveau nvidia radeon"
 
 Again make sure that you have the correct bus id for your card.
 
-#### Audio
+##### Audio
 
 In `/etc/modprobe.d/audio_powersave.conf` add to enable audio power saving:
 
@@ -153,7 +153,7 @@ In `/etc/modprobe.d/audio_powersave.conf` add to enable audio power saving:
 options snd_hda_intel power_save=1
 ```
 
-#### WiFi
+##### WiFi
 
 Since this laptop comes with Intel Wireless 8265, we can use `iwlwifi` power saving options. Add these options in `/etc/modprobe.d/iwlwifi.conf`:
 
@@ -162,7 +162,7 @@ options iwlwifi power_save=1 d0i3_disable=0 uapsd_disable=0
 options iwldvm force_cam=0
 ```
 
-#### Intel GPU
+##### Intel GPU
 
 Power saving options for Intel GPU, just stick this line in `/etc/modprobe.d/i915.conf`.
 
@@ -170,7 +170,7 @@ Power saving options for Intel GPU, just stick this line in `/etc/modprobe.d/i91
 options i915 enable_guc=3 enable_fbc=1
 ```
 
-#### Suspend and Hibernate
+##### Suspend and Hibernate
 
 Personally, I prefer hibernating my machine whenever I do not use it for a long time, that is why I use [suspend-then-hibernate](https://aymanbagabas.com/2018/07/18/suspend-then-hibernate.html). Suspend to RAM works out of the box, but [hibernate](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation) requires some work. First, make sure you have either a swap partition or [swap file](https://wiki.archlinux.org/index.php/Swap#Swap_file). I went with swap file just because it does not require partitioning. According to Redhat [Recommended System Swap Space](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/installation_guide/sect-disk-partitioning-setup-x86#sect-recommended-partitioning-scheme-x86), 1.5 of system RAM is the recommended amount of swap for hibernation which is 24Gb in this case.
 
@@ -189,7 +189,7 @@ Now define that within `/etc/fstab` for auto mounting:
 
 In order for hibernate to work, you have to define where the system should look for the resume image in your Linux partition. You can define that in the kernel parameter in your bootloader `resume=UUID=ce6dd35a-08d5-4b49-a46c-eff1de8937ce`. Here I am using partition UUID, you can get that with `sudo blkid`. Since I am using a swap file, I also have to define a `resume_offset=645120` which is the location of the swap file in the partition. You can get that using `sudo filefrag -v /swapfile`. Finally, add `resume` hook after `udev` and `i915` module in `/etc/mkinitcpio.conf`. Regenerate initramfs `sudo mkinitcpio -P`.
 
-#### MISC
+##### MISC
 
 - Add `pcie_aspm=force` kernel parameter to enable ASPM (Active State Power Management).
 - Disable watchdog, add `blacklist iTCO_wdt` to `/etc/modprobe.d/nowatchdog.conf`.
@@ -199,11 +199,11 @@ In order for hibernate to work, you have to define where the system should look 
 - Install Plymouth.
 - Enable auto-brightness `aurman -S iio-sensor-proxy`.
 
-### Files
+#### Files
 
 - Config files used in this post [etc.zip](etc.zip).
 
-### UPDATE 1 - fix sound
+#### UPDATE 1 - fix sound
 
 You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` package then follow this picture and click on "Install boot override":
 
@@ -211,7 +211,7 @@ You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` p
 
 You might need to set "connectivity" to "internal" to get it working. Finally, recreate your initramfs `sudo mkinitcpio -P` and reboot.
 
-### UPDATE 2
+#### UPDATE 2
 
 - Missing hotkeys `micmute, wlan, and pc manager` now work using [this](https://github.com/aymanbagabas/Huawei-WMI) driver. It will be part of linux 4.21 along with the speakers fix and micmute LED.
 - Some people reported slow network connection with the above settings. To fix that, drop `uapsd_disable=0` from `/etc/modprobe.d/iwlwifi.conf`.

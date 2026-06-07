@@ -16,19 +16,19 @@ Lately, I started using Notion for note-taking, to-do lists, and now for writing
 ![My Notion Blog database](my_notion_blog_database.jpeg)
 
 
-# What is a Notion Database?
+## What is a Notion Database?
 
 
 [Notion databases](https://www.notion.so/help/guides/creating-a-database) are smart tables that can hold a collection of pages with customizable properties and multiple layouts. Think of it as smart spreadsheets on steroids.
 
 
-# The Layout
+## The Layout
 
 
 Jekyll uses YAML front matter to specify post title, date, tags, and other properties. Using Notion databases properties, we can map Jekyll YAML front matter into a simple Notion Database. Each entry in the database corresponds to a Jekyll post with its respective front matter properties. The script will use the date specified as the published date for the post, it will default to the entry creation date if one was not specified. If you want a page to be published, simply check the “Publish” checkbox.
 
 
-# The Script
+## The Script
 
 
 Writing the importer script was a breeze using [Notion JavaScript SDK](https://github.com/makenotion/notion-sdk-js) and [souvikinator/notion-to-md](https://github.com/souvikinator/notion-to-md). The SDK pulls the entries in the database, then the converter converts each Notion page into Markdown ready to be used in Jekyll.
@@ -78,7 +78,7 @@ Here, we’re using 2 environment variables to store the Notion integration toke
 You can find the importer script [here](https://github.com/aymanbagabas/aymanbagabas.github.io/blob/abd711ed3033a9416b7fedd5c3561a896ae13888/_scripts/notion-import.js).
 
 
-# Periodically Import Content
+## Periodically Import Content
 
 
 Using Github Actions, we can create a workflow that runs periodically every hour to run the script and then publish the contents using Github Pages. This depends on your setup, for me, I’m hosting my website on Github Pages just because of its convenience.
