@@ -4,7 +4,9 @@ title = "Ayman Bagabas"
 enableEmoji = true
 enableRobotsTXT = true
 pluralizeListTitles = false
-disableKinds = ["taxonomy", "term"]
+
+[taxonomies]
+  tag = "tags"
 
 [permalinks]
   posts = "/posts/:year/:month/:day/:slug/"

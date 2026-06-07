@@ -181,6 +181,31 @@ li { margin: 0.25rem 0; }
 
 .search-input:focus { outline: none; border-color: var(--fg); }
 
+.tag-cloud {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.tag-cloud li { margin: 0; }
+.tag-cloud small { color: var(--muted); }
+
+.post-tags {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.post-tags a { color: var(--muted); }
+
 .not-found { text-align: center; padding: 4rem 0; }
 .not-found h1 { font-size: 4rem; margin: 0; }
 

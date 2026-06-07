@@ -19,6 +19,14 @@
   <div class="post-body">
     {{ .Content }}
   </div>
+
+  {{ with .Params.tags }}
+  <footer class="post-tags">
+    {{ range . }}
+    <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+    {{ end }}
+  </footer>
+  {{ end }}
 </article>
 
 {{ if and (eq hugo.Environment "production") .Site.Config.Services.Disqus.Shortname }}

@@ -1,0 +1,8 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+<ul class="tag-cloud">
+  {{ range .Data.Terms.Alphabetical }}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> <small>({{ .Count }})</small></li>
+  {{ end }}
+</ul>
+{{ end }}
