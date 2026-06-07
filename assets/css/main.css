@@ -12,6 +12,8 @@
 
 * { box-sizing: border-box; }
 
+::selection { background: var(--fg); color: var(--bg); }
+
 html { font-size: 16px; }
 
 body {
