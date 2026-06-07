@@ -50,7 +50,7 @@ Coming from an Object-Oriented Programming mentality, I wanted the ability to cr
 
 I started by questioning what attributes each square has? And I came up with these: isMine, isFlagged, isDown, x, y, and weight. isMine tells if a square is a mine. isFlagged is when a square is being flagged or marked. isDown if a square is revealed. x and y hold the location in the game. weight is a number greater than zero where it holds how many mines within its surrounding squares. With these attributes I came with this JS class:
 
-```js
+```js {linenos=true}
 class square {
   constructor(x, y) {
     this.x = x;

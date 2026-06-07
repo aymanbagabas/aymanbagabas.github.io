@@ -45,7 +45,7 @@ Here I’m choosing almost everything 🙂 Make sure to avoid adding `options` 
 Now, we need to add out `autocmd`s on `VimEnter` and `VimLeave`. 
 
 
-```lua
+```lua {linenos=true}
 -- Simple session management on directory open
 -- Here we check if the opened file is a directory.
 -- Then we load the sessionfile if exists.

@@ -80,7 +80,7 @@ These sprites should be stored in the reserved interpreter area 0-512 of memory.
 
 Start with the big picture, how does your computer works? After you boot your computer it starts initializing components and devices. This includes inputs, outputs, graphics, CPU, etc. Then it loads the system and starts executing instructions sequentially. The main loop should look something like this:
 
-```cpp
+```cpp {linenos=true}
 
 #include // Chip-8 system
 #include // Input
@@ -115,7 +115,7 @@ int main(int argc, char **argv) {
 
 Chip-8 should implement ways to load and execute instructions:
 
-```cpp
+```cpp {linenos=true}
 
 void initChip8() {
     // initialize system
