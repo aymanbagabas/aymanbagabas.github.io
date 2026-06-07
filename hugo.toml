@@ -21,9 +21,6 @@ pluralizeListTitles = false
 [services.googleAnalytics]
   ID = "G-5ZQY2F0YLT"
 
-[services.disqus]
-  shortname = "blog-aymanbagabas-com"
-
 [security]
   allowContent = ['text/markdown', 'text/html']
 
