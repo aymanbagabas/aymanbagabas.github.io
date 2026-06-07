@@ -1,12 +1,10 @@
 ---
-date: '2025-03-11'
+date: 2025-03-11
 title: A Brief History of Terminal Emulators
 tags:
-- terminal
+  - terminal
+
 canonical_url: https://charm.sh/blog/intro-to-terminals/
-slug: a-brief-history-of-terminal-emulators
-aliases:
-- /blog/2025/03/11/a-brief-history-of-terminal-emulators.html
 ---
 
 If you're reading this, you've probably used a terminal emulator before. But

@@ -1,15 +1,13 @@
 ---
-date: '2023-04-28'
+date: 2023-04-28
 title: Self-hosted Soft Serve
 tags:
-- ssh
-- terminal
-- golang
-- tui
+  - ssh
+  - terminal
+  - golang
+  - tui
+
 canonical_url: https://charm.sh/blog/self-hosted-soft-serve/
-slug: self-hosted-soft-serve
-aliases:
-- /blog/2023/04/28/self-hosted-soft-serve.html
 ---
 
 [Soft Serve](https://github.com/charmbracelet/soft-serve) is a self-hostable Git server for the command-line. It supports Git over HTTP(s), SSH, and the [Git Protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol). [Soft Serve](https://github.com/charmbracelet/soft-serve) also comes with a simple straight-forward user management interface for teams.
