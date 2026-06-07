@@ -9,7 +9,7 @@ pluralizeListTitles = false
   tag = "tags"
 
 [permalinks]
-  posts = "/posts/:year/:month/:day/:slug/"
+  posts = "/posts/:slug/"
 
 [languages.en]
   locale = "en-us"

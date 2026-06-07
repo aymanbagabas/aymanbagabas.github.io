@@ -9,6 +9,7 @@ slug: archlinux-on-matebook-x-pro
 aliases:
 - /blog/2018/07/23/archlinux-on-matebook-x-pro.html
 - /blog/2018/07/23/archlinux-on-matebook-x-pro/
+- /posts/2018/07/23/archlinux-on-matebook-x-pro/
 ---
 
 Recently, I got a new laptop, Huawei Matebook X Pro. It has an i7 8th Gen. Intel CPU, 16Gib of RAM, 512Gib of SSD storage, Nvidia MX150 GPU with 2Gib of DRAM, and a beautiful HiDPI and touchscreen. It also comes with a fingerprint sensor. The first thing I did was installing Arch Linux, because well I am a Linux user! In the end, everything was working properly except:
@@ -200,13 +201,13 @@ In order for hibernate to work, you have to define where the system should look 
 
 ### Files
 
-- Config files used in this post [etc.zip](/assets/stuff/etc.zip).
+- Config files used in this post [etc.zip](etc.zip).
 
 ### UPDATE 1 - fix sound
 
 You can fix the sound issue with `hdajackretask` which is part of `alsa-tools` package then follow this picture and click on "Install boot override":
 
-{{< image file="/assets/images/hdajackretask.png" caption="HDAJackReTask" max-width="100%" >}}
+![HDAJackReTask](hdajackretask.png)
 
 You might need to set "connectivity" to "internal" to get it working. Finally, recreate your initramfs `sudo mkinitcpio -P` and reboot.
 

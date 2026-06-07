@@ -8,6 +8,7 @@ slug: suspend-then-hibernate
 aliases:
 - /blog/2018/07/18/suspend-then-hibernate.html
 - /blog/2018/07/18/suspend-then-hibernate/
+- /posts/2018/07/18/suspend-then-hibernate/
 ---
 
 In _systemd_ 239, they have added a new service that handles suspending then hibernating after a given amount of time. This is easier than using external scripts since it comes built-in with this version of _systemd_. You can check _systemd_ version with `systemctl --version`.

@@ -7,12 +7,13 @@ tags:
 aliases:
 - /blog/2022/03/29/import-notion-pages-to-jekyll.html
 - /blog/2022/03/29/import-notion-pages-to-jekyll/
+- /posts/2022/03/29/import-notion-pages-to-jekyll/
 ---
 
 Lately, I started using Notion for note-taking, to-do lists, and now for writing blog posts. Notion makes it simple to combine all those activities in a unified pretty interface. Using Jekyll, Github Pages, and Github Actions, I was able to import my Notion Blog database posts into Jekyll using a Github workflow that runs twice a day.
 
 
-![My Notion Blog database](/assets/images/2022-03-29-import-notion-pages-to-jekyll/my_notion_blog_database.jpeg)
+![My Notion Blog database](my_notion_blog_database.jpeg)
 
 
 # What is a Notion Database?
@@ -36,7 +37,7 @@ Writing the importer script was a breeze using [Notion JavaScript SDK](https://g
 To use the script, first, you have to create a new Notion integration that can access your Blog page database. Simply go to settings, choose integrations, click on “develop your own integration” and create a new integration with the proper scopes.
 
 
-![](/assets/images/2022-03-29-import-notion-pages-to-jekyll/Untitled.png)
+![](Untitled.png)
 
 
 After creating that, you will get an integration key that would be used later with the script for it to work. But before that, you will need to invite your newly created integration bot to the Notion page that has the database that you want to use. Simply click the “share” button on the database page and invite the integration you just created. It will have the same name you specified when you created the integration.

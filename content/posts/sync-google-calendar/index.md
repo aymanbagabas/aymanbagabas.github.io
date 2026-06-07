@@ -11,6 +11,7 @@ slug: sync-google-calendar
 aliases:
 - /blog/2018/04/08/sync-google-calendar.html
 - /blog/2018/04/08/sync-google-calendar/
+- /posts/2018/04/08/sync-google-calendar/
 ---
 
 For a long time I wanted to have all my calendars and todo lists synchronized with my current desktop setup. Currently, I am using XFCE software, like Thunar, with Openbox to manage everyday stuff. Yes, I know with Gnome DE you can achieve that easily, but Gnome has a HUGE package dependencies. XFCE on the other hand is very light-weight and simple.
@@ -19,11 +20,11 @@ The other wonderful piece of software is [vdirsyncer](https://vdirsyncer.pimutil
 
 First, make sure we have all the needed packages. Orage and Vdirsyncer should exist in most distros official repositories. In Archlinux, the installation can be done with `sudo pacman -S vdirsyncer orage`. It would be similar for other distros as well. Ubuntu/Debian `sudo apt-get install vdirsyncer orage`.
 
-{{< image file="/assets/images/orage1.png" caption="Orage highlighting events" >}}
+![Orage highlighting events](orage1.png)
 
 Here you can see how orage highlights dates with events attached to them. For example, April 1st is Easter Sundy. That was pulled from my Google United States holidays calendar.
 
-{{< image file="/assets/images/orage2.png" caption="Orage displaying events" >}}
+![Orage displaying events](orage2.png)
 
 ### Vdirsyncer setup
 

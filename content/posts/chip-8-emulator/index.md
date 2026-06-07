@@ -10,6 +10,7 @@ slug: chip-8-emulator
 aliases:
 - /blog/2018/09/17/chip-8-emulator.html
 - /blog/2018/09/17/chip-8-emulator/
+- /posts/2018/09/17/chip-8-emulator/
 ---
 
 If you ever played retro games on modern computers, then you probably know what an emulator is. Chip-8 is an interpreted programming language that was created originally by [Joseph Weisbecker](https://en.wikipedia.org/wiki/Joseph_Weisbecker). Chip-8 programs get interpreted by a virtual machine. It offers a very simple monochrome graphics and uses a 4Kb of memory. It has the "8" part because all the system's components, like CPU registers, have a size of 8 bits or 1 byte.

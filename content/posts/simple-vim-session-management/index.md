@@ -7,6 +7,7 @@ tags:
 aliases:
 - /blog/2023/04/13/simple-vim-session-management.html
 - /blog/2023/04/13/simple-vim-session-management/
+- /posts/2023/04/13/simple-vim-session-management/
 ---
 
 Recently I switched back to using Neovim after being a VSCode user for a while. One of the things I miss in VSCode is the session management that comes bundled in. My brain became wired to doing things like `code <projectDir>` to open the editor with all files loaded just like the way I left them. Luckily in Vim, you can use `:mksession` to create sessions.
