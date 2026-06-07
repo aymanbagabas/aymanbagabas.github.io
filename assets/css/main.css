@@ -143,6 +143,16 @@ pre code { background: transparent; padding: 0; border-radius: 0; }
 .copy-btn:hover { color: var(--fg); border-color: var(--muted); }
 .copy-btn.copied { color: var(--syntax-green, #3f953a); opacity: 1; }
 
+.cursor-bounce {
+  position: fixed;
+  width: 12px;
+  height: 24px;
+  background: var(--fg);
+  pointer-events: none;
+  z-index: 1000;
+  will-change: transform, opacity;
+}
+
 @media (hover: none) {
   .copy-btn { opacity: 0.6; }
 }

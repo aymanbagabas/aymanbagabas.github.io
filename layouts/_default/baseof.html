@@ -41,5 +41,7 @@
 
   {{ $copy := resources.Get "js/copy-code.js" | minify | fingerprint }}
   <script src="{{ $copy.RelPermalink }}" integrity="{{ $copy.Data.Integrity }}" defer></script>
+  {{ $bounce := resources.Get "js/cursor-bounce.js" | minify | fingerprint }}
+  <script src="{{ $bounce.RelPermalink }}" integrity="{{ $bounce.Data.Integrity }}" defer></script>
 </body>
 </html>
