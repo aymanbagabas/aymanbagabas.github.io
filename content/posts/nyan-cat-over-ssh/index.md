@@ -9,7 +9,6 @@ tags:
 aliases:
 - /blog/2022/03/25/nyan-cat-over-ssh.html
 - /blog/2022/03/25/nyan-cat-over-ssh/
-- /posts/2022/03/25/nyan-cat-over-ssh/
 ---
 
 Everyone knows the Nyan Cat meme that started in 2011. The meme started from a [YouTube](https://www.youtube.com/watch?v=QH2-TGUlwu4) video that merged a Japanese pop song with an animated cartoon cat. Then a Telnet Nyan Cat server was created by [klange/nyancat](https://github.com/klange/nyancat). And now, in 2022, after 11 years of nyaning, it got ported to SSH! Try it out here `ssh dir.charm.sh -p2226`

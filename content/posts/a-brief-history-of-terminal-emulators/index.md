@@ -8,7 +8,6 @@ canonical_url: https://charm.sh/blog/intro-to-terminals/
 aliases:
 - /blog/2025/03/11/a-brief-history-of-terminal-emulators.html
 - /blog/2025/03/11/a-brief-history-of-terminal-emulators/
-- /posts/2025/03/11/a-brief-history-of-terminal-emulators/
 ---
 
 If you're reading this, you've probably used a terminal emulator before. But

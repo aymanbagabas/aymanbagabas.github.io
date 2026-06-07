@@ -15,7 +15,6 @@ aliases:
 - /blog/2020/11/18/run-native-c-c++-code-in-the-browser-using-emscripten/
 - /blog/2020/11/18/run-native-c-c-code-in-the-browser-using-emscripten.html
 - /blog/2020/11/18/run-native-c-c-code-in-the-browser-using-emscripten/
-- /posts/2020/11/18/run-native-c-c-code-in-the-browser-using-emscripten/
 ---
 
 While working on [WMIDumpper](https://aymanbagabas.com/wmidumpper/), a simple tool that analyzes ACPI WMI blocks, I had to figure out how to implement [bmfdec](https://github.com/pali/bmfdec) in JavaScript. My first thought was to port it to JavaScript and put in the time and effort to rewrite ~1500 lines of C code in JS. But then a light bulb went on in my head, WebAssembly! A quick search showed that [Emscripten](https://emscripten.org/) is exactly what I need. It can compile C/C++ native code into WebAssembly and run it on the web.
