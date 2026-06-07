@@ -57,3 +57,7 @@ pluralizeListTitles = false
   authorURL = "https://aymanbagabas.com"
   copyright = "© 2017–2026 Ayman Bagabas"
   dateFormat = "Jan 2, 2006"
+  images = ["/favicon.png"]
+
+  [params.social]
+    twitter = "aymanbagabas"
