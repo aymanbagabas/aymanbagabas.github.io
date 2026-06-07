@@ -1,14 +1,18 @@
-/* Syntax highlighting — Atom One Light palette */
+/* Atom One Light editor palette
+   Source: atom/one-light-syntax (the same palette used by VS Code and JetBrains ports). */
 .chroma {
-  --syntax-fg:       #2a2c33;
-  --syntax-muted:    #a0a1a7;
-  --syntax-red:      #de3e35;
-  --syntax-green:    #3f953a;
-  --syntax-yellow:   #d2b67c;
-  --syntax-blue:     #2f5af3;
-  --syntax-magenta:  #a00095;
-  --syntax-purple:   #950095;
-  --syntax-hl:       #ededed;
+  --syntax-fg:       #383a42; /* mono-1 */
+  --syntax-mono2:    #686b77; /* mono-2 */
+  --syntax-muted:    #a0a1a7; /* mono-3 — comments */
+  --syntax-cyan:     #0184bc; /* hue-1 — types, builtins */
+  --syntax-blue:     #4078f2; /* hue-2 — functions, decorators */
+  --syntax-purple:   #a626a4; /* hue-3 — keywords */
+  --syntax-green:    #50a14f; /* hue-4 — strings */
+  --syntax-red:      #e45649; /* hue-5 — variables, tags */
+  --syntax-red-2:    #ca1243; /* hue-5-2 */
+  --syntax-orange:   #986801; /* hue-6 — numbers */
+  --syntax-orange-2: #c18401; /* hue-6-2 — class names, constants */
+  --syntax-hl:       #f2f2f2; /* line highlight */
   --syntax-gd-bg:    #fbeaea;
   --syntax-gi-bg:    #eaf5ea;
 
@@ -28,33 +32,36 @@
 
 /* Keywords */
 .chroma .k, .chroma .kc, .chroma .kd, .chroma .kn,
-.chroma .kp, .chroma .kr { color: var(--syntax-magenta); }
-.chroma .kt { color: var(--syntax-yellow); }
+.chroma .kp, .chroma .kr { color: var(--syntax-purple); }
+.chroma .kt { color: var(--syntax-cyan); }
 
 /* Names */
-.chroma .na { color: var(--syntax-red); }
-.chroma .nb, .chroma .bp { color: var(--syntax-blue); }
-.chroma .nc { color: var(--syntax-yellow); }
-.chroma .no { color: var(--syntax-purple); }
-.chroma .nd { color: var(--syntax-magenta); }
+.chroma .na { color: var(--syntax-orange); }
+.chroma .nb, .chroma .bp { color: var(--syntax-cyan); }
+.chroma .nc { color: var(--syntax-orange-2); }
+.chroma .no { color: var(--syntax-orange); }
+.chroma .nd { color: var(--syntax-blue); }
 .chroma .ni { color: var(--syntax-red); }
-.chroma .ne { color: var(--syntax-red); }
+.chroma .ne { color: var(--syntax-purple); }
 .chroma .nf, .chroma .fm { color: var(--syntax-blue); }
 .chroma .nl { color: var(--syntax-fg); }
 .chroma .nn { color: var(--syntax-fg); }
-.chroma .nt { color: var(--syntax-magenta); }
+.chroma .nt { color: var(--syntax-red); }
 .chroma .nv, .chroma .vc, .chroma .vg,
 .chroma .vi, .chroma .vm { color: var(--syntax-red); }
 
 /* Literals */
 .chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl,
-.chroma .sd, .chroma .s2, .chroma .se, .chroma .sh, .chroma .si,
-.chroma .sx, .chroma .sr, .chroma .s1, .chroma .ss { color: var(--syntax-green); }
+.chroma .s2, .chroma .sh, .chroma .sx,
+.chroma .s1, .chroma .ss { color: var(--syntax-green); }
+.chroma .sd { color: var(--syntax-muted); font-style: italic; }
+.chroma .se, .chroma .si { color: var(--syntax-cyan); }
+.chroma .sr { color: var(--syntax-cyan); }
 .chroma .m, .chroma .mb, .chroma .mf, .chroma .mh,
-.chroma .mi, .chroma .il, .chroma .mo { color: var(--syntax-purple); }
+.chroma .mi, .chroma .il, .chroma .mo { color: var(--syntax-orange); }
 
 /* Operators, punctuation */
-.chroma .o, .chroma .ow { color: var(--syntax-magenta); }
+.chroma .o, .chroma .ow { color: var(--syntax-fg); }
 .chroma .p { color: var(--syntax-fg); }
 
 /* Generic (diff, etc.) */
