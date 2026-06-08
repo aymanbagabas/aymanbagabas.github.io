@@ -1,31 +1,8 @@
 {{ define "main" }}
 <h1 class="page-title">{{ .Title }}</h1>
-<div id="tags-page">
-  <div class="tags-list">
-    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    <a href="#{{ $name | urlize }}" class="tag-link">
-      <span class="tag-name">{{ $name }}</span>
-      <span class="tag-count">{{ len $taxonomy }}</span>
-    </a>
-    {{ end }}
-  </div>
-
-  <hr />
-
-  <div class="posts-by-tag">
-    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-    <div id="{{ $name | urlize }}" class="posts-for-tag">
-      <h2>{{ $name }}</h2>
-      <ul class="posts-list">
-        {{ range $taxonomy.Pages.ByDate.Reverse }}
-        <li>
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }} <small>{{ .Date.Format "January 2, 2006" }}</small></a></h3>
-        </li>
-        {{ end }}
-      </ul>
-      <hr />
-    </div>
-    {{ end }}
-  </div>
-</div>
+<ul class="tag-cloud">
+  {{ range .Data.Terms.Alphabetical }}
+  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> <small>({{ .Count }})</small></li>
+  {{ end }}
+</ul>
 {{ end }}

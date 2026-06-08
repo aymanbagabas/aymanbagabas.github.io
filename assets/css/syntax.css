@@ -1,0 +1,76 @@
+/* Atom One Light editor palette
+   Source: atom/one-light-syntax (the same palette used by VS Code and JetBrains ports). */
+.chroma {
+  --syntax-fg:       #383a42; /* mono-1 */
+  --syntax-mono2:    #686b77; /* mono-2 */
+  --syntax-muted:    #a0a1a7; /* mono-3 — comments */
+  --syntax-cyan:     #0184bc; /* hue-1 — types, builtins */
+  --syntax-blue:     #4078f2; /* hue-2 — functions, decorators */
+  --syntax-purple:   #a626a4; /* hue-3 — keywords */
+  --syntax-green:    #50a14f; /* hue-4 — strings */
+  --syntax-red:      #e45649; /* hue-5 — variables, tags */
+  --syntax-red-2:    #ca1243; /* hue-5-2 */
+  --syntax-orange:   #986801; /* hue-6 — numbers */
+  --syntax-orange-2: #c18401; /* hue-6-2 — class names, constants */
+  --syntax-hl:       #f2f2f2; /* line highlight */
+  --syntax-gd-bg:    #fbeaea;
+  --syntax-gi-bg:    #eaf5ea;
+
+  color: var(--syntax-fg);
+  background-color: transparent;
+}
+
+.chroma .err { color: var(--syntax-red); }
+.chroma .lntable { border-spacing: 0; padding: 0; margin: 0; width: auto; }
+.chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+.chroma .lnt, .chroma .ln { color: var(--syntax-muted); margin-right: 0.4em; padding: 0 0.4em; user-select: none; }
+.chroma .hl { background-color: var(--syntax-hl); }
+
+/* Comments */
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs,
+.chroma .cp, .chroma .cpf { color: var(--syntax-muted); font-style: italic; }
+
+/* Keywords */
+.chroma .k, .chroma .kc, .chroma .kd, .chroma .kn,
+.chroma .kp, .chroma .kr { color: var(--syntax-purple); }
+.chroma .kt { color: var(--syntax-cyan); }
+
+/* Names */
+.chroma .na { color: var(--syntax-orange); }
+.chroma .nb, .chroma .bp { color: var(--syntax-cyan); }
+.chroma .nc { color: var(--syntax-orange-2); }
+.chroma .no { color: var(--syntax-orange); }
+.chroma .nd { color: var(--syntax-blue); }
+.chroma .ni { color: var(--syntax-red); }
+.chroma .ne { color: var(--syntax-purple); }
+.chroma .nf, .chroma .fm { color: var(--syntax-blue); }
+.chroma .nl { color: var(--syntax-fg); }
+.chroma .nn { color: var(--syntax-fg); }
+.chroma .nt { color: var(--syntax-red); }
+.chroma .nv, .chroma .vc, .chroma .vg,
+.chroma .vi, .chroma .vm { color: var(--syntax-red); }
+
+/* Literals */
+.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl,
+.chroma .s2, .chroma .sh, .chroma .sx,
+.chroma .s1, .chroma .ss { color: var(--syntax-green); }
+.chroma .sd { color: var(--syntax-muted); font-style: italic; }
+.chroma .se, .chroma .si { color: var(--syntax-cyan); }
+.chroma .sr { color: var(--syntax-cyan); }
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh,
+.chroma .mi, .chroma .il, .chroma .mo { color: var(--syntax-orange); }
+
+/* Operators, punctuation */
+.chroma .o, .chroma .ow { color: var(--syntax-fg); }
+.chroma .p { color: var(--syntax-fg); }
+
+/* Generic (diff, etc.) */
+.chroma .gd { color: var(--syntax-red); background-color: var(--syntax-gd-bg); }
+.chroma .gi { color: var(--syntax-green); background-color: var(--syntax-gi-bg); }
+.chroma .gh, .chroma .gu { color: var(--syntax-blue); font-weight: bold; }
+.chroma .gs { font-weight: bold; }
+.chroma .ge { font-style: italic; }
+.chroma .gr { color: var(--syntax-red); }
+.chroma .go { color: var(--syntax-fg); }
+.chroma .gp { color: var(--syntax-muted); }
+.chroma .gt { color: var(--syntax-red); }

@@ -1,11 +1,4 @@
 {{ define "main" }}
-<h1 class="page-title">Tag: {{ .Title }}</h1>
-{{ .Content }}
-<ul class="posts-list">
-  {{ range .Pages.ByDate.Reverse }}
-  <li>
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }} <small>{{ .Date.Format "January 2, 2006" }}</small></a></h3>
-  </li>
-  {{ end }}
-</ul>
+<h1 class="page-title">#{{ .Title }}</h1>
+{{ partial "article-list.html" .Pages.ByDate.Reverse }}
 {{ end }}

@@ -1,12 +1,5 @@
 {{ define "main" }}
 <h1 class="page-title">{{ .Title }}</h1>
-{{ .Content }}
-<ul class="posts-list">
-  {{ range .Paginator.Pages.ByDate.Reverse }}
-  <li>
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }} <small>{{ .Date.Format "January 2, 2006" }}</small></a></h3>
-  </li>
-  {{ end }}
-</ul>
-{{ partial "pagination.html" . }}
+{{ with .Content }}<div class="page-content">{{ . }}</div>{{ end }}
+{{ partial "article-list.html" .Pages.ByDate.Reverse }}
 {{ end }}

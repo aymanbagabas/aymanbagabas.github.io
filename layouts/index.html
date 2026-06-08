@@ -1,27 +1,10 @@
 {{ define "main" }}
-{{ $posts := where .Site.RegularPages "Section" "blog" }}
-{{ $paginator := .Paginate $posts.ByDate.Reverse }}
+<section class="about">
+  {{ .Content }}
+</section>
 
-{{ with .Content }}{{ . }}{{ end }}
-
-{{ range $paginator.Pages }}
-<article class="post">
-  <h2 class="post-title">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </h2>
-  {{ partial "post-meta.html" . }}
-
-  <div class="post-body">
-    {{ if .Truncated }}
-      {{ .Summary }}
-      <p><a href="{{ .RelPermalink }}">More &hellip;</a></p>
-    {{ else }}
-      {{ .Content }}
-    {{ end }}
-  </div>
-</article>
+<section class="articles">
+  <h2 class="articles-title">Articles</h2>
+  {{ partial "article-list.html" (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+</section>
 {{ end }}
-
-{{ partial "pagination.html" . }}
-{{ end }}
-

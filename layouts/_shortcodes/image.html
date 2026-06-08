@@ -1,11 +1,9 @@
-{{- $file := .Get "file" -}}
-{{- $url := .Get "url" -}}
-{{- $caption := .Get "caption" -}}
-{{- $alt := default $caption (.Get "alt") -}}
-{{- $maxWidth := default "100%" (.Get "max-width") -}}
-<figure class="image">
-  {{- if $url }}<a href="{{ $url }}">{{ end -}}
-    <img src="{{ $file }}" style="max-width: {{ $maxWidth }};" alt="{{ $alt }}" />
-  {{- if $url }}</a>{{ end -}}
-  {{ with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+{{- $w := default "" (.Get "width") -}}
+{{- $h := default "" (.Get "height") -}}
+{{- $align := default "" (.Get "align") -}}
+{{- $alt := default "" (.Get "alt") -}}
+{{- $src := .Get "src" -}}
+<figure{{ with $align }} class="figure-{{ . }}"{{ end }}>
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ with $w }} width="{{ . }}"{{ end }}{{ with $h }} height="{{ . }}"{{ end }}>
+  {{ with .Get "caption" }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
 </figure>
