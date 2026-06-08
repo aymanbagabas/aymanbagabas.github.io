@@ -14,9 +14,6 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-env:
-  HUGO_VERSION: "0.162.1"
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +26,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3.2.1
         with:
-          hugo-version: ${{ env.HUGO_VERSION }}
+          hugo-version: latest
           extended: true
 
       - name: Fetch GitHub repositories
