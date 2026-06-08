@@ -3,16 +3,5 @@ public/
 resources/
 .hugo_build.lock
 
-# Importer scratch
-_posts/
-
-# Node
-node_modules/
-
-# Ruby (tumblr importer)
-Gemfile.lock
-vendor/
-.bundle
-
 # Editor / OS
 .DS_Store
