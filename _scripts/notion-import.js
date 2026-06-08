@@ -58,22 +58,26 @@ const buildFrontmatter = (props, published, notionId) => {
     props.Date?.date?.start ?? props.created_time ?? new Date().toISOString();
   const title = props.Post?.title?.[0]?.plain_text ?? "untitled";
   const slugProp = props.Slug?.rich_text?.[0]?.plain_text?.trim();
+  const slug = slugProp ? slugify(slugProp) : slugify(title);
   const tags = (props.Tags?.multi_select ?? []).map((t) => t.name);
   const cats = (props.Categories?.multi_select ?? []).map((t) => t.name);
   const canonical = props["Canonical URL"]?.url;
+  const aliases = (props.Aliases?.multi_select ?? []).map((t) => t.name);
 
   let fm = "---\n";
   fm += `date: ${fmDate(date)}\n`;
   fm += `title: ${JSON.stringify(title)}\n`;
-  if (slugProp) fm += `slug: ${JSON.stringify(slugify(slugProp))}\n`;
+  if (slugProp) fm += `slug: ${JSON.stringify(slug)}\n`;
   if (tags.length) fm += `tags:\n${tags.map((t) => `  - ${t}`).join("\n")}\n`;
   if (cats.length)
     fm += `categories:\n${cats.map((t) => `  - ${t}`).join("\n")}\n`;
   if (canonical) fm += `canonical_url: ${canonical}\n`;
+  if (aliases.length)
+    fm += `aliases:\n${aliases.map((a) => `  - ${a}`).join("\n")}\n`;
   if (!published) fm += `draft: true\n`;
   fm += `notion_id: ${notionId}\n`;
   fm += "---\n\n";
-  return { fm, title, slug: slugProp ? slugify(slugProp) : slugify(title) };
+  return { fm, title, slug };
 };
 
 const readNotionId = (filePath) => {
