@@ -29,13 +29,6 @@ jobs:
           hugo-version: latest
           extended: true
 
-      - name: Fetch GitHub repositories
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p data
-          gh api "users/aymanbagabas/repos?per_page=100&type=owner&sort=updated" --paginate > data/github_repos.json
-
       - uses: actions/configure-pages@v6
 
       - name: Build site
