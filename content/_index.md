@@ -1,5 +1,15 @@
 ---
 title: Ayman Bagabas
+description: I'm Ayman Bagabas, a software engineer working on terminal tools, Git plumbing, and automation. Born in Saudi Arabia, based in NYC. Currently at GitHub.
+keywords:
+  - terminal
+  - cli
+  - git
+  - automation
+  - infrastructure
+  - open-source
+  - golang
+  - rust
 aliases:
   - /about/
 ---

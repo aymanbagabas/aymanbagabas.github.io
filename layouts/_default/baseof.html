@@ -5,11 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ $title }}</title>
-  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ with .Description }}{{ . }}{{ else }}{{ .Plain | truncate 200 }}{{ end }}{{ end }}">
-
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
+  {{- with or .Description .Summary }}
+  <meta name="description" content="{{ . | plainify | truncate 160 "" }}">
+  {{- end }}
+  {{- with .Params.keywords }}
+  <meta name="keywords" content="{{ delimit . ", " }}">
+  {{- end }}
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

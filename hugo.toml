@@ -15,9 +15,6 @@ pluralizeListTitles = false
   locale = "en-us"
   weight = 1
 
-[languages.en.params]
-  description = "Personal site of Ayman Bagabas."
-
 [services.googleAnalytics]
   ID = "G-5ZQY2F0YLT"
 
