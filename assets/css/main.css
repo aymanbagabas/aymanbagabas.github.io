@@ -4,10 +4,34 @@
   --muted: #555;
   --rule: #d0d0d0;
   --code-bg: #fff;
+  --cursor-default: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'><rect width='12' height='24' fill='%23111'/></svg>") 0 0, default;
+  --cursor-pointer: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='28' viewBox='0 0 14 28'><rect width='14' height='28' fill='%23111'/></svg>") 0 0, pointer;
   --max-width: 42.5rem;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-display: "Rakkas", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111;
+    --fg: #f0f0f0;
+    --muted: #999;
+    --rule: #333;
+    --code-bg: #222;
+    --cursor-default: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'><rect width='12' height='24' fill='%23f0f0f0'/></svg>") 0 0, default;
+    --cursor-pointer: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='28' viewBox='0 0 14 28'><rect width='14' height='28' fill='%23f0f0f0'/></svg>") 0 0, pointer;
+  }
+}
+
+[data-theme="dark"] {
+  --bg: #111;
+  --fg: #f0f0f0;
+  --muted: #999;
+  --rule: #333;
+  --code-bg: #222;
+  --cursor-default: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'><rect width='12' height='24' fill='%23f0f0f0'/></svg>") 0 0, default;
+  --cursor-pointer: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='28' viewBox='0 0 14 28'><rect width='14' height='28' fill='%23f0f0f0'/></svg>") 0 0, pointer;
 }
 
 * { box-sizing: border-box; }
@@ -28,16 +52,17 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='24' viewBox='0 0 12 24'><rect width='12' height='24' fill='%23111'/></svg>") 0 0, default;
+  cursor: var(--cursor-default);
 }
 
 a, button, summary, [role="button"], label[for], input[type="submit"], input[type="button"] {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='28' viewBox='0 0 14 28'><rect width='14' height='28' fill='%23111'/></svg>") 0 0, pointer;
+  cursor: var(--cursor-pointer);
 }
 
 .site-header {
   text-align: center;
   padding: 3rem 1rem 2rem;
+  position: relative;
 }
 
 .site-title {
@@ -139,13 +164,13 @@ pre code { background: transparent; padding: 0; border-radius: 0; }
   border-radius: 4px;
   background: var(--code-bg);
   color: var(--muted);
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .code-wrap:hover .copy-btn,
 .copy-btn:focus-visible { opacity: 1; }
-.copy-btn:hover { color: var(--fg); border-color: var(--muted); }
+.copy-btn:hover { color: var(--fg); border-color: var(--muted); opacity: 1; }
 .copy-btn.copied { color: var(--syntax-green, #3f953a); opacity: 1; }
 
 .cursor-bounce {
@@ -336,3 +361,35 @@ li > ul, li > ol { padding-left: 1.75rem; }
   .site-header { padding: 1rem 0; }
   a { text-decoration: none; }
 }
+
+#theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+#theme-toggle:hover, #theme-toggle:focus-visible {
+  opacity: 1;
+  color: var(--fg);
+}
+
+#theme-toggle svg { width: 1rem; height: 1rem; }
+
+#theme-toggle .icon-sun,
+#theme-toggle .icon-moon,
+#theme-toggle .icon-auto { display: none; }
+
+[data-theme-pref="light"] #theme-toggle .icon-sun { display: block; }
+[data-theme-pref="dark"] #theme-toggle .icon-moon { display: block; }
+[data-theme-pref="auto"] #theme-toggle .icon-auto { display: block; }

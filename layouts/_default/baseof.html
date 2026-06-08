@@ -4,6 +4,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var pref = "auto";
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") pref = t;
+      } catch (e) {}
+      var root = document.documentElement;
+      root.setAttribute("data-theme-pref", pref);
+      if (pref !== "auto") root.setAttribute("data-theme", pref);
+    })();
+  </script>
   <title>{{ $title }}</title>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
@@ -21,8 +33,10 @@
 
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-  {{ $syntax := resources.Get "css/syntax.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}">
+  {{ $syntax := resources.Get "css/syntax-light.css" | minify | fingerprint }}
+  <link id="syntax-light" rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}" media="(prefers-color-scheme: light)">
+  {{ $syntaxDark := resources.Get "css/syntax-dark.css" | minify | fingerprint }}
+  <link id="syntax-dark" rel="stylesheet" href="{{ $syntaxDark.RelPermalink }}" integrity="{{ $syntaxDark.Data.Integrity }}" media="(prefers-color-scheme: dark)">
 
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/logo.svg">
@@ -33,6 +47,11 @@
 <body>
   <header class="site-header">
     <a href="/" class="site-title" lang="ar" dir="rtl">أيمن</a>
+    <button id="theme-toggle" type="button" aria-label="Toggle color scheme" title="Toggle color scheme">
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18" fill="currentColor" stroke="none"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" stroke="none"/></svg>
+    </button>
   </header>
 
   <main class="site-main">
@@ -47,5 +66,7 @@
   <script src="{{ $copy.RelPermalink }}" integrity="{{ $copy.Data.Integrity }}" defer></script>
   {{ $bounce := resources.Get "js/cursor-bounce.js" | minify | fingerprint }}
   <script src="{{ $bounce.RelPermalink }}" integrity="{{ $bounce.Data.Integrity }}" defer></script>
+  {{ $theme := resources.Get "js/theme.js" | minify | fingerprint }}
+  <script src="{{ $theme.RelPermalink }}" integrity="{{ $theme.Data.Integrity }}" defer></script>
 </body>
 </html>
