@@ -16,7 +16,7 @@ aliases:
 
 Hi 👋 I'm Ayman.
 
-A software engineer working on terminal and command-line tools, Git plumbing, and infrastructure automation. Currently a Senior Software Engineer at [GitHub](https://github.com/) (Microsoft). Previously, I worked at [Charm](https://charm.sh/), [Resal](https://www.resal.me/), and [MyHealthily](https://myhealthily.com/). I hold a B.S. in Computer Science from Georgia Southern University.
+A software engineer working on terminal and command-line tools, Git plumbing, and infrastructure automation. Currently a Senior Software Engineer at [GitHub](https://github.com/) (Microsoft). Previously, I worked at [Charm](https://charm.sh/), [Resal](https://www.resal.me/en/), and [MyHealthily](https://myhealthily.com/). I hold a B.S. in Computer Science from Georgia Southern University.
 
 Born in Saudi Arabia, currently in New York City. Outside of work, I [hack on open source](https://github.com/aymanbagabas), make music, and explore the outdoors.
 
