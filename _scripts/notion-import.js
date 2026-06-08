@@ -14,7 +14,7 @@ const fs = require("fs");
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
-const root = path.join("content", "posts", "notion");
+const root = path.join("content", "posts");
 
 const slugify = (s) =>
   s
@@ -53,7 +53,7 @@ const downloadImage = async (url, dest) => {
   fs.writeFileSync(dest, buf);
 };
 
-const buildFrontmatter = (props, published) => {
+const buildFrontmatter = (props, published, notionId) => {
   const date =
     props.Date?.date?.start ?? props.created_time ?? new Date().toISOString();
   const title = props.Post?.title?.[0]?.plain_text ?? "untitled";
@@ -71,8 +71,19 @@ const buildFrontmatter = (props, published) => {
     fm += `categories:\n${cats.map((t) => `  - ${t}`).join("\n")}\n`;
   if (canonical) fm += `canonical_url: ${canonical}\n`;
   if (!published) fm += `draft: true\n`;
+  fm += `notion_id: ${notionId}\n`;
   fm += "---\n\n";
   return { fm, title, slug: slugProp ? slugify(slugProp) : slugify(title) };
+};
+
+const readNotionId = (filePath) => {
+  if (!fs.existsSync(filePath)) return null;
+  const head = fs.readFileSync(filePath, "utf8").split(/\r?\n/, 30);
+  for (const line of head) {
+    const m = line.match(/^notion_id:\s*(\S+)/);
+    if (m) return m[1];
+  }
+  return null;
 };
 
 (async () => {
@@ -98,9 +109,21 @@ const buildFrontmatter = (props, published) => {
   for (const page of pages) {
     const published = page.properties.Publish?.checkbox === true;
     const props = { ...page.properties, created_time: page.created_time };
-    const { fm, slug } = buildFrontmatter(props, published);
+    const { fm, slug } = buildFrontmatter(props, published, page.id);
 
     const bundleDir = path.join(root, slug);
+    const indexPath = path.join(bundleDir, "index.md");
+    const existingId = readNotionId(indexPath);
+    if (existingId && existingId !== page.id) {
+      console.warn(
+        `skip ${slug}: bundle exists with different notion_id (${existingId})`,
+      );
+      continue;
+    }
+    if (!existingId && fs.existsSync(indexPath)) {
+      console.warn(`skip ${slug}: bundle exists without notion_id`);
+      continue;
+    }
     fs.mkdirSync(bundleDir, { recursive: true });
 
     const blocks = await getBlockChildren(page.id);
