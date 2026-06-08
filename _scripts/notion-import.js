@@ -149,7 +149,20 @@ const readNotionId = (filePath) => {
     }
 
     const md = n2m.toMarkdownString(await n2m.blocksToMarkdown(blocks)).parent;
-    fs.writeFileSync(path.join(bundleDir, "index.md"), fm + md);
+    // Notion only emits h1-h3; demote them all so they fit under the
+    // page title (which is rendered as h1 in the template) and show
+    // up in the TOC (which starts at h2). Skip lines inside fenced
+    // code blocks so shell comments stay intact.
+    let inFence = false;
+    const demoted = md
+      .split("\n")
+      .map((line) => {
+        if (/^```/.test(line)) inFence = !inFence;
+        if (inFence) return line;
+        return line.replace(/^(#{1,5}) /, "#$1 ");
+      })
+      .join("\n");
+    fs.writeFileSync(path.join(bundleDir, "index.md"), fm + demoted);
     console.log(`wrote ${bundleDir}/index.md`);
   }
 })();
