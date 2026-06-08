@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   import:
@@ -28,9 +29,15 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
 
-      - uses: stefanzweifel/git-auto-commit-action@v7
+      - id: commit
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: sync posts from Notion"
           commit_user_name: "importer-bot 🤖"
           commit_user_email: "actions@github.com"
           commit_author: "importer-bot 🤖 <actions@github.com>"
+
+      - if: steps.commit.outputs.changes_detected == 'true'
+        run: gh workflow run deploy.yml --ref ${{ github.ref_name }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
