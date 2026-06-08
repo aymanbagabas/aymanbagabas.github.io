@@ -3,5 +3,8 @@ public/
 resources/
 .hugo_build.lock
 
+# Node
+node_modules/
+
 # Editor / OS
 .DS_Store

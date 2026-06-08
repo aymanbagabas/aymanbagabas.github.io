@@ -1,0 +1,36 @@
+{{- /*
+  Image render hook. For local images that exist as page resources we run
+  Hugo's image processing pipeline: resize large images down to 1200px wide
+  and emit a <picture> with a WebP source for browsers that support it.
+  Remote images and SVGs pass through unchanged.
+*/ -}}
+{{- $src := .Destination -}}
+{{- $alt := .PlainText -}}
+{{- $title := .Title -}}
+{{- $isRemote := or (hasPrefix $src "http://") (hasPrefix $src "https://") -}}
+{{- $isSVG := hasSuffix (lower $src) ".svg" -}}
+{{- $page := .Page -}}
+{{- $resource := "" -}}
+{{- if and (not $isRemote) (not $isSVG) -}}
+  {{- $clean := strings.TrimPrefix "./" $src -}}
+  {{- with $page.Resources.GetMatch $clean -}}
+    {{- $resource = . -}}
+  {{- end -}}
+{{- end -}}
+{{- if $resource -}}
+  {{- $img := $resource -}}
+  {{- if gt $resource.Width 1200 -}}
+    {{- $img = $resource.Resize "1200x q85" -}}
+  {{- end -}}
+  {{- $webp := $img.Resize (printf "%dx webp q80" $img.Width) -}}
+  <picture>
+    <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}"
+         width="{{ $img.Width }}" height="{{ $img.Height }}"
+         loading="lazy" decoding="async"
+         {{ with $title }}title="{{ . }}"{{ end }}>
+  </picture>
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async"
+       {{ with $title }}title="{{ . }}"{{ end }}>
+{{- end -}}

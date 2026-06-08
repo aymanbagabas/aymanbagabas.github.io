@@ -1,0 +1,36 @@
+name: Import Notion posts
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          lfs: true
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - run: node _scripts/notion-import.js
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore: sync posts from Notion"
+          commit_user_name: "importer-bot 🤖"
+          commit_user_email: "actions@github.com"
+          commit_author: "importer-bot 🤖 <actions@github.com>"

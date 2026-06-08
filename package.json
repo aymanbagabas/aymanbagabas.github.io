@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "import-notion": "node _scripts/notion-import.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.3.0",
+    "notion-to-md": "^2.7.0"
+  }
+}
