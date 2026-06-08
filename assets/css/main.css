@@ -4,7 +4,7 @@
   --muted: #555;
   --rule: #d0d0d0;
   --code-bg: #fff;
-  --max-width: 42rem;
+  --max-width: 42.5rem;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-display: "Rakkas", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -54,7 +54,7 @@ a, button, summary, [role="button"], label[for], input[type="submit"], input[typ
 .site-main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.25rem 4rem;
+  padding: 0 1.5rem 4rem;
 }
 
 a {
