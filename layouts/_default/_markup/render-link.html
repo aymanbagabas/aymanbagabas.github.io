@@ -1,3 +1,6 @@
 {{- $url := urls.Parse .Destination -}}
 {{- $isExternal := and $url.Scheme (ne $url.Host site.Home.Permalink) (ne $url.Host (urls.Parse site.BaseURL).Host) -}}
-<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- printf `<a href="%s"` (.Destination | safeURL) | safeHTML -}}
+{{- with .Title }}{{ printf ` title="%s"` . | safeHTML }}{{ end -}}
+{{- if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end -}}
+>{{ .Text | safeHTML }}</a>
