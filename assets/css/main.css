@@ -187,7 +187,7 @@ pre code { background: transparent; padding: 0; border-radius: 0; }
   .copy-btn { opacity: 0.6; }
 }
 
-img, video { max-width: 100%; height: auto; display: block; margin: 1rem auto; }
+img, video { max-width: 100%; height: auto; display: block; margin: 1rem auto; border-radius: 6px; }
 
 figure { margin: 1.5rem 0; text-align: center; }
 figure img { margin: 0 auto; }
