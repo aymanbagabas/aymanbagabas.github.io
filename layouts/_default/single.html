@@ -8,7 +8,7 @@
       <span class="post-reading-time">{{ .ReadingTime }} min read</span>
       {{ with .Params.canonical_url }}
       <span aria-hidden="true">·</span>
-      <span class="post-canonical">originally on <a href="{{ . }}" rel="canonical noopener noreferrer">{{ (urls.Parse .).Host }} ↗</a></span>
+      <span class="post-canonical">originally on <a href="{{ . }}" target="_blank" rel="canonical noopener noreferrer">{{ (urls.Parse .).Host }} ↗</a></span>
       {{ end }}
     </p>
   </header>
