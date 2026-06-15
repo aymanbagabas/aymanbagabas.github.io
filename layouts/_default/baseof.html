@@ -20,6 +20,7 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
+  <link rel="canonical" href="{{ .Permalink }}">
   {{- with or .Description .Summary }}
   <meta name="description" content="{{ . | plainify | truncate 160 "" }}">
   {{- end }}
