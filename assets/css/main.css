@@ -302,7 +302,8 @@ li > ul, li > ol { padding-left: 1.75rem; }
 .post-toc a:hover { color: var(--fg); text-decoration: underline; }
 
 .post-body h1, .post-body h2, .post-body h3,
-.post-body h4, .post-body h5, .post-body h6 {
+.post-body h4, .post-body h5, .post-body h6,
+.articles-title {
   position: relative;
   scroll-margin-top: 1rem;
 }
@@ -327,6 +328,7 @@ li > ul, li > ol { padding-left: 1.75rem; }
   .post-body h4:hover .heading-anchor,
   .post-body h5:hover .heading-anchor,
   .post-body h6:hover .heading-anchor,
+  .articles-title:hover .heading-anchor,
   .heading-anchor:focus { opacity: 1; }
 }
 
