@@ -21,6 +21,9 @@
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
   <link rel="canonical" href="{{ .Permalink }}">
+  {{- with .Site.Params.pgpKey }}
+  <link rel="pgpkey" type="application/pgp-keys" href="https://keys.openpgp.org/vks/v1/by-fingerprint/{{ . }}">
+  {{- end }}
   {{- with or .Description .Summary }}
   <meta name="description" content="{{ . | plainify | truncate 160 "" }}">
   {{- end }}

@@ -1,6 +1,10 @@
 {{ define "main" }}
 <section class="about">
   {{ .Content }}
+  {{- with .Site.Params.pgpKey }}
+  {{- $g := findRE "[0-9A-F]{4}" . }}
+  <p class="pgp"><a href="https://keys.openpgp.org/vks/v1/by-fingerprint/{{ . }}" title="OpenPGP key"><span>{{ delimit (first 5 $g) " " }}</span> <span>{{ delimit (last 5 $g) " " }}</span></a></p>
+  {{- end }}
 </section>
 
 <section class="articles">

@@ -203,6 +203,22 @@ li > ul, li > ol { padding-left: 1.75rem; }
 
 .about { margin-bottom: 2.5rem; }
 
+.pgp {
+  margin: 2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.pgp span { white-space: nowrap; }
+
+.pgp a {
+  color: color-mix(in srgb, var(--muted) 50%, var(--bg));
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.pgp a:hover, .pgp a:focus-visible { color: var(--fg); }
+
 .articles-title {
   margin-top: 3rem;
   padding-top: 1.5rem;

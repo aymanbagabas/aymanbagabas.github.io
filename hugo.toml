@@ -55,6 +55,7 @@ pluralizeListTitles = false
   copyright = "© 2017–2026 Ayman Bagabas"
   dateFormat = "Jan 2, 2006"
   images = ["/favicon.png"]
+  pgpKey = "593D6EEE7871708E329619322EBA00DFFCC63351"
 
   [params.social]
     twitter = "aymanbagabas"
